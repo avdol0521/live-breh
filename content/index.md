@@ -1,6 +1,7 @@
 ---
-title: Welcome to Quartz
+title: well hello there
 ---
+### this is Abdullah0521's obsidian vault. at least the one you can access publicly 
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+links to key files:
+- 
