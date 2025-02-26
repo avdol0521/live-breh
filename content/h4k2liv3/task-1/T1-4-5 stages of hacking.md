@@ -20,7 +20,18 @@ tags:
 		- its basically directly interacting with the target system, for example by sending network packets and probing for open services
 		- some examples of this too:
 			- [[subdomain enumeration]] (crt.sh can be used to get the subdomains without actively interacting with the target)
+			- wappalyzer (shows the tech stack of the site you visit)
+				- example: (for esp32io)
+				- ![[wappalyzer example.png]]
+			- [[nmap]] 
+			- whatweb (similar to wappalyzer)
+			- [[netcat]] 
 ## Enumeration and scanning:
+- tools we can use:
+	- nikto
+	- [[nmap]] 
+	- nessus
+	- burp
 ## Gaining access:
 ## Maintaining access:
 ## Covering tracks:
