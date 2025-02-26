@@ -28,10 +28,13 @@ tags:
 			- [[netcat]] 
 ## Enumeration and scanning:
 - tools we can use:
-	- nikto
-	- [[nmap]] 
-	- nessus
-	- burp
-## Gaining access:
+	- nikto vuln scanning as well
+	- [[nmap]] for port scanning and seeing what services are running plus determining the OS version as well
+	- nessus for vuln scanning
+	- burp (its mainly a proxy used in the exploitation phase tbh but kinda fits here ig)
+- other stuff to try:
+	- DNS queries
+	- limited scans to understand network topology ig
+## Exploitation:
 ## Maintaining access:
 ## Covering tracks:
