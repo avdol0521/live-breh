@@ -12,4 +12,4 @@ tags:
 	- 1024 <-> 49151:
 		- these are registered ports assigned to less common or proprietary apps
 	- 49152 <-> 65,535:
-		- 
+		- used for short term use
