@@ -4,7 +4,7 @@ tags:
   - child
 ---
 ill divide this into individual topics from here. links below: 
-- [[task-1-topic-1-IP addresses and MAC addresses]]
-- [[task-1-topic-2-OSI model and the Three Way Handshake]]
-- [[task-1-topic-3-kali linux stuff]]
+- [[T1-1-IP and MAC addresses]]
+- [[T1-2-OSI and TCP-IP model]]
+- [[T1-3-kali linux stuff]]
 - 
