@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 ### common commands: 
-- cd shortcuts:
+- `cd` shortcuts:
 	- can do just / for root
 	- can also do username to jump to home
 - `ls la`
@@ -17,3 +17,5 @@ tags:
 	- to troubleshoot UI tweaking
 - `rm` variants:
 	- `rm -r dirname`
+- [[my git cheatsheet]] 
+- ill document apt later. and ill look into pimpmykali later as well.
