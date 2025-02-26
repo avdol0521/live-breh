@@ -1,0 +1,22 @@
+---
+title: "IP"
+tags:
+  - fetus
+---
+- stands for Internet Protocol. its essentially a label assigned to each and every device connected to a network. its used for communication between devices. IP addresses operate at the Network layer of the [[OSI model]] 
+- types:
+	- IPv4:
+		- its a 32 bit numeric address. its written in decimal like 192.168.0.1 where each part can range from 0 to 255
+		- can provide around 4.3 billion unique addresses. the reason we havent completely ran out of IPv4 IP addresses is because of stuff like private IP addresses, Dynamic IP addresses etc. more on that shit later
+	- IPv6:
+		- its 128 bit instead of 32 and its written in hexadecimal, seperated by colons 
+		- example: (2001:0db8:85a3:0000:0000:8a2e:0370:7334)
+		- obvious advantage being a vastly superior amount of available addresses and built in security as well. will probably need this in the future when IPv4 addresses runs out
+- Static and Dynamic IP addresses:
+	- Static IPs:
+		- 
+	- Dynamic IPs:
+- Public and Private IP addresses:
+	- Public IPs:
+	- Private IPs:
+- Subnetting:
