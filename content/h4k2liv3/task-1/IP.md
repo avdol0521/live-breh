@@ -14,9 +14,14 @@ tags:
 		- obvious advantage being a vastly superior amount of available addresses and built in security as well. will probably need this in the future when IPv4 addresses runs out
 - Static and Dynamic IP addresses:
 	- Static IPs:
-		- 
+		- needs to be manually assigned and doesnt change. used for stuff like servers and other network devices that need to be reliably accessed
 	- Dynamic IPs:
+		- is automatically assigned by a [[DHCP]] (Dynamic Host Configuration Protocol) server, changes alot
 - Public and Private IP addresses:
 	- Public IPs:
+		- accessible from around the world and is unique 
 	- Private IPs:
+		- used within local networks. isnt accessible from around the world and isnt unique either. requires [[NAT]] (Network Address Translation) to communicate externally
 - Subnetting:
+	- basically its dividing a network into smaller more manageable sub networks hence the name "subnetting"
+	- improves routing efficiency, security and network performance
