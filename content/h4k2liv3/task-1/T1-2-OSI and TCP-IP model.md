@@ -1,5 +1,5 @@
 ---
-title: OSI model and the Three way handshake
+title: OSI and TCP/IP model
 tags:
   - fetus
 ---
