@@ -19,7 +19,7 @@ tags:
 	- Active recon:
 		- its basically directly interacting with the target system, for example by sending network packets and probing for open services
 		- some examples of this too:
-			- [[subdomain enumeration]] 
+			- [[subdomain enumeration]] (crt.sh can be used to get the subdomains without actively interacting with the target)
 ## Enumeration and scanning:
 ## Gaining access:
 ## Maintaining access:
