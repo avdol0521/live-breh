@@ -16,22 +16,22 @@ tags:
 ## common ports and services:
 #### web service related:
 - [[HTTP]]
-- [[HTTPS]]
+- [[HTTPS]] 
 #### file transfer related:
 - [[FTP]]
 - [[SFTP]] 
 #### email service related:
-- [[SMTP]]
-- [[POP3]]
-- [[IMAP]]
+- [[SMTP]] 
+- [[POP3]] 
+- [[IMAP]] 
 #### DNS:
-- [[DNS]]
+- [[DNS]] 
 #### remote access related:
-- [[SSH]]
-- [[Telnet]]
-- [[RDP]]
+- [[SSH]] 
+- [[Telnet]] 
+- [[RDP]] 
 #### other notable ones:
-- [[NTP]]
-- [[SNMP]]
-- [[LDAP]]
-- [[LDAPS]]
+- [[NTP]] 
+- [[SNMP]] 
+- [[LDAP]] 
+- [[LDAPS]] 
