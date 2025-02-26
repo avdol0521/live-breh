@@ -13,6 +13,9 @@ tags:
 		- these are registered ports assigned to less common or proprietary apps
 	- 49152 <-> 65,535:
 		- used for short term use
+- a client initiates a connection to a specific service by targeting the IP and the port number the service is running on for example 192.168.0.1:80 for http on my local network 
+- dont keep open unmonitored ports. they're a security risk. only open them if necessary for required services. 
+- use secure versions of protocols 
 ## common ports and services:
 #### web service related:
 - [[HTTP]]
