@@ -21,5 +21,6 @@ tags:
 - crt.sh
 ## notes:
 - some domains use wildcard records that can return false positives by resolving non existent subdomains. 
+	- [[wildcard DNS records]] 
 - aggressive querying can trigger rate limits or be flagged as malicious activity
 - when combining data collected from multiple sources, its important to effectively filter and validate to identify actual relevant subdomains 
