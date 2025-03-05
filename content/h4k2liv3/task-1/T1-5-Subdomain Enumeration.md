@@ -3,6 +3,7 @@ title: Subdomain Enumeration
 tags:
   - fetus
 ---
+# Basics:
 2 ways to do it. active and passive enumeration.
 ## passive enumeration:
 - Querying public DNS records (A, AAAA, CNAME, MX)
@@ -24,3 +25,4 @@ tags:
 	- [[wildcard DNS records]] 
 - aggressive querying can trigger rate limits or be flagged as malicious activity
 - when combining data collected from multiple sources, its important to effectively filter and validate to identify actual relevant subdomains 
+# Process:
