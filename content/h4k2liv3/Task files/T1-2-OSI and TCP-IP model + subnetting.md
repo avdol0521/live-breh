@@ -1,5 +1,5 @@
 ---
-title: OSI and TCP/IP model
+title: OSI and TCP/IP model + subnetting
 tags:
   - fetus
 ---

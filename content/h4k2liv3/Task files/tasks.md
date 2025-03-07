@@ -1,5 +1,5 @@
 ---
-title: task-1
+title: tasks
 tags:
   - child
 ---
