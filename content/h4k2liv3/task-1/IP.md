@@ -22,6 +22,6 @@ tags:
 		- accessible from around the world and is unique 
 	- Private IPs:
 		- used within local networks. isnt accessible from around the world and isnt unique either. requires [[NAT]] (Network Address Translation) to communicate externally
-- Subnetting:
+- [[Subnetting]]:
 	- basically its dividing a network into smaller more manageable sub networks hence the name "subnetting"
 	- improves routing efficiency, security and network performance
