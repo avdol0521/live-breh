@@ -5,6 +5,7 @@ tags:
 ---
 - abbreviation full form: Open Systems Interconnection (OSI)
 - is divided into 7 layers
+- the first 
 ## the 7 layers:
 
 #### Physical layer:
@@ -12,7 +13,7 @@ tags:
 - mainly focuses on the signal transmission itself not the data
 #### Data link layer: 
 - what it does: takes care of the node to node data transfer, error detection and correction plus framing as well through switches and bridges 
-- has two sub layers:
+- has two sub layers: (will look into it later)
 	- Media access control (MAC)
 	- Logical link control (LLC)
 #### Network layer: 

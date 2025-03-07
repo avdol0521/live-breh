@@ -23,3 +23,7 @@ read [[IP]] before getting into this
 	- network: 10.0.0.0
 	- usable: 10.0.0.1 <--> 10.0.0.62
 	- broadcast: 10.0.0.63
+- second subnet:
+	- network: 10.0.0.64
+	- usable: 10.0.0.65 <--> 10.0.0.62
+	- broadcast: 10.0.0.63
