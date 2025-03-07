@@ -27,3 +27,9 @@ read [[IP]] before getting into this
 	- network: 10.0.0.64
 	- usable: 10.0.0.65 <--> 10.0.0.62
 	- broadcast: 10.0.0.63
+- 194.10.20.0/29
+- 32-29 = 3
+- 2^3 = 8 
+- network: - 194.10.20.0 
+- broadcast : - 194.10.20.7
+- usable: 194.10.20.1 <--> 194.10.20.6
