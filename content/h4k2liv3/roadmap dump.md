@@ -184,12 +184,12 @@ Outline :
     
 54. Our notes revised
     
-# 2nd Stage : Exploitaion
+# 2nd Stage : Exploitation
 
 ------------------------------------------------------------------------------------------------
 ## Day 19 : [TCM Security Capstone Academy Walkthrough in Bangla](https://youtu.be/K-7M31BSwIA?si=4dABSahko2nErGm8)
 
-DownLoadLink : [PEH Capstone](https://drive.google.com/drive/folders/1VXEuyySgzsSo-MYmyCareTnJ5rAeVKeH)
+Download Link : [PEH Capstone](https://drive.google.com/drive/folders/1VXEuyySgzsSo-MYmyCareTnJ5rAeVKeH)
 
 Outline :
 
@@ -217,7 +217,7 @@ Outline :
     
 60. Blackpearl exploitation
     
-# 3rd Stage : Prep for CEH and eJPT
+# 3rd Stage : Prep for CEH and [[eJPT]]
 --------------------------------------------------------------------------------
 ## Day 22 : [How to Create a TryHackMe Account & Get Started | Ethical Hacking for Beginners in Bangla](https://youtu.be/kvvSNJGt3cE?si=o5dzizrEZM02ER9y)
 
@@ -233,7 +233,7 @@ Outline :
     
 ## Day 23 : [Bolt CMS Exploitation Tutorial (Bangla) | TryHackMe 'Bolt: A Hero is Unleashed' Walkthrough](https://youtu.be/oS7QCSc10X8?si=n-nRpZpZa4_qPJs2)
 
-RoomLink : [TryHackMe | Bolt](https://tryhackme.com/r/room/bolt) 
+Room Link : [TryHackMe | Bolt](https://tryhackme.com/r/room/bolt) 
 
 Outline : 
 
@@ -243,7 +243,7 @@ Outline : 
     
 ## Day 24 : [TryHackMe Blog Room Walkthrough in Bangla | WordPress Cms Hacking | CEH Practical & eJPT guide](https://youtu.be/A1ECa1CYrjs?si=FLlNcjG0CGb6aluN)
 
-RoomLink : [TryHackMe | Blog](https://tryhackme.com/r/room/blog)
+Room Link : [TryHackMe | Blog](https://tryhackme.com/r/room/blog)
 
 Outline :
 
@@ -255,7 +255,7 @@ Outline :
     
 ## Day 25 : [ColddBox:Easy TryHackMe Walkthrough in Bangla | WordPress Cms Exploitation | CEH Practical & eJPT](https://youtu.be/b3N-nZrGOKk?si=OwCtYgl0RiNbueEA)
 
-RoomLink : [TryHackMe | ColddBox: Easy](https://tryhackme.com/r/room/colddboxeasy) 
+Room Link : [TryHackMe | ColddBox: Easy](https://tryhackme.com/r/room/colddboxeasy) 
 
 Outline :
 
@@ -265,7 +265,7 @@ Outline :
     
 ## Day 26 : [Fuel Cms | Ignite TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Exam Preparation](https://youtu.be/PrB7VpA3YB4?si=kRaO-7GB6A-T7Ohg)
 
-RoomLink : [TryHackMe | Ignite](https://tryhackme.com/r/room/ignite) 
+Room Link : [TryHackMe | Ignite](https://tryhackme.com/r/room/ignite) 
 
 Outline :
 
@@ -273,7 +273,7 @@ Outline :
     
 ## Day 27 : 
 
-RoomLink : [TryHackMe | SQHell](https://tryhackme.com/r/room/sqhell) 
+Room Link : [TryHackMe | SQHell](https://tryhackme.com/r/room/sqhell) 
 
 Outline :
 
@@ -283,7 +283,7 @@ Outline :
     
 75. Sql injection
     
-## Day 28 : RoomLink : [Basic Pentesting](https://tryhackme.com/r/room/basicpentestingjt) 
+## Day 28 : Room Link : [Basic Pentesting](https://tryhackme.com/r/room/basicpentestingjt) 
 
 VideoLink :  [Basic Pentesting TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Preparation](https://youtu.be/N8gfLwwokNw?si=sp0dJgDDfLgyWdwS)
 Outline :
@@ -292,12 +292,12 @@ Outline :
     
 77. Think out of the box
     
-## Day 29 : RoomLink : [TryHackMe | Kenobi](https://tryhackme.com/r/room/kenobi) 
+## Day 29 : Room Link : [TryHackMe | Kenobi](https://tryhackme.com/r/room/kenobi) 
 
 Video Link : [Kenobi TryHackMe Walkthrough in Bangla | Prepare for eJPT & CEH Practical](https://youtu.be/j5oCT1f1nQU?si=zDeMtyczsdpddtD1)
 ## Day 30 : 
 
-RoomLink : [Easy Peasy](https://tryhackme.com/r/room/easypeasyctf)
+Room Link : [Easy Peasy](https://tryhackme.com/r/room/easypeasyctf)
 
 Outline :
 
@@ -305,103 +305,103 @@ Outline :
     
 ## Day 31 : [Agent Sudo TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Preparation](https://youtu.be/gBgnC8NKOpg?si=l06oMFRcQBusWXsg)
 
-RoomLink : [TryHackMe | Agent Sudo](https://tryhackme.com/r/room/agentsudoctf) 
+Room Link : [TryHackMe | Agent Sudo](https://tryhackme.com/r/room/agentsudoctf) 
 ## Day 32 : [RootMe TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Exam Preparation](https://youtu.be/hvBQrOd7LJg)
 
-RoomLink : [TryHackMe | RootMe](https://tryhackme.com/r/room/rrootme) 
+Room Link : [TryHackMe | RootMe](https://tryhackme.com/r/room/rrootme) 
 ## Day 33 : [Brooklyn Nine-Nine TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Exam Preparation](https://youtu.be/cc3WoCVFD1Q?si=fnIP97dJgvPFlvDa)
 
-RoomLink : [TryHackMe | Brooklyn Nine Nine](https://tryhackme.com/r/room/brooklynninenine)  (BruteForce)
+Room Link : [TryHackMe | Brooklyn Nine Nine](https://tryhackme.com/r/room/brooklynninenine)  (BruteForce)
 ## Day 34 : [SkyNet TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Exam Preparation](https://youtu.be/JLkzfDT7baI)  
 
-RoomLink : [TryHackMe | Cyber Security Training](https://tryhackme.com/r/room/skynet) 
+Room Link : [TryHackMe | Cyber Security Training](https://tryhackme.com/r/room/skynet) 
 ## Day 35 : [StartUp TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Prep](https://youtu.be/w9_ufdJLARs?si=Qy7vuXIW3b6QtUbp)
 
-RoomLink : [TryHackMe | Startup](https://tryhackme.com/r/room/startup) 
+Room Link : [TryHackMe | Startup](https://tryhackme.com/r/room/startup) 
 ## Day 36 : [Gaming Server TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Exam Preparation](https://youtu.be/uFW_B5zTgLQ?si=6CMG1dJ3pdVL0lwi)
 
-RoomLink : [TryHackMe | GamingServer](https://tryhackme.com/r/room/gamingserver) 
+Room Link : [TryHackMe | GamingServer](https://tryhackme.com/r/room/gamingserver) 
 ##  Day 37 : [Blue TryHackMe Walkthrough in Bangla | hacking windows 7 | EternalBlue | ms17-010](https://youtu.be/nYmR8Yf9sJ8)
 
-RoomLink : [TryHackMe | Blue](https://tryhackme.com/r/room/blue) 
+Room Link : [TryHackMe | Blue](https://tryhackme.com/r/room/blue) 
 ## Day 38 : [Hacking Windows 7 | ICE TryHackMe Walkthrough in Bangla | eJPT and CEH Practical Guide](https://youtu.be/AiM--qG69KY)
 
-RoomLInk : [TryHackMe | Ice](https://tryhackme.com/r/room/ice) 
+Room Link : [TryHackMe | Ice](https://tryhackme.com/r/room/ice) 
 ## Day 39 : [Blaster TryHackMe Walkthrough in Bangla | hacking windows | UAC Bypass | eJPT & CEH Practical Guide](https://youtu.be/QdXPY0P11OU?si=WKOuuvGwI2aLo5NB)
 
-RoomLink : [TryHackMe | Blaster](https://tryhackme.com/r/room/blaster) 
+Room Link : [TryHackMe | Blaster](https://tryhackme.com/r/room/blaster) 
 ## Day 40 : 
 
-RoomLink : [https://tryhackme.com/r/room/steelmountain](https://tryhackme.com/r/room/steelmountain)   
+Room Link : [https://tryhackme.com/r/room/steelmountain](https://tryhackme.com/r/room/steelmountain)   
 ## Day 41 : [Relevant TryHackMe in Bangla | eJPT & CEH Practical Exam Preparation | windows Server 2016 Hacking](https://youtu.be/ItYvcsfuPnU?si=a7pUMPHHTaashCQb)
 
-RoomLink : [TryHackMe | Relevant](https://tryhackme.com/r/room/relevant) 
+Room Link : [TryHackMe | Relevant](https://tryhackme.com/r/room/relevant) 
 ## Day 42 : 
 
-RoomLink : [ICA: 1 ~ VulnHub](https://www.vulnhub.com/entry/ica-1,748/) 
+Room Link : [ICA: 1 ~ VulnHub](https://www.vulnhub.com/entry/ica-1,748/) 
 ## Day 43 : 
 
-RoomLink : [DC: 1 ~ VulnHub](https://www.vulnhub.com/entry/dc-1,292/) 
+Room Link : [DC: 1 ~ VulnHub](https://www.vulnhub.com/entry/dc-1,292/) 
 ## Day 44 : 
 
-RoomLink : [Hack Me Please: 1 ~ VulnHub](https://www.vulnhub.com/entry/hack-me-please-1,731/) 
+Room Link : [Hack Me Please: 1 ~ VulnHub](https://www.vulnhub.com/entry/hack-me-please-1,731/) 
 ## Day 45 : 
 
-RoomLink : [symfonos: 1 ~ VulnHub](https://www.vulnhub.com/entry/symfonos-1,322/) 
+Room Link : [symfonos: 1 ~ VulnHub](https://www.vulnhub.com/entry/symfonos-1,322/) 
 ## Day 46 : 
 
-RoomLink : [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (1-5)
+Room Link : [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (1-5)
 ## Day 47 :
 
-RoomLink :  [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (6-10)
+Room Link :  [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (6-10)
 ## Day 48 : 
 
-RoomLink : [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (11-15)
+Room Link : [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (11-15)
 ## Day 49 : 
 
-RoomLink : [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (16-21)
+Room Link : [TryHackMe | Linux PrivEsc](https://tryhackme.com/r/room/linuxprivesc) (16-21)
 ## Day 50 : 
 
-roomLink : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (1-3)
+Room Link : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (1-3)
 ## Day 51 : 
 
-RoomLink : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (4-6)
+Room Link : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (4-6)
 ## Day 52 : 
 
-RoomLInk : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (7-9)
+Room Link : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (7-9)
 ## Day 53 : 
 
-RoomLink : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (10-12)
+Room Link : [TryHackMe | Linux Privilege Escalation](https://tryhackme.com/r/room/linprivesc) (10-12)
 ## Day 54 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (1-5)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (1-5)
 ## Day 55 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (6-10)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (6-10)
 ## Day 56 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (11-15)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (11-15)
 ## Day 57 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (16-20)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (16-20)
 ## Day 58 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (21-25)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (21-25)
 ## Day 59 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (26-30)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (26-30)
 ## Day 60 : 
 
-roomLink : [Wreath](https://tryhackme.com/r/room/wreath) (31-35)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (31-35)
 ## Day 61 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (36-40)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (36-40)
 ## Day 62 : 
 
-RoomLink : [Wreath](https://tryhackme.com/r/room/wreath) (41-46)
+Room Link : [Wreath](https://tryhackme.com/r/room/wreath) (41-46)
 ## Day 63 : 
 
-RoomLink : [TryHackMe | VulnNet: Internal](https://tryhackme.com/r/room/vulnnetinternal)
+Room Link : [TryHackMe | VulnNet: Internal](https://tryhackme.com/r/room/vulnnetinternal)
 # 4th Stage : Active Directory
 -----------------------------------------------------------------------
 this part's extra. isn't really required for [[eJPT]] or CEH. but it is helpful for the OSCP, PNPT, CRTO, CPTS exams 
