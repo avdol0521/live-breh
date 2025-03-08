@@ -5,7 +5,7 @@ tags:
 ---
 # Stage 1 : Basics
 --- 
-## Day 1 : [Day 1: Introduction to Ethical Hacking in Bangla | Beginner's Guide](https://www.youtube.com/watch?v=n3U_hA9BsEY&list=PL-9X-2c60pK8mmKlw6YYqqWBfUCAisj4Z&index=1)
+## Day 1 : [Introduction to Ethical Hacking in Bangla | Beginner's Guide](https://www.youtube.com/watch?v=n3U_hA9BsEY&list=PL-9X-2c60pK8mmKlw6YYqqWBfUCAisj4Z&index=1)
 
 Outline : 
 
@@ -17,7 +17,7 @@ Outline : 
     
 4. Important Tools For Note Keeping
     
-## Day 2 : [Day 2: Ethical Hacking in Bangla | IP and MAC Address Explained](https://youtu.be/HZbOYt5k6_U?si=4oFZXqTL2zY-ci4m)
+## Day 2 : [Ethical Hacking in Bangla | IP and MAC Address Explained](https://youtu.be/HZbOYt5k6_U?si=4oFZXqTL2zY-ci4m)
 
 Outline :
 
@@ -27,7 +27,7 @@ Outline :
     
 7. Mac Address
     
-## Day 3 : [Day 3 : OSI Model and Three-Way Handshake | Ethical Hacking in Bangla Explained](https://youtu.be/9GomP2BB8fI?si=DLqmigyMrog-qUC-)
+## Day 3 : [OSI and TCP-IP Model | Ethical Hacking in Bangla Explained](https://youtu.be/9GomP2BB8fI?si=DLqmigyMrog-qUC-)
 
 Outline :
 
@@ -37,7 +37,7 @@ Outline :
     
 10.  Common Ports And Protocols
     
-## Day 4 : [Day 4: Kali Linux for Beginners | Ethical Hacking Tutorial in Bangla](https://youtu.be/G8IWZT0gI0U?si=i07-C8Xdz2pJNx-e)
+## Day 4 : [Kali Linux for Beginners | Ethical Hacking Tutorial in Bangla](https://youtu.be/G8IWZT0gI0U?si=i07-C8Xdz2pJNx-e)
 
 Outline :
 
@@ -53,7 +53,7 @@ Outline :
     
 16. Navigating File System
     
-## Day 5 : [Day 5 : User, Privileges & File System in Kali Linux | Ethical Hacking for Beginners in Bangla](https://youtu.be/-0d0rlvo47w?si=ejYLfcCLRAPBPv4f)
+## Day 5 : [User, Privileges & File System in Kali Linux | Ethical Hacking for Beginners in Bangla](https://youtu.be/-0d0rlvo47w?si=ejYLfcCLRAPBPv4f)
 
 Outline :
 
@@ -65,7 +65,7 @@ Outline :
     
 20. Default root login
     
-## Day 6 : [Day 6: Kali Linux for Beginners | Ethical Hacking Tutorial in Bangla (Final Part)](https://youtu.be/823AL-Byskc?si=cs9t5DRRuABxGRDJ)
+## Day 6 : [Kali Linux for Beginners | Ethical Hacking Tutorial in Bangla (Final Part)](https://youtu.be/823AL-Byskc?si=cs9t5DRRuABxGRDJ)
 
 Outline :
 
@@ -77,7 +77,7 @@ Outline :
     
 24. Installing And Updating Tools
     
-## Day 7 : [Day 7 : 5 Stages of Hacking | Ethical Hacking Explained in Bangla | Beginner's Guide](https://youtu.be/VC-3AcVD5SQ?si=hhN9IamoyZ34G9w3)
+## Day 7 : [5 Stages of Hacking | Ethical Hacking Explained in Bangla | Beginner's Guide](https://youtu.be/VC-3AcVD5SQ?si=hhN9IamoyZ34G9w3)
 
 Outline :
 
@@ -89,7 +89,7 @@ Outline :
     
 28. Breached Credentials
     
-## Day 8 : [Day 8 : Ethical Hacking in Bangla | SubDomain Enumeration explained for beginners](https://youtu.be/uu6hZntanfY?si=Uk1IZQ53ae57u1yg)
+## Day 8 : [Ethical Hacking in Bangla | SubDomain Enumeration explained for beginners](https://youtu.be/uu6hZntanfY?si=Uk1IZQ53ae57u1yg)
 
 Outline :
 
@@ -97,7 +97,7 @@ Outline :
     
 30. Identifying Web technologies
     
-## Day 9 : [Day 9 : Ethical Hacking In Bangla | BurpSuite Basic For Beginners](https://youtu.be/CKAmFlz2GHY?si=AAQkKYaE2urHYCii) 
+## Day 9 : [Ethical Hacking In Bangla | BurpSuite Basic For Beginners](https://youtu.be/CKAmFlz2GHY?si=AAQkKYaE2urHYCii) 
 
 Outline :
 
@@ -113,7 +113,7 @@ Outline :
     
 36. Idea about intruder tab 
     
-## Day 10 : [Day 10 : Ethical Hacking In Bangla | Osint | Google Dorking And Social Media Search Techniques](https://youtu.be/dppwUenkQ7c?si=ahqoQFnvMrS5OwWk)  
+## Day 10 : [Ethical Hacking In Bangla | Osint | Google Dorking And Social Media Search Techniques](https://youtu.be/dppwUenkQ7c?si=ahqoQFnvMrS5OwWk)  
 
 Outline :
 
@@ -121,19 +121,19 @@ Outline :
     
 38. Utilizing social media
     
-## Day 11 : [Day 11 : Ethical Hacking In Bangla | Installing Kioptrix | Hacking Lab For Beginners | Practical](https://youtu.be/7Q7oQPcW3JU)
+## Day 11 : [Ethical Hacking In Bangla | Installing Kioptrix | Hacking Lab For Beginners | Practical](https://youtu.be/7Q7oQPcW3JU)
 
 Outline :
 
 39. Installing Kioptrix
     
-## Day 12 : [Day 12: Nmap Basics Bangla Tutorial | Learn the Fundamentals of Nmap | Ethical Hacking for Beginners](https://youtu.be/CdS0OKbeKxk?si=KqdNAnojxoA-9N6c)
+## Day 12 : [Nmap Basics Bangla Tutorial | Learn the Fundamentals of Nmap | Ethical Hacking for Beginners](https://youtu.be/CdS0OKbeKxk?si=KqdNAnojxoA-9N6c)
 
 Outline : 
 
 40. Scanning with nmap
     
-## Day 13 : [Day 13: Mastering HTTP Enumeration - Essential Guide for Ethical Hacking | Ethical Hacking In Bangla](https://youtu.be/FHqQf64AFqE?si=VwjQVPSmxmLIb5tT)
+## Day 13 : [Mastering HTTP Enumeration - Essential Guide for Ethical Hacking | Ethical Hacking In Bangla](https://youtu.be/FHqQf64AFqE?si=VwjQVPSmxmLIb5tT)
 
 Outline :
 
@@ -141,9 +141,8 @@ Outline :
     
 ## Day 14 : 
 
-video 1 :  [(445/139) SMB Enumeration Techniques | Bangla Tutorial | SMBClient, RPCClient, Enum4Linux,NMBLookup](https://youtu.be/xU2dnEIRtcw?si=G7BI8X6AJDwbg51D)
-
-Video 2 :  [Day 14 : SMB & SSH Enumeration for Beginners | Ethical Hacking In Bangla](https://youtu.be/-lIjIcVS43s?si=g-ncc08SuHa_A6M7)
+- video 1 :  [(445/139) SMB Enumeration Techniques | Bangla Tutorial | SMBClient, RPCClient, Enum4Linux,NMBLookup](https://youtu.be/xU2dnEIRtcw?si=G7BI8X6AJDwbg51D)
+- Video 2 :  [Day 14 : SMB & SSH Enumeration for Beginners | Ethical Hacking In Bangla](https://youtu.be/-lIjIcVS43s?si=g-ncc08SuHa_A6M7)
 
 Outline :
 
@@ -151,7 +150,7 @@ Outline :
     
 43. Enumerating ssh
     
-## Day 15 : [Day 15: Vulnerability Analysis in Bangla – Uncover Security Threats | Ethical Hacking In Bangla](https://youtu.be/-tSEGq3sui0?si=X8J3U9BbfZFbGY2E)
+## Day 15 : [Vulnerability Analysis in Bangla – Uncover Security Threats | Ethical Hacking In Bangla](https://youtu.be/-tSEGq3sui0?si=X8J3U9BbfZFbGY2E)
 
 Outline : 
 
@@ -167,7 +166,7 @@ Outline :
     
 47. Scanning With Nessus
     
-## Day 17 : [Day 17 : Exploiting Kioptrix with Metasploit | Reverse Shell/Bind Shell | Ethical Hacking In Bangla](https://youtu.be/jZ2_BAP08m0?si=rO-KwmeJrAkjvHTQ)
+## Day 17 : [Exploiting Kioptrix with Metasploit | Reverse Shell/Bind Shell | Ethical Hacking In Bangla](https://youtu.be/jZ2_BAP08m0?si=rO-KwmeJrAkjvHTQ)
 
 Outline :
 
@@ -177,7 +176,7 @@ Outline :
     
 50. Gaining root With metasploit
     
-## Day 18 : [Day 18 : Final Part | Exploiting Kioptrix Manually | How to Perform Brute-Force Attack | Bangla](https://youtu.be/4HBlvTxGDWo)
+## Day 18 : [Final Part | Exploiting Kioptrix Manually | How to Perform Brute-Force Attack | Bangla](https://youtu.be/4HBlvTxGDWo)
 
 Outline :
 
