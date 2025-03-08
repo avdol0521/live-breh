@@ -4,6 +4,9 @@ tags:
   - fetus
 ---
 # Basics:
+ig if i wanna start with the absolute basics, we'll have to learn what subdomains are in the first place:
+- [[subdomains]] 
+
 2 ways to do it. active and passive enumeration.
 ## passive enumeration:
 - Querying public DNS records (A, AAAA, CNAME, MX)

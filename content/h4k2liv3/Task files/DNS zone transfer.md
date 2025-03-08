@@ -3,7 +3,7 @@ title: "DNS zone transfer"
 tags:
   - fetus
 ---
-used for DNS server syncing, where a DNS server uses this mechanism to replicate the DNS records (zone file) from a master DNS server to one or more slave DNS servers.
+used for DNS server syncing, where a DNS server uses this mechanism to replicate the DNS records ([[zone file]]) from a master DNS server to one or more slave DNS servers.
 has 2 types:
 - AXFR (full zone transfer): transfers the entire zone file
 - IXFR (Incremental zone transfer): transfers the changed data only kind of like github 
