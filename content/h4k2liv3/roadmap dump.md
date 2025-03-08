@@ -1,7 +1,7 @@
 ---
-title: "roadmap dump"
+title: roadmap dump
 tags:
-  - fetus
+  - child
 ---
 # 1st Stage : Basics
 --- 
