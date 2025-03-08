@@ -1,3 +1,8 @@
+---
+title: "roadmap dump"
+tags:
+  - fetus
+---
 # 1st Stage : Basics
 --- 
 ## Day 1 : [## Day 1: Introduction to Ethical Hacking in Bangla | Beginner's Guide](https://www.youtube.com/watch?v=n3U_hA9BsEY&list=PL-9X-2c60pK8mmKlw6YYqqWBfUCAisj4Z&index=1)
