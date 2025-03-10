@@ -12,7 +12,7 @@ tags:
 - what it does: sends raw bits over a medium like cables, hubs and other stuff
 - mainly focuses on the signal transmission itself not the data
 #### Data link layer: 
-- what it does: takes care of the node to nion and correction plus framing as well through switches anode data transfer, error detectd bridges 
+- what it does: takes care of the node to node connection and correction plus framing as well through switches anode data transfer, error detected bridges 
 - has two sub layers: (will look into it later)
 	- Media access control (MAC)
 	- Logical link control (LLC)
