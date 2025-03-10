@@ -52,3 +52,6 @@ tags:
 - example:
 	- `sudo chmod u-w filename` (removes write perms from user)
 	- `sudo chmod u-w,g+x filename` (removes write perms from user and adds execute perms to the group)
+- owner: rwx 
+- group: r-x 55
+- other: r--
