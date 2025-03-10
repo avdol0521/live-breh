@@ -24,3 +24,4 @@
 - add the remote link in vscode
 - commit and sync everything
 - boom done its all on github now
+iot 1/1 character

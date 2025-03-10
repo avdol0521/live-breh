@@ -5,3 +5,4 @@ tags:
 ---
 - [[Kali installation documentation]] 
 - [[kali common commands and stuff]] 
+- [[python server creation]] 
