@@ -4,5 +4,6 @@ tags:
   - fetus
 ---
 - [[Kali installation documentation]] 
-- [[kali common commands and stuff]] 
+- [[kali common commands and stuff]]
+- [[sudoers file]] 
 - [[python server creation]] 

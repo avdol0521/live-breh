@@ -4,5 +4,5 @@ tags:
   - fetus
 ---
 - port: 53 ([[TCP]]/[[UDP]])
-- translates user friendly domain names to IP addresses
+- resolves hostnames to their respective IPs
 - UDP us typically used for queries because of lower overhead while tcp is used for larger/zone transfers

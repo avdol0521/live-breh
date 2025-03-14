@@ -19,3 +19,7 @@ tags:
 - [[my git cheatsheet]] 
 - ill document tool installation with apt and pip later. i already have everything setup in my kali machine so im feeling kinda lazy. and ill look into pimpmykali later as well.
 - 192.168.10.0/30
+
+
+
+
