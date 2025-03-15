@@ -67,6 +67,7 @@ tags:
 	- `sort filename -o filename` 
 		- saves the sorted file into itself
 	- can do `-u` to get unique lines as well
+## other stuff:
 - `passwd`
 	- changes the pass for the specified user 
 	- `sudo passwd root` 
