@@ -33,4 +33,4 @@ Cmnd_Alias NETWORK_CMDS = /sbin/ifconfig, /sbin/ip, /usr/sbin/traceroute
 
 Cmnd_Alias ADMIN_CMDS = /usr/sbin/useradd, /usr/sbin/userdel, /usr/sbin/visudo
 ```
-- then just do `username ALL=(ALL) NOPASSWD group/aliasname` 
+- then just do `username ALL=(ALL) NOPASSWD: group/aliasname` 
