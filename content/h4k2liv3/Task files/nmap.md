@@ -124,3 +124,148 @@ read how [[UDP]] works first
 	- can also get help about specific scripts with `--script-help <script-name>` 
 	- finding scripts:
 		- a list of scripts are stored in the script.db file located in `/usr/share/nmap/scripts/script.db`. can grep specific service related scripts from that :D
+```zsh title:"cat /usr/share/nmap/scripts/script.db | grep 'http'" fold
+┌──(root㉿kali)-[~]
+└─# cat /usr/share/nmap/scripts/script.db | grep "http"
+Entry { filename = "http-adobe-coldfusion-apsa1301.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-affiliate-id.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-apache-negotiation.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-apache-server-status.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-aspnet-debug.nse", categories = { "discovery", "vuln", } }
+Entry { filename = "http-auth-finder.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-auth.nse", categories = { "auth", "default", "safe", } }
+Entry { filename = "http-avaya-ipoffice-users.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-awstatstotals-exec.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-axis2-dir-traversal.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-backup-finder.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-barracuda-dir-traversal.nse", categories = { "auth", "exploit", "intrusive", } }
+Entry { filename = "http-bigip-cookie.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-brute.nse", categories = { "brute", "intrusive", } }
+Entry { filename = "http-cakephp-version.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-chrono.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-cisco-anyconnect.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-coldfusion-subzero.nse", categories = { "exploit", } }
+Entry { filename = "http-comments-displayer.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-config-backup.nse", categories = { "auth", "intrusive", } }
+Entry { filename = "http-cookie-flags.nse", categories = { "default", "safe", "vuln", } }
+Entry { filename = "http-cors.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-cross-domain-policy.nse", categories = { "external", "safe", "vuln", } }
+Entry { filename = "http-csrf.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-date.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-default-accounts.nse", categories = { "auth", "discovery", "intrusive", } }
+Entry { filename = "http-devframework.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-dlink-backdoor.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-dombased-xss.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-domino-enum-passwords.nse", categories = { "auth", "intrusive", } }
+Entry { filename = "http-drupal-enum-users.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-drupal-enum.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-enum.nse", categories = { "discovery", "intrusive", "vuln", } }
+Entry { filename = "http-errors.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-exif-spider.nse", categories = { "intrusive", } }
+Entry { filename = "http-favicon.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-feed.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-fetch.nse", categories = { "safe", } }
+Entry { filename = "http-fileupload-exploiter.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-form-brute.nse", categories = { "brute", "intrusive", } }
+Entry { filename = "http-form-fuzzer.nse", categories = { "fuzzer", "intrusive", } }
+Entry { filename = "http-frontpage-login.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-generator.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-git.nse", categories = { "default", "safe", "vuln", } }
+Entry { filename = "http-gitweb-projects-enum.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-google-malware.nse", categories = { "discovery", "external", "malware", "safe", } }
+Entry { filename = "http-grep.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-headers.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-hp-ilo-info.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-huawei-hg5xx-vuln.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-icloud-findmyiphone.nse", categories = { "discovery", "external", "safe", } }
+Entry { filename = "http-icloud-sendmsg.nse", categories = { "discovery", "external", "safe", } }
+Entry { filename = "http-iis-short-name-brute.nse", categories = { "brute", "intrusive", } }
+Entry { filename = "http-iis-webdav-vuln.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-internal-ip-disclosure.nse", categories = { "discovery", "safe", "vuln", } }
+Entry { filename = "http-joomla-brute.nse", categories = { "brute", "intrusive", } }
+Entry { filename = "http-jsonp-detection.nse", categories = { "discovery", "safe", "vuln", } }
+Entry { filename = "http-litespeed-sourcecode-download.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-ls.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-majordomo2-dir-traversal.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-malware-host.nse", categories = { "malware", "safe", } }
+Entry { filename = "http-mcmp.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-method-tamper.nse", categories = { "auth", "vuln", } }
+Entry { filename = "http-methods.nse", categories = { "default", "safe", } }
+Entry { filename = "http-mobileversion-checker.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-ntlm-info.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-open-proxy.nse", categories = { "default", "discovery", "external", "safe", } }
+Entry { filename = "http-open-redirect.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-passwd.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-php-version.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-phpmyadmin-dir-traversal.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-phpself-xss.nse", categories = { "fuzzer", "intrusive", "vuln", } }
+Entry { filename = "http-proxy-brute.nse", categories = { "brute", "external", "intrusive", } }
+Entry { filename = "http-put.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-qnap-nas-info.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-referer-checker.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-rfi-spider.nse", categories = { "intrusive", } }
+Entry { filename = "http-robots.txt.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-robtex-reverse-ip.nse", categories = { "discovery", "external", "safe", } }
+Entry { filename = "http-robtex-shared-ns.nse", categories = { "discovery", "external", "safe", } }
+Entry { filename = "http-sap-netweaver-leak.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-security-headers.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-server-header.nse", categories = { "version", } }
+Entry { filename = "http-shellshock.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-sitemap-generator.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-slowloris-check.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-slowloris.nse", categories = { "dos", "intrusive", } }
+Entry { filename = "http-sql-injection.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-stored-xss.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-svn-enum.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-svn-info.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-title.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-tplink-dir-traversal.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-trace.nse", categories = { "discovery", "safe", "vuln", } }
+Entry { filename = "http-traceroute.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-trane-info.nse", categories = { "discovery", "safe", "version", } }
+Entry { filename = "http-unsafe-output-escaping.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-useragent-tester.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-userdir-enum.nse", categories = { "auth", "intrusive", } }
+Entry { filename = "http-vhosts.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-virustotal.nse", categories = { "external", "malware", "safe", } }
+Entry { filename = "http-vlcstreamer-ls.nse", categories = { "discovery", "safe", } }
+Entry { filename = "http-vmware-path-vuln.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2006-3392.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2009-3960.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2010-0738.nse", categories = { "auth", "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2010-2861.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2011-3192.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2011-3368.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2012-1823.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2013-0156.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-vuln-cve2013-6786.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "http-vuln-cve2013-7091.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2014-2126.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2014-2127.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2014-2128.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2014-2129.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2014-3704.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2014-8877.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2015-1427.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-vuln-cve2015-1635.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2017-1001000.nse", categories = { "safe", "vuln", } }
+Entry { filename = "http-vuln-cve2017-5638.nse", categories = { "vuln", } }
+Entry { filename = "http-vuln-cve2017-5689.nse", categories = { "auth", "exploit", "vuln", } }
+Entry { filename = "http-vuln-cve2017-8917.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-vuln-misfortune-cookie.nse", categories = { "intrusive", "vuln", } }
+Entry { filename = "http-vuln-wnr1000-creds.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "http-waf-detect.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-waf-fingerprint.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-webdav-scan.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "http-wordpress-brute.nse", categories = { "brute", "intrusive", } }
+Entry { filename = "http-wordpress-enum.nse", categories = { "discovery", "intrusive", } }
+Entry { filename = "http-wordpress-users.nse", categories = { "auth", "intrusive", "vuln", } }
+Entry { filename = "http-xssed.nse", categories = { "discovery", "external", "safe", } }
+Entry { filename = "https-redirect.nse", categories = { "version", } }
+Entry { filename = "ip-https-discover.nse", categories = { "default", "discovery", "safe", } }
+Entry { filename = "membase-http-info.nse", categories = { "discovery", "safe", } }
+Entry { filename = "riak-http-info.nse", categories = { "discovery", "safe", } }
+```
+		
+		- can also search with `ls -l /usr/share/nmap/scripts/*http*` ig
+		- 

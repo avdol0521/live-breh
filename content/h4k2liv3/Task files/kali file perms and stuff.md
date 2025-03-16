@@ -2,7 +2,6 @@
 title: kali file perms and stuff
 tags:
   - fetus
-  - feature/filter
 ---
 ## perm types:
 - `r`- read perm
