@@ -7,3 +7,4 @@ tags:
 - [[kali common commands and stuff]]
 - [[sudoers file]] 
 - [[python server creation]] 
+- [[random linux trivia]] 

@@ -32,9 +32,23 @@ less common scan types:
 - TCP Null Scans (`-sN`)
 - TCP FIN Scans (`-sF`)
 - TCP Xmas Scans (`-sX`)
-### TCP Connect Scans:
-
-
+### TCP Connect Scans (-sT):
+go read what [[TCP]] is and how the [[Three Way handshake]] works first
+ 
+- TCP Connect scans work by tryna connect to all specified TCP ports and sees if they're open or not
+### TCP SYN Scans (-sS):
+- is the default scan used by nmap if run with **sudo** perms. otherwise it uses a normal TCP scan
+- also known as half-open or stealth scans
+- something i copy pasted from tryhackme:
+	- `SYN scans can also be made to work by giving Nmap the CAP_NET_RAW, CAP_NET_ADMIN and CAP_NET_BIND_SERVICE capabilities; however, this may not allow many of the NSE scripts to run properly.`
+#### advantages:
+- unlike the TCP scan it doesnt do a full [[Three Way handshake]]. instead, after receiving the SYN/ACK response from the server it sends an RST packet back instead of an ACK packet
+	- its stealthier
+		- often isnt logged by older IDSs and apps listening on open ports cuz its standard practice to only log a connection once its been fully established (isnt the case with modern IDS solutions tho)
+	- significantly faster since it doesnt need to deal with TCP connection establishment and termination for every port
+#### disadvantages: 
+- needs **sudo** perm to create raw packets
+- unstable services might get brought down
 ## random mentions:
 ---
-- ICMP (or "ping") scanning
+- [[ICMP]] (or "ping") scanning
