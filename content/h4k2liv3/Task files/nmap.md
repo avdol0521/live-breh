@@ -122,3 +122,5 @@ read how [[UDP]] works first
 			- args are separated with commas 
 			- list of scripts and their arguments: https://nmap.org/nsedoc/
 	- can also get help about specific scripts with `--script-help <script-name>` 
+	- finding scripts:
+		- a list of scripts are stored in the script.db file located in `/usr/share/nmap/scripts/script.db`. can grep specific service related scripts from that :D
