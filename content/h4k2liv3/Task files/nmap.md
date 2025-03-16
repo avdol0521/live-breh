@@ -267,5 +267,4 @@ Entry { filename = "membase-http-info.nse", categories = { "discovery", "safe", 
 Entry { filename = "riak-http-info.nse", categories = { "discovery", "safe", } }
 ```
 		
-		- can also search with `ls -l /usr/share/nmap/scripts/*http*` ig
-		- 
+- can also search with `ls -l /usr/share/nmap/scripts/*http*` ig
