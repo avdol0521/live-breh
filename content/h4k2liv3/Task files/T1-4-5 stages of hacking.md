@@ -24,6 +24,7 @@ tags:
 				- example: (for esp32io)
 				- ![[wappalyzer example.png]]
 			- [[nmap]] 
+			- [[rustscan]] 
 			- whatweb (similar to wappalyzer)
 			- [[netcat]] 
 ## Enumeration and scanning:

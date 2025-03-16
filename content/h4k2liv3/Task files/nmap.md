@@ -268,3 +268,19 @@ Entry { filename = "riak-http-info.nse", categories = { "discovery", "safe", } }
 ```
 		
 - can also search with `ls -l /usr/share/nmap/scripts/*http*` ig
+#### adding scripts:
+	
+```zsh
+sudo wget -O /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap/scripts/<script-name>.nse
+```
+	
+```zsh
+nmap --script-updatedb
+```
+
+### firewall evasion:
+- just do `-Pn` 
+	- tells nmap to not ping before scanning. helps with targets like windows 
+- can also use `-f` to fragment packets. makes it less likely to get detected
+	- `--mtu n` 
+		- can specify the size of packets like this as well. **must be multiples of 8**
