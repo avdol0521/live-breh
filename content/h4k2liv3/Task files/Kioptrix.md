@@ -408,3 +408,115 @@ Post-scan script results:
 |_  32768/tcp: 192.168.0.107
 Nmap done: 1 IP address (1 host up) scanned in 355.33 seconds
 ```
+
+## dirbuster results: 
+
+```zsh fold title:idk
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Mon Mar 17 11:41:53 EDT 2025
+--------------------------------
+
+http://192.168.33.26:80
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/
+/icons/
+/manual/
+/manual/mod/
+/usage/
+/icons/small/
+/mrtg/
+/manual/mod/mod_perl/
+/manual/mod/mod_ssl/
+
+Dirs found with a 403 response:
+
+/cgi-bin/
+/doc/
+
+
+--------------------------------
+Files found during testing:
+
+Files found with a 200 responce:
+
+/test.php
+/usage/usage_202503.html
+/usage/usage_200909.html
+/mrtg/mrtg.html
+/mrtg/unix-guide.html
+/mrtg/nt-guide.html
+/mrtg/cfgmaker.html
+/mrtg/indexmaker.html
+/mrtg/faq.html
+/mrtg/reference.html
+/mrtg/forum.html
+/mrtg/contrib.html
+/mrtg/mrtg-rrd.html
+/mrtg/logfile.html
+/mrtg/mibhelp.html
+/mrtg/squid.html
+/mrtg/webserver.html
+/manual/mod/mod_ssl/ssl_overview.html
+/manual/mod/mod_ssl/index.html
+/manual/mod/mod_ssl/ssl_intro.html
+/manual/mod/mod_ssl/ssl_reference.html
+/manual/mod/mod_ssl/ssl_compat.html
+/manual/mod/mod_ssl/ssl_howto.html
+/manual/mod/mod_ssl/ssl_faq.html
+/manual/mod/mod_ssl/ssl_glossary.html
+
+
+--------------------------------
+```
+## nikto results: 
+
+```zsh title:"nikto -h http://192.168.33.26" fold
+┌──(root㉿kali)-[~]
+└─# nikto -h http://192.168.33.26 
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          192.168.33.26
++ Target Hostname:    192.168.33.26
++ Target Port:        80
++ Start Time:         2025-03-17 10:51:27 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
++ /: Server may leak inodes via ETags, header found with file /, inode: 34821, size: 2890, mtime: Wed Sep  5 23:12:46 2001. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-1418
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ /: Apache is vulnerable to XSS via the Expect header. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3918
++ OpenSSL/0.9.6b appears to be outdated (current is at least 3.0.7). OpenSSL 1.1.1s is current for the 1.x branch and will be supported until Nov 11 2023.
++ Apache/1.3.20 appears to be outdated (current is at least Apache/2.4.54). Apache 2.2.34 is the EOL for the 2.x branch.
++ mod_ssl/2.8.4 appears to be outdated (current is at least 2.9.6) (may depend on server version).
++ OPTIONS: Allowed HTTP Methods: GET, HEAD, OPTIONS, TRACE .
++ /: HTTP TRACE method is active which suggests the host is vulnerable to XST. See: https://owasp.org/www-community/attacks/Cross_Site_Tracing
++ Apache/1.3.20 - Apache 1.x up 1.2.34 are vulnerable to a remote DoS and possible code execution.
++ Apache/1.3.20 - Apache 1.3 below 1.3.27 are vulnerable to a local buffer overflow which allows attackers to kill any process on the system.
++ Apache/1.3.20 - Apache 1.3 below 1.3.29 are vulnerable to overflows in mod_rewrite and mod_cgi.
++ mod_ssl/2.8.4 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell.
++ ///etc/hosts: The server install allows reading of any system file by adding an extra '/' to the URL.
++ /usage/: Webalizer may be installed. Versions lower than 2.01-09 vulnerable to Cross Site Scripting (XSS). See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0835
++ /manual/: Directory indexing found.
++ /manual/: Web server manual found.
++ /icons/: Directory indexing found.
++ ERROR: Error limit (20) reached for host, giving up. Last error: 
++ Scan terminated: 13 error(s) and 18 item(s) reported on remote host
++ End Time:           2025-03-17 11:01:09 (GMT-4) (582 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+```
+
+## metasploit results:
+
+```
+msf6 auxiliary(scanner/smb/smb_version) > run
+[*] 192.168.33.26:139     -   Host could not be identified: Unix (Samba 2.2.1a)
+[*] 192.168.33.26:        - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+```
+

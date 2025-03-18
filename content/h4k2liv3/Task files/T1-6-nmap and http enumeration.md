@@ -1,8 +1,8 @@
 ---
-title: nmap and http+https enumeration
+title: nmap and http enumeration
 tags:
   - fetus
 ---
 - [[nmap]] 
 - [[http enumeration]] 
-- [[Kioptrix]] 
+- [[Kioptrix]]  

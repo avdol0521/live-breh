@@ -9,4 +9,5 @@ tags:
 - [[T1-3-kali linux stuff]] 
 - [[T1-4-5 stages of hacking]] 
 - [[T1-5-Recon]] 
-- [[T1-6-nmap and http+https enumeration]] 
+- [[T1-6-nmap and http enumeration]] 
+- [[T1-7-smb, and ssh enumeration + researching vulnerabilities]] 
