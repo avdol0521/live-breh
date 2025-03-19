@@ -520,3 +520,18 @@ msf6 auxiliary(scanner/smb/smb_version) > run
 [*] Auxiliary module execution completed
 ```
 
+## ssh enum documentation:
+	
+```c
+ssh 10.0.2.15
+Unable to negotiate with 10.0.2.15 port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
+```
+
+```
+ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 10.0.2.15
+
+```
+
+
+- smbclient
+- smbmap

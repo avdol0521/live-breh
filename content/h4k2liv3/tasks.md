@@ -10,4 +10,7 @@ tags:
 - [[T1-4-5 stages of hacking]] 
 - [[T1-5-Recon]] 
 - [[T1-6-nmap and http enumeration]] 
+	- [[Kioptrix]]
+	- [[tools]] 
 - [[T1-7-smb, and ssh enumeration + researching vulnerabilities]] 
+- [[T1-8-Academy]] 

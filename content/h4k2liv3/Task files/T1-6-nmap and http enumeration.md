@@ -5,4 +5,3 @@ tags:
 ---
 - [[nmap]] 
 - [[http enumeration]] 
-- [[Kioptrix]]  
