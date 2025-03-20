@@ -7,3 +7,7 @@ tags:
 - [[hydra]] 
 ## wordlist generation
 - [[crunch]] 
+## directory fuzzing
+- [[ffuf]]
+- [[dirbuster]] 
+- [[gobuster]] 
