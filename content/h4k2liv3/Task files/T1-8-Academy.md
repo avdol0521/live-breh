@@ -385,4 +385,4 @@ cd73502828457d15655bbd7a63fb0bc8:student
 ## getting a shell through `http://10.0.2.6/academy/my-profile.php`:
 
 - get [[pentestMonkey-PHP_reverse_shell]] and modify it as needed and upload it
-- 
+- use [[netcat]] 

@@ -6,7 +6,9 @@ tags:
 ## brute forcing
 - [[hydra]] 
 ## wordlist generation
-- [[crunch]] 
+- [[crunch]]
+## SMB stuff: 
+
 ## directory fuzzing
 - [[ffuf]]
 - [[dirbuster]] 
