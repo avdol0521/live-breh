@@ -11,3 +11,7 @@ tags:
 - [[ffuf]]
 - [[dirbuster]] 
 - [[gobuster]] 
+## hash cracking 
+- [[hash-identifier]] 
+- [[john]]
+- [[hashcat]] 
