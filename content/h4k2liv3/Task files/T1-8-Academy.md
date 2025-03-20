@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 ## nmap results
-	
+- `nmap -sV -O 10.0.2.6`:
 ```js title:"nmap -sV -O 10.0.2.6" fold
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-18 17:44 EDT
 Nmap scan report for 10.0.2.6
@@ -25,7 +25,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 18.25 seconds
 ```
-	
+- `nmap -T4 -p- -A 10.0.2.6`:
 ```js title:"nmap -T4 -p- -A 10.0.2.6" fold
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-18 17:36 EDT
 Nmap scan report for 10.0.2.6
@@ -74,7 +74,7 @@ Nmap done: 1 IP address (1 host up) scanned in 30.35 seconds
 	
 
 ## dir fuzzing results:
-	
+- dirbuster results:
 ```c title:"dirbuster results" fold
 DirBuster 1.0-RC1 - Report
 http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
@@ -260,7 +260,7 @@ Files found with a 401 responce:
 - `http://10.0.2.6/academy/index.php` seems interesting. need student creds to login. will have to find that elsewhere i think. imma try enumming ftp next
 - `http://10.0.2.6/phpmyadmin/index.php` might wanna try SQLi. simple payloads didnt work tho
 ## ftp files:
-	
+- note.txt:
 ``` title:note.txt fold
 Hello Heath !
 Grimmie has setup the test website for the new academy.
@@ -280,7 +280,7 @@ We can always adapt it to our needs.
 
 -jdelta
 ```
-	
+- note.txt info:
 ``` title:"note.txt info" fold
 StudentRegno: 10201321  
 studentPhoto: ''  
@@ -294,7 +294,7 @@ cgpa: 7.60
 creationdate: 2021-05-29 14:36:56  
 updationDate: ''
 ```
-	
+- note.txt non blank info:
 ``` title:"note.txt non blank info" fold
 StudentRegno: 10201321  
 password: cd73502828457d15655bbd7a63fb0bc8  
@@ -303,7 +303,7 @@ pincode: 777777
 cgpa: 7.60  
 creationdate: 2021-05-29 14:36:56
 ```
-	
+- possible unames:
 ``` title:"possible unames" fold
 Rum Ham 
 Heath
@@ -313,7 +313,7 @@ jdelta
 	
 
 ## cracking the pass with [[hashcat]]:
-
+- `hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt`:
 ```c title:"hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt" fold
 hashcat (v6.2.6) starting
 
@@ -377,7 +377,7 @@ Hardware.Mon.#1..: Util:  1%
 Started: Thu Mar 20 11:31:41 2025
 Stopped: Thu Mar 20 11:32:00 2025
 ```
-
+- cracked pass:
 ```c title:"cracked pass" fold
 cd73502828457d15655bbd7a63fb0bc8:student
 ```
@@ -386,3 +386,4 @@ cd73502828457d15655bbd7a63fb0bc8:student
 
 - get [[pentestMonkey-PHP_reverse_shell]] and modify it as needed and upload it
 - use [[netcat]] 
+- 
