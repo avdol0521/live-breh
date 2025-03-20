@@ -15,3 +15,7 @@ tags:
 - [[hash-identifier]] 
 - [[john]]
 - [[hashcat]] 
+## shells:
+- [[pentestMonkey-PHP_reverse_shell]] 
+## port listeners:
+- [[netcat]] 

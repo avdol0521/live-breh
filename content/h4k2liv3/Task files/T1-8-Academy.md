@@ -254,6 +254,11 @@ Files found with a 401 responce:
 ```
 	
 
+## directory notes: 
+
+- `http://10.0.2.6/academy/admin/` seems to have default admin:admin credentials tf
+- `http://10.0.2.6/academy/index.php` seems interesting. need student creds to login. will have to find that elsewhere i think. imma try enumming ftp next
+- `http://10.0.2.6/phpmyadmin/index.php` might wanna try SQLi. simple payloads didnt work tho
 ## ftp files:
 	
 ``` title:note.txt fold
@@ -376,3 +381,8 @@ Stopped: Thu Mar 20 11:32:00 2025
 ```c title:"cracked pass" fold
 cd73502828457d15655bbd7a63fb0bc8:student
 ```
+
+## getting a shell through `http://10.0.2.6/academy/my-profile.php`:
+
+- get [[pentestMonkey-PHP_reverse_shell]] and modify it as needed and upload it
+- 
