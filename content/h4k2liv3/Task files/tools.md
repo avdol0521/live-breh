@@ -19,6 +19,7 @@ tags:
 - [[hashcat]] 
 ## shells:
 - [[pentestMonkey-PHP_reverse_shell]] 
+- [[pentestMonkey-oneLinerBashShell]] 
 ## port listeners:
 - [[netcat]] 
 ## file uploading:
