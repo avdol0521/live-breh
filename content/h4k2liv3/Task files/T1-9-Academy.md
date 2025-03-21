@@ -283,7 +283,7 @@ We can always adapt it to our needs.
 -jdelta
 ```
 	
-- note.txt info:
+- note.txt separated info:
 ``` title:"note.txt info" fold
 StudentRegno: 10201321  
 studentPhoto: ''  
@@ -298,7 +298,7 @@ creationdate: 2021-05-29 14:36:56
 updationDate: ''
 ```
 	
-- note.txt non blank info:
+- note.txt separated info with the blank parameters taken out:
 ``` title:"note.txt non blank info" fold
 StudentRegno: 10201321  
 password: cd73502828457d15655bbd7a63fb0bc8  
