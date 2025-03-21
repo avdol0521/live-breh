@@ -1,5 +1,5 @@
 ---
-title: "T1-8-Academy"
+title: Academy
 tags:
   - fetus
 ---
