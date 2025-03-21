@@ -21,3 +21,6 @@ tags:
 - [[pentestMonkey-PHP_reverse_shell]] 
 ## port listeners:
 - [[netcat]] 
+## file uploading:
+- [[python server creation]]
+- [[wget]] 
