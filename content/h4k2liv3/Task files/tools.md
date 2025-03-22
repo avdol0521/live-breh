@@ -1,7 +1,6 @@
 ---
-title: "tools"
-tags:
-  - fetus
+title: tools
+tags: []
 ---
 ## brute forcing:
 - [[hydra]] 
@@ -24,13 +23,13 @@ tags:
 - [[gobuster]] 
 ## hash cracking:
 - [[hash-identifier]] 
-- [[john]]
+- [[john the ripper]]
 - [[hashcat]] 
 ## shells:
 - [[pentestMonkey-PHP_reverse_shell]] 
 - [[pentestMonkey-oneLinerBashShell]] 
-## port listeners:
+## port listeners: 
 - [[netcat]] 
-## file uploading:
+## file uploading: 
 - [[python server creation]]
 - [[wget]] 

@@ -201,6 +201,7 @@ jp
 	
 - sidenote: `jp` loves java 
 - connecting to ssh didnt work with the id_rsa since we dont know a password. doesnt seem like anything else can be done with [[NFS]] or [[SSH]] for now. lets do some [[http enumeration]] 
+## http enum:
 ### root web pages:
 - `http://10.0.2.7:80/`:
 <img src="dev-port80.png">
