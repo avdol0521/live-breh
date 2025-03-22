@@ -5,7 +5,7 @@ tags:
 ---
 ## usage: 
 
-```zsh title:usage fold
+```sh
 ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://10.0.2.6/FUZZ
 ```
 - `-w` specifies the wordlist to use 

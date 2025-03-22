@@ -22,8 +22,11 @@ tags:
 - [[HTTPS]] 
 - [[ICMP]] 
 #### file transfer related:
-- [[FTP]]
+- [[FTP]] 
 - [[SFTP]] 
+- [[NFS]] 
+- [[RPC]] 
+- [[SMB]] 
 #### email service related:
 - [[SMTP]] 
 - [[POP3]] 

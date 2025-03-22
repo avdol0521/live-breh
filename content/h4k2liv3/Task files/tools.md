@@ -3,17 +3,26 @@ title: "tools"
 tags:
   - fetus
 ---
-## brute forcing
+## brute forcing:
 - [[hydra]] 
-## wordlist generation
+- [[fcrackzip]] 
+## wordlist generation:
 - [[crunch]]
-## SMB stuff: 
+## SMB stuff:
 
-## directory fuzzing
+## file sharing services and stuff:
+- [[showmount]] 
+- [[FTP]] 
+- [[mount]] 
+## file compression/decompression: 
+- [[gzip]]
+- [[gunzip]]
+- [[unzip]] 
+## directory fuzzing:
 - [[ffuf]]
 - [[dirbuster]] 
 - [[gobuster]] 
-## hash cracking 
+## hash cracking:
 - [[hash-identifier]] 
 - [[john]]
 - [[hashcat]] 
