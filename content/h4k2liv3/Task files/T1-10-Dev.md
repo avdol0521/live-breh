@@ -346,6 +346,7 @@ I_love_java
 ```
 jeanpaul:I_love_java
 ```
+## getting a shell and then root:
 - theres nothing on the home directory. gonna check what jeanpaul can use as sudo with `sudo -l`
 ```sh
 jeanpaul@dev:~$ sudo -l
