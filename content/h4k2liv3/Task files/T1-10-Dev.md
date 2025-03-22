@@ -245,7 +245,6 @@ server-status
 <img src="DevPort80App.png">
 - found a `bolt.db` file in the database folder but there wasnt anything in there 
 - lots of stuff in the `config` file 
-
 <img src="DevPort80ConfigFile.png">
 
 - `config.yml` file: [[Dev-Port80AppConfigYmlFile]] 
