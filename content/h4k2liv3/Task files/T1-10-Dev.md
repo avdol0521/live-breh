@@ -263,6 +263,7 @@ bolt
 ```
 - possible passwords:
 ```
+java101
 I_love_java
 ```
 - there wasnt anything interesting in the `permissions.yml` file 
