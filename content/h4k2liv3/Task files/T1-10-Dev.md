@@ -203,10 +203,11 @@ jp
 - connecting to ssh didnt work with the id_rsa since we dont know a password. doesnt seem like anything else can be done with [[NFS]] or [[SSH]] for now. lets do some [[http enumeration]] 
 ### root web pages:
 - `http://10.0.2.7:80/`:
-![[dev-port80.png]]
+<img src="dev-port80.png">
 
 - `http://10.0.2.7:8080/`:
-![[Dev-port8080.png]]
+<img src="Dev-port8080.png"> 
+
 ## dirbusting results: 
 - `ffuf -u http://10.0.2.7:8080/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt > ffuf8080.txt`
 	- [[Dev-ffufPort8080Result]] 
@@ -230,18 +231,23 @@ server-status
 
 ### port `8080` web pages:
 - `http://10.0.2.7:8080/dev/`:
-![[DevPort8080DevDirectory.png]]
+<img src="DevPort8080DevDirectory.png">
+
 - `http://10.0.2.7:8080/server-status`: (information disclosure spotted)
-![[DevPort8080Server-status.png]]
+<img src="DevPort8080Server-status.png">
+
 ### port `80` web pages: 
 - got a redirect to `http://10.0.2.7/public/bolt/userfirst` when i tried `http://10.0.2.7:80/public/`. its the same as the server status on port 8080 with the same information disclosure. 
 - `http://10.0.2.7/src` shows a directory called `Site` went into it and found a file that shows a black page when clicked on. inspected the source and it was blank as well
-![[DevPort80Src.png]]
+<img src="DevPort80Src.png">
+
 - `http://10.0.2.7/app/`: (seems interesting)
-![[DevPort80App.png]]
+<img src="DevPort80App.png">
 - found a `bolt.db` file in the database folder but there wasnt anything in there 
 - lots of stuff in the `config` file 
-![[DevPort80ConfigFile.png]] 
+
+<img src="DevPort80ConfigFile.png">
+
 - `config.yml` file: [[Dev-Port80AppConfigYmlFile]] 
 - damn got some juicy stuff in the yml file: 
 ```yml 
@@ -361,4 +367,4 @@ sudo zip $TF /etc/hosts -T -TT 'sh #'
 sudo rm $TF
 ```
 - we got ROOOOOOOOOOOTTTTTTTTTTTTT
-![[DevHasBeenRooted.png]]
+<img src="DevHasBeenRooted.png">
