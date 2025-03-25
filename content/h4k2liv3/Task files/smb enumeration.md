@@ -34,8 +34,4 @@ run
 [*] 192.168.33.26:        - Scanned 1 of 1 hosts (100% complete)
 [*] Auxiliary module execution completed
 ```
-### [[smbclient]] workflow documentation: 
-	
-```
-smbclient
-```
+### [[smbclient]] workflow documentation:  

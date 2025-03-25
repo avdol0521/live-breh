@@ -8,7 +8,7 @@ tags: []
 ## wordlist generation:
 - [[crunch]]
 ## SMB stuff:
-
+- [[smbclient]] 
 ## file sharing services and stuff:
 - [[showmount]] 
 - [[FTP]] 

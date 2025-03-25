@@ -227,3 +227,78 @@ Host script results:
 
 Nmap done: 1 IP address (1 host up) scanned in 519.16 seconds
 ```
+- did `smbclient -L ////blog.thm// -N` to list out available shares as well 
+```sh
+        Sharename       Type      Comment
+        ---------       ----      -------
+        print$          Disk      Printer Drivers
+        BillySMB        Disk      Billy's local SMB Share
+        IPC$            IPC       IPC Service (blog server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+
+        Server               Comment
+        ---------            -------
+
+        Workgroup            Master
+        ---------            -------
+        WORKGROUP            BLOG
+```
+- did `smbclient \\\\blog.thm\\BillySMB` and got in. got 3 files using get 
+```
+smb: \> ls
+  .                                   D        0  Tue May 26 14:17:05 2020
+  ..                                  D        0  Tue May 26 13:58:23 2020
+  Alice-White-Rabbit.jpg              N    33378  Tue May 26 14:17:01 2020
+  tswift.mp4                          N  1236733  Tue May 26 14:13:45 2020
+  check-this.png                      N     3082  Tue May 26 14:13:43 2020
+```
+- `check-this.png`: 
+![[blogCheckThis.png]]
+- scanned it and got `https://qrgo.page.link/M6dE` which leads to `https://www.youtube.com/watch?v=eFTLKWw542g` 
+
+## http enum:
+- added `blog.thm` to the `/etc/hosts` file first to get the cms working
+- possible unames: 
+```
+billy joel
+Billy
+karen wheeler
+```
+- `/robots.txt` is accessible:
+```sh
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+```
+- `/wp-admin/admin-ajax.php` was blank. theres just a `0` in there and nothing else
+- dont have the creds for `/wp-admin/` yet. can try bruteforcing with rockyou ig
+### dirbusting results: 
+- used ffuf 
+```
+/
+login 
+rss 
+feed
+atom
+wp-content
+welcome
+admin
+w
+n
+rss2
+wp-includes
+no
+N
+W
+rdf
+page1
+Welcome 
+'
+dashboard
+note 
+%20
+we
+2020 
+wp-admin
+```
+
