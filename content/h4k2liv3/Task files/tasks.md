@@ -14,3 +14,5 @@ tags:
 - [[T1-8-Kioptrix]] 
 - [[T1-9-Academy]] 
 - [[T1-10-Dev]] 
+- [[T1-11-BlackPearl]] 
+- [[T1-12-Bolt]] 

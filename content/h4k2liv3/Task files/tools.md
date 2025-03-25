@@ -28,8 +28,13 @@ tags: []
 ## shells:
 - [[pentestMonkey-PHP_reverse_shell]] 
 - [[pentestMonkey-oneLinerBashShell]] 
+- [[python-tty-shell]] 
+## file tools: 
+- [[linpeas.sh]] 
 ## port listeners: 
 - [[netcat]] 
 ## file uploading: 
 - [[python server creation]]
 - [[wget]] 
+## DNS enumeration
+- [[dnsrecon]] 
