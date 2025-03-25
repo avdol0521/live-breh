@@ -220,3 +220,4 @@ bolt
 ```
 boltadmin123
 ```
+- checked the documentation and found out there's a login at `IP:PORT/bolt/login`. logged in with the creds and got the CMS version `3.7.1`. got the EDB-ID of the RCE vuln as well. used the RCE module and exploited the machine, got a root shell and used find to get and cat `find.txt`. was child's play. gonna do [[T1-13-blog]] next
