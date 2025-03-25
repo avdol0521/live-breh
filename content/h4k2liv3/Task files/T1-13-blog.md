@@ -26,7 +26,7 @@ Service Info: Host: BLOG; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 1040.13 seconds
 ```
-
+	
 - `nmap -p- -Pn -A -T4 10.10.76.139`:
 ```sh fold title:"nmap -p- -Pn -A -T4 10.10.76.139"
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-25 03:36 EDT
@@ -85,7 +85,7 @@ HOP RTT       ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 1093.43 seconds
 ```
-
+	
 ## [[smb]] enumeration: 
 - `nmap --script=*smb* 10.10.76.139 -p 139,445`:
 ```sh fold title:"nmap --script=*smb* 10.10.76.139 -p 139,445"
@@ -227,6 +227,7 @@ Host script results:
 
 Nmap done: 1 IP address (1 host up) scanned in 519.16 seconds
 ```
+	
 - did `smbclient -L ////blog.thm// -N` to list out available shares as well 
 ```sh
         Sharename       Type      Comment
@@ -243,6 +244,7 @@ Reconnecting with SMB1 for workgroup listing.
         ---------            -------
         WORKGROUP            BLOG
 ```
+	
 - did `smbclient \\\\blog.thm\\BillySMB` and got in. got 3 files using get 
 ```
 smb: \> ls
@@ -252,6 +254,7 @@ smb: \> ls
   tswift.mp4                          N  1236733  Tue May 26 14:13:45 2020
   check-this.png                      N     3082  Tue May 26 14:13:43 2020
 ```
+	
 - `check-this.png`: 
 ![[blogCheckThis.png]]
 - scanned it and got `https://qrgo.page.link/M6dE` which leads to `https://www.youtube.com/watch?v=eFTLKWw542g` 
@@ -264,12 +267,14 @@ billy joel
 Billy
 karen wheeler
 ```
+	
 - `/robots.txt` is accessible:
 ```sh
 User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
 ```
+	
 - `/wp-admin/admin-ajax.php` was blank. theres just a `0` in there and nothing else
 - dont have the creds for `/wp-admin/` yet. can try bruteforcing with rockyou ig
 ### dirbusting results: 

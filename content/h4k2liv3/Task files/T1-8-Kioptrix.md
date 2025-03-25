@@ -529,9 +529,8 @@ Unable to negotiate with 10.0.2.15 port 22: no matching key exchange method foun
 
 ```
 ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 10.0.2.15
-
 ```
 
 
-- smbclient
-- smbmap
+- smbclient 
+- smbmap 
