@@ -1,0 +1,12 @@
+---
+title: "THM attackbox terminal thing"
+tags:
+  - fetus
+---
+```
+1. Tools are located in /root/Desktop/Tools & /opt/
+2. Webshells are located in /usr/share/webshells
+3. Wordlists are located in /usr/share/wordlists
+4. READMEs are located in /root/Instructions
+5. To use Empire & Starkiller, read the following file: /root/Instructions/empire-starkiller.txt
+```

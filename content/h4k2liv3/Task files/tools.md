@@ -9,6 +9,8 @@ tags: []
 - [[crunch]]
 ## SMB stuff:
 - [[smbclient]] 
+- [[smbmap]] 
+- [[smbget]] 
 ## file sharing services and stuff:
 - [[showmount]] 
 - [[FTP]] 
