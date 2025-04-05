@@ -1,5 +1,5 @@
 ---
-title: "T1-13-blog"
+title: blog
 tags:
   - fetus
 ---
@@ -656,8 +656,31 @@ require_once(ABSPATH . 'wp-settings.php');
 wordpressuser:LittleYellowLamp90!@
 ```
 - `ltrace`
+- path: `/usr/sbin/checker` 
 
 ---
 - lxc 
 - lxd 
 - smb escapinh
+- xxd
+- strings
+- tcpdump
+```sh title:"before"
+www-data@blog:/tmp$ ltrace /usr/sbin/checker     
+ltrace /usr/sbin/checker
+getenv("admin")                                  = nil
+puts("Not an Admin")                             = 13
+Not an Admin
++++ exited (status 0) +++
+```
+
+```sh title:"after"
+www-data@blog:/tmp$ ltrace /usr/sbin/checker
+ltrace /usr/sbin/checker
+getenv("admin")                                  = "test"
+setuid(0)                                        = -1
+system("/bin/bash"
+```
+- check how this works
+- db access
+- shuvo ahmed sanim

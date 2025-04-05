@@ -31,6 +31,7 @@ tags: []
 - [[pentestMonkey-PHP_reverse_shell]] 
 - [[pentestMonkey-oneLinerBashShell]] 
 - [[python-tty-shell]] 
+- [[rmOneLinerShell]] 
 ## file tools: 
 - [[linpeas.sh]] 
 ## port listeners: 
