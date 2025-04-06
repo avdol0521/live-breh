@@ -118,7 +118,7 @@ c0ldd:9876543210
 c0ldd:cybersecurity
 ```
 - gonna try ssh again 
-- yup works
+- yup works 
 - got `user.txt` 
 - can run these as `sudo` 
 ```
