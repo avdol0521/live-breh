@@ -19,4 +19,5 @@ tags:
 - [[T1-13-blog]] 
 - [[T1-14-colddbox]] 
 - [[T1-15-FUEL CMS]] 
-- [[T1-10-SQHell]] 
+- [[T1-16-SQHell]] 
+- [[T1-17-BasicPentesting]] 
