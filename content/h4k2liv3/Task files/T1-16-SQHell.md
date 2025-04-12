@@ -3,6 +3,14 @@ title: SQHell
 tags:
   - fetus
 ---
+## flag 1:
+## flag 2:
+## flag 3:
+## flag 4:
+## flag 5:
+
+
+
 ## boolean based SQLi on `/register/user-check?username=admin`: 
 - request:
 ```
