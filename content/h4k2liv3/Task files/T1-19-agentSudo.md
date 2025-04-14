@@ -321,7 +321,7 @@ DesKel a.k.a Agent R
 - zip pass: alien 
 - steg pass: Area51 
 - other agent: james 
-- ssh pass: hackerrules 
+- ssh pass: hackerrules!
 - user flag: b03d975e8c92a7c04146cfa7a5a313c7
 - incident name: roswell alien autopsy
 - CVE: CVE-2019-14287
