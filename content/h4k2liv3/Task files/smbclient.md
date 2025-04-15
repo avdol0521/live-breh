@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 ## usage: 
-```
+```sh
 smbclient -L \\\\ipORhost\\
 ```
 - can do the `sharename` at the end as well
