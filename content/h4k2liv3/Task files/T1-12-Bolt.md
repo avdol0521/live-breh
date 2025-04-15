@@ -1,5 +1,5 @@
 ---
-title: "T1-12-Bolt"
+title: Bolt
 tags:
   - fetus
 ---
@@ -214,7 +214,7 @@ Nmap done: 1 IP address (1 host up) scanned in 34.19 seconds
 ```
 bolt
 ```
-- `http://10.10.98.63:8000/entry/message-for-it-department`:
+- `http://10.10.98.63:8000/entry/message-for-it-department`:<br>
 ![[boltMessageForIT.png]]
 - password:
 ```

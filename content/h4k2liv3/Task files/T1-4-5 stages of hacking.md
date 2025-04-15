@@ -3,6 +3,7 @@ title: 5 stages of hacking
 tags:
   - fetus
 ---
+# INCOMPLETE NOTE STFU IM TOO LAZY TO FINISH TS
 ## Recon:
 - you accumulate as much information about the target as you can in this stage
 - two main ways you can do this:

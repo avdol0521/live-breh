@@ -79,7 +79,7 @@ Connection: keep-alive
 
 
 ```
-- intruder result:
+- intruder result: <br>
 ![[agentSudoIntruderResult.png]]
 - theres only one redirect. everything else is the same 
 - `http-response` for user-agent `C`: 
@@ -145,7 +145,7 @@ Agent R
 Agent J
 ```
 ## ssh and ftp bruteforcing: 
-- `hydra -l chris -P /usr/share/wordlists/rockyou.txt ssh://10.10.196.182:22` while that runs imma run an ftp bruteforce as well since the room asks for it. oh and all nmap ftp scripts as well cuz why tf not 
+- `hydra -l chris -P /usr/share/wordlists/rockyou.txt ssh://10.10.196.182:22` while that runs imma run an ftp bruteforce as well since the room asks for it. oh and all nmap ftp scripts as well cuz why tf not <br>
  ![[agentSudoBruteforceSS.png]]
  - fun lmao. we already got the pass from ftp as well
  - found creds: 
@@ -174,9 +174,9 @@ Agent C
 ```
 - hmmmmmmm seems like all these alien photos are somehow fake and theres a real photo stored at /home/agentJ or something. and theres apparently user creds stored in these images. time to use steghide babyyyyy 
 - the two pictures: 
-	- `cutie.png`:
+	- `cutie.png`:<br>
 	![[cutie.png]]
-	- `cute-alien.jpg`:
+	- `cute-alien.jpg`:<br>
 	![[cute-alien.jpg]]
 	(the fake transparency really pisses me off smh)
 
@@ -216,7 +216,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ```
 8702.zip/To_agentR.txt:$zip2$*0*1*0*4673cae714579045*67aa*4e*61c4cf3af94e649f827e5964ce575c5f7a239c48fb992c8ea8cbffe51d03755e0ca861a5a3dcbabfa618784b85075f0ef476c6da8261805bd0a4309db38835ad32613e3dc5d7e87c0f91c0b5e64e*4969f382486cb6767ae6*$/zip2$:To_agentR.txt:8702.zip:_cutie.png.extracted/8702.zip
 ```
-- explanation of the hash string: (gonna look into this more)
+- explanation of the hash string: (gonna look into this more)<br>
 	![[agentSudoHashStringExplanation.png]]
 - `john z2jHash.txt --wordlist=/usr/share/wordlists/rockyou.txt`:
 ```
@@ -288,13 +288,13 @@ User james may run the following commands on agent-sudo:
     (ALL, !root) /bin/bash
 ```
 - theres an image as well called `Alien_autospy.jpg`. need to reverse search it on yandex and get the incident name
-- `Alien_autospy.jpg`: (the misspelled 'autospy' bothers me so much omfg)
+- `Alien_autospy.jpg`: (the misspelled 'autospy' bothers me so much omfg)<br>
 ![[Alien_autospy.jpg]]
 - ooooh roswell ufo incident :0
 - lets get to the priv esc part now
 - googled it and found a CVE `CVE-2019-14287`:
 - [[CVE-2019-14287]]
-- priv esc:
+- priv esc:<br>
 ![[agentSudoPrivEsc.png]]
 - why it works: 
 	- james can run bash as any user other than root. and the user id `-1` in this case gets stored in binary with the `two's complement` rule, which then turns it into the maximum value of a 32 bit integer:

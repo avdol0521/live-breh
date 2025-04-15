@@ -125,8 +125,8 @@ Nmap done: 1 IP address (1 host up) scanned in 1334.73 seconds
 - the `/var` directory is shared. lets [[mount]] it
 - `mount -t nfs 10.10.56.98:/var /mnt/kenobi`
 - lets see whats in there 
-- `tree -L 3 /mnt/kenobi`
-```sh
+- `tree -L 3 /mnt/kenobi`<br>
+```sh fold title:"treeOutput"
 /mnt/kenobi
 ├── backups
 │   └── apt.extended_states.0
@@ -362,10 +362,11 @@ Nmap done: 1 IP address (1 host up) scanned in 1334.73 seconds
         ├── index.html
         └── robots.txt
 ```
+
 - lots of stuff. but i wanna get my hands on that `id_rsa` real quick first 
 - moved it into `/var/tmp` with the vulnerability and copied it into my system. lets see if i can login with this or if it asks for a passphrase
 - yaaay got in as kenobi. lets priv esc
-- got `user.txt`:
+- got `user.txt`:<br>
 ```
 d0b0f3f53b6caa532a83915e19224899
 ```

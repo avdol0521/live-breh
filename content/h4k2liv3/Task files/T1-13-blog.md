@@ -255,7 +255,7 @@ smb: \> ls
   check-this.png                      N     3082  Tue May 26 14:13:43 2020
 ```
 	
-- `check-this.png`: 
+- `check-this.png`: <br>
 ![[blogCheckThis.png]]
 - scanned it and got `https://qrgo.page.link/M6dE` which leads to `https://www.youtube.com/watch?v=eFTLKWw542g` 
 - `Alice-White-Rabbit.jpg` seemed innocent enough but when i ran it through steghide it said it was a rabbit hole lmao. gonna do http enum now
@@ -539,7 +539,7 @@ kwheel
 - shit needs password. ig ill let it run for now
 - found a pass for kwheel its `cutiepie1`
 - im gonna test around in the editor 
-- doesnt seem like theres any XSS 
+- doesnt seem like theres any XSS <br>
 ![[blogXSSfailed.png]]
 - i dont really have any image webshells on hand rn
 - ig ill go back to metasploit 
@@ -548,6 +548,7 @@ kwheel
 ```
 hydra -L unames.txt -P /usr/share/wordlists/rockyou.txt blog.thm http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fblog.thm%2Fwp-admin%2F&testcookie=1:F=The password you entered" -I -t 54 -v
 ```
+<br>
 ![[blogMeterpreter.png]]
 - catted the `wp-config.php` 
 ```

@@ -1,5 +1,5 @@
 ---
-title: "T1-22-startup"
+title: startup
 tags:
   - fetus
 ---

@@ -50,14 +50,14 @@ s = 115
 104 = h
 101 = e
 
-- burp setup:
-![[SQHell burp1.png]]
-![[SQHell burp2.png]]
-![[SQHell burp3.png]]
-- results after filtering for false:
+- burp setup:<br>
+![[SQHell burp1.png]]<br>
+![[SQHell burp2.png]]<br>
+![[SQHell burp3.png]]<br>
+- results after filtering for false:<br>
 ![[SQHell burpClusterBombResults.png]]
 - after cross referencing it with an ASCII table, the DB name turns out to be `sqhell_3` 
-- tried to convert the python script to something in http but clearly didnt work cuz o dont know how to write proper http stuff **yet**. ill just use the python script. oh and also heres a peek at what i tried to do:
+- tried to convert the python script to something in http but clearly didnt work cuz o dont know how to write proper http stuff **yet**. ill just use the python script. oh and also heres a peek at what i tried to do:<br>
 ![[SQHell failedAttempt.png]]
 - used a modified version of [[SQHellPythonScript1]]. given below:
 ```py fold title:"mSkibidi.py"
@@ -210,7 +210,7 @@ print(f"\nColumns: {columns}")
 			- `id`
 			- `password`
 			- `username`
-- an image of the output cuz why not:
+- an image of the output cuz why not:<br>
 ![[SQHellPyOutput1.png]]
 
 - another python script to get the flag column from the flag table:

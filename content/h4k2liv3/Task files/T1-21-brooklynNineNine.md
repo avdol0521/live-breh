@@ -72,7 +72,8 @@ Nmap done: 1 IP address (1 host up) scanned in 1326.05 seconds
 ### version enum: 
 
 ## http enum: 
-theres this image in the root page: ![[brooklynNineNineRootImage.png]]
+theres this image in the root page: <br>
+![[brooklynNineNineRootImage.png]]
 - theres a comment in the page source that says: 
 ```
 <!-- Have you ever heard of steganography? -->

@@ -1,5 +1,5 @@
 ---
-title: "T1-11-BlackPearl"
+title: BlackPearl
 tags:
   - fetus
 ---

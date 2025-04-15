@@ -1,5 +1,5 @@
 ---
-title: "T1-20-rootme"
+title: rootme
 tags:
   - fetus
 ---
