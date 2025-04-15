@@ -430,6 +430,7 @@ Done!
 ```
 - we got `rwx` perms for `print.sh`
 - we dont have any perms for `planner.sh` although that doesnt matter at this point 
+## priv esc to root
 - SOOOOOOOOOOOOOOOOO we got a file we have full access to that gets ran as root every one minutes 
 - i just `echo`'d `/tmp/shell5.elf` into `/etc/print.sh` (i created another payload called `shell5.elf`with msfvenom and uploaded it at `/tmp` that listens on a different port than the one the current meterpreter session is using)
 - and then i ran another listener in [[metasploit]] that listens on that port 
