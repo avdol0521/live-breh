@@ -8,4 +8,4 @@ tags:
 links to key files:
 - [[H4k2liv3]] 
 <br>
-<img src="vorp2.png" style="text-align:center;">
+<img src="vorp2.png" style="margin-left:25%;">
