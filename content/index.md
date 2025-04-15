@@ -7,3 +7,5 @@ tags:
 
 links to key files:
 - [[H4k2liv3]] 
+<br>
+![[schizo.png]]
