@@ -73,7 +73,7 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 1166.51 seconds
 ```
 ## ftp enum: 
-- logged in as `anonymous` and found 3 files 
+- logged in as `anonymous` and found a directory and 2 files
 ```sh
 drwxrwxrwx    2 65534    65534        4096 Nov 12  2020 ftp
 -rw-r--r--    1 0        0          251631 Nov 12  2020 important.jpg
