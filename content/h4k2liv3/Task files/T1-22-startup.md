@@ -119,7 +119,7 @@ Maya
 ![[startupHttpPopup.png]]
 #### dirbusting results: 
 - `feroxbuster --url http://10.10.18.117/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
-```http
+```sh
 200      GET       20l      113w      808c http://10.10.18.117/
 301      GET        9l       28w      312c http://10.10.18.117/files => http://10.10.18.117/files/
 200      GET        1l       40w      208c http://10.10.18.117/files/notice.txt
