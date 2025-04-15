@@ -190,7 +190,7 @@ Someone asked what our main ingredient to our spice soup is today. I figured I c
 #### aight lets get back to what we were doing 
 - got that pcap file. followed the streams, there seems to be a terminal log over tcp on stream 7
 - stream7:
-```sh
+```sh fold title:"stream7"
 Linux startup 4.4.0-190-generic #220-Ubuntu SMP Fri Aug 28 23:02:15 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
  17:40:21 up 20 min,  1 user,  load average: 0.00, 0.03, 0.12
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
