@@ -22,7 +22,7 @@ tags: []
 ## directory fuzzing:
 - [[ffuf]]
 - [[dirbuster]] 
-- [[gobuster]] 
+- [[feroxbuster]] 
 ## hash cracking:
 - [[hash-identifier]] 
 - [[john the ripper]]
