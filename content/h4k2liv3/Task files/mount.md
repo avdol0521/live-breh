@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 ## usage: 
-```
+```sh
 sudo mount -t nfs <target-ip>:/exported/directory /mnt/nfs
 ```
 - needs `sudo` perms to run

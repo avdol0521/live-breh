@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 ## usage
-```
+```sh
 crunch 1 4 abcdefghijklmnopqrstuvwxyz -o wordlist.txt
 ```
 - `1 4` : specifies the min and max length

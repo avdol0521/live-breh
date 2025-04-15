@@ -104,7 +104,7 @@ alek
 - gonna try bruteforcing ssh with rockyou with this uname
 - while thats running. im gonna look into what that `domain` thing is
 ## dns enumeration:
-- seems like he used a tool called [[dnsrecon]] 
+- seems like he used a tool called [[dnsenum]] 
 - `dnsrecon -r 127.0.0.0/24 -n 192.168.33.81 -d skibidi`
 ```sh
 [*] Performing Reverse Lookup from 127.0.0.0 to 127.0.0.255

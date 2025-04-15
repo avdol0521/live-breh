@@ -5,7 +5,7 @@ tags:
 ---
 ## usage: 
 
-```
+```sh
 hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 - `-m` sets the hash mode. 0 here is MD5 in this case 

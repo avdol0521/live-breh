@@ -40,4 +40,4 @@ tags: []
 - [[python server creation]]
 - [[wget]] 
 ## DNS enumeration
-- [[dnsrecon]] 
+- [[dnsenum]] 

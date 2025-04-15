@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 ## usage:
-```
+```sh
 hydra -l username -P passlist ssh://IP:PORT
 ```
 - `-l` for known username 

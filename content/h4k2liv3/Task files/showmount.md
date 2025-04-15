@@ -6,7 +6,7 @@ tags:
 - used for [[NFS]] 
 ## usage:
 
-```
+```sh
 showmount -e IP
 ```
 - `-e` shows all exports as a list

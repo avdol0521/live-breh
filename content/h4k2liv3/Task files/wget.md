@@ -5,6 +5,6 @@ tags:
 ---
 ## usage:
 
-```
+```sh
 wget http://IPorDomain:port/filenameOrPath
 ```
