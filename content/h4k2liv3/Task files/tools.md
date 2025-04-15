@@ -32,6 +32,10 @@ tags: []
 - [[pentestMonkey-oneLinerBashShell]] 
 - [[python-tty-shell]] 
 - [[rmOneLinerShell]] 
+## metasploit_framework:
+- [[metasploit]] 
+- [[msfvenom]] 
+- [[meterpreter]] 
 ## file tools: 
 - [[linpeas.sh]] 
 ## port listeners: 
