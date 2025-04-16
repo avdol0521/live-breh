@@ -26,3 +26,4 @@ tags:
 - [[T1-20-rootme]] 
 - [[T1-21-brooklynNineNine]]
 - [[T1-22-startup]] 
+- [[T1-23-gamingServer]] 
