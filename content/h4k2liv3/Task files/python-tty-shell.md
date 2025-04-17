@@ -4,5 +4,9 @@ tags:
   - fetus
 ---
 ```sh
-python -c 'import pty; pty.spawn("/bin/bash")' 
+python3 -c 'import pty; pty.spawn("/bin/bash")' 
+```
+
+```sh
+stty raw -echo && fg
 ```
