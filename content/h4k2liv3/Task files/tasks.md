@@ -27,3 +27,4 @@ tags:
 - [[T1-21-brooklynNineNine]]
 - [[T1-22-startup]] 
 - [[T1-23-gamingServer]] 
+- [[T1-24-Blue]] 
