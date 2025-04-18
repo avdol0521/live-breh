@@ -50,3 +50,5 @@ Host script results:
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Thu Apr 17 13:03:06 2025 -- 1 IP address (1 host up) scanned in 433.33 seconds
 ```
+- ran `ms17_010` and got the shell as admin 
+- did `dir C:\flag*.txt \s \b` to find all the flags 
