@@ -40,6 +40,7 @@ tags: []
 - [[linpeas.sh]] 
 ## port listeners: 
 - [[netcat]] 
+- [[pwncat-cs]] 
 ## file uploading: 
 - [[python server creation]]
 - [[wget]] 

@@ -52,3 +52,21 @@ OS and Service detection performed. Please report any incorrect results at https
 ```
 - ran `ms17_010` and got the shell as admin 
 - did `dir C:\flag*.txt \s \b` to find all the flags 
+---
+- stuff to look into:
+	- registry, NTFS perms, UAC and service model 
+	- cmdlets, scripting, remoting (WinRM), how attackers use PS for post exploitation 
+	- [[SMB]], share misconfigs, Null SMB sessions, impacket 
+	- Active directory fundamentals
+		- domains, forests, trusts, users/groups, GPOs and how Kerberos/LDAP fit together
+	- windows enum:
+		- whoami
+		- WMIC
+		- PowerView
+		- bloodhound
+	- SUID equivilants for priv esc like weak service perms, Unquoted Paths, DLL hijacks, registry ACLs
+	- persistance mechanisms:
+		- Practice startup folder, scheduled tasks, WMI event subscription, Run keys and service creation 
+	- lateral movement:
+		- explore Pass-the-Hash/Pass-the-Ticket, PS-Remoting, WMI, RDP and SMB relay
+	- windows exploit dev and public e
