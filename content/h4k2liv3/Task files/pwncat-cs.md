@@ -34,12 +34,12 @@ if [ ! -d "$HOME/.pyenv" ]; then
   echo "[*] Installing pyenv 〜(￣▽￣〜)"
   curl https://pyenv.run | bash
 else
-  echo "[*] pyenv already installed ¯\\_(ツ)_/¯"
+  echo '[*] pyenv already installed ¯\_(ツ)_/¯'
 fi
 
 # Append pyenv config to shell config if not already there
 if ! grep -q 'pyenv init' "$SHELL_CONFIG"; then
-  echo "[*] Patching $SHELL_CONFIG with pyenv config (^人^)"
+  echo '[*] Patching $SHELL_CONFIG with pyenv config (⌐■_■)'
   {
     echo ''
     echo '# >>> pyenv config >>>'
