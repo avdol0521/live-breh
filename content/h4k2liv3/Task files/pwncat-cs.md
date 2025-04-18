@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 ## installation:
-- the script below sets up [[pwncat-cs]] for use inside the project folder you'll be working inside. pwncat-cs relies on an older python version, so its sets up the environment so that it automatically switches to that python upon entering the project folder, making [[pwncat-cs]] usable. so yeah, get inside a project folder first
+- the script below sets up `pwncat-cs` for use inside the project folder you'll be working inside. `pwncat-cs` relies on an older python version, so its sets up the environment so that it automatically switches to that python version upon entering the project folder, making `pwncat-cs` usable. so yeah, get inside a project folder first
 ```sh
 nano install_pwncat_cs.sh
 ```
