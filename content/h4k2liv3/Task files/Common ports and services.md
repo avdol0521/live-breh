@@ -37,6 +37,7 @@ tags:
 - [[SSH]] 
 - [[Telnet]] 
 - [[RDP]] 
+- [[MSRDP]]
 #### other notable ones:
 - [[NTP]] 
 - [[SNMP]] 

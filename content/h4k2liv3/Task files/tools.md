@@ -44,5 +44,9 @@ tags: []
 ## file uploading: 
 - [[python server creation]]
 - [[wget]] 
-## DNS enumeration
+## DNS enumeration:
 - [[dnsenum]] 
+## compilers:
+- [[gcc]] 
+## RDP:
+- 
