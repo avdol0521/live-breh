@@ -70,3 +70,5 @@ OS and Service detection performed. Please report any incorrect results at https
 	- lateral movement:
 		- explore Pass-the-Hash/Pass-the-Ticket, PS-Remoting, WMI, RDP and SMB relay
 	- windows exploit dev and public e
+	- powershell
+	- 
