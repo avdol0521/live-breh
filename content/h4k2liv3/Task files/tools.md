@@ -49,4 +49,4 @@ tags: []
 ## compilers:
 - [[gcc]] 
 ## RDP:
-- 
+- [[remmina]] 

