@@ -44,6 +44,7 @@ tags: []
 ## file uploading: 
 - [[python server creation]]
 - [[wget]] 
+- [[certutil]] 
 ## DNS enumeration:
 - [[dnsenum]] 
 ## compilers:

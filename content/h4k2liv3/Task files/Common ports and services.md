@@ -43,3 +43,11 @@ tags:
 - [[SNMP]] 
 - [[LDAP]] 
 - [[LDAPS]] 
+#### windows services:
+- [[microsoft-ds (SMB)]]
+- [[netbios-ssn]] 
+- [[ms-wbt-server (RDP)]]
+- [[LDAP]] 
+- [[Global Catalog LDAP]]
+- [[WinRM (HTTP)]] (https exists as well)
+- [[Kerberos]]
