@@ -44,10 +44,11 @@ tags: []
 ## port listeners: 
 - [[netcat]] 
 - [[pwncat-cs]] 
-## file uploading: 
+## file uploading/downloading (ish): 
 - [[python server creation]]
 - [[wget]] 
 - [[certutil]] 
+- [[curl]] 
 ## DNS enumeration:
 - [[dnsenum]] 
 ## compilers:
