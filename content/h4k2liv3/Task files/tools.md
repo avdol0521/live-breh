@@ -2,7 +2,7 @@
 title: tools
 tags: []
 ---
-\## recon:
+## recon:
 - [[nmap]] 
 - [[amass]] 
 ## brute forcing:
@@ -56,3 +56,5 @@ tags: []
 - [[remmina]] 
 ## database stuff:
 - [[mysql]] 
+## specific commands for later:
+- [[base64ListDecoderOneLiner]] 
