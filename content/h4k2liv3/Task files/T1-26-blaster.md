@@ -1,5 +1,5 @@
 ---
-title: "T1-26-blaster"
+title: blaster
 tags:
   - fetus
 ---

