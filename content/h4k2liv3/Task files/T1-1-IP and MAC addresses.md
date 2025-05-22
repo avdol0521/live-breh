@@ -12,4 +12,4 @@ both are used to identify devices but have different use cases. ill go into in d
 	- [[ND]] (neighbor discovery): similar shit just for IPv6
 #### differences:
 - IP addresses are global identifiers used to communicate between networks while MAC addresses are local identifiers used to communicate directly between devices on a local network.
-- IP addresses can change but MACs cant (they can just usually they dont coz the usual normie user doesnt need to change it like ever)
+- IP addresses can change but MACs cant (they can be spoofed but usually they dont need to be coz the usual normie user doesnt need to change it like ever)

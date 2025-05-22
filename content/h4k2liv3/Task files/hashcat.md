@@ -6,7 +6,7 @@ tags:
 ## usage: 
 
 ```sh
-hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+hashcat -m 0 -a 0 hash.txt /usr/share/seclists/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
 ```
 - `-m` sets the hash mode. 0 here is MD5 in this case 
 - `-a` sets the attack mode

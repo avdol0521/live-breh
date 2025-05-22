@@ -3,8 +3,7 @@ title: Academy
 tags:
   - fetus
 ---
-## nmap results
-
+ ## nmap results
 - `nmap -sV -O 10.0.2.6`:
 ```js title:"nmap -sV -O 10.0.2.6" fold
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-18 17:44 EDT
@@ -26,7 +25,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 18.25 seconds
 ```
-
+	
 - `nmap -T4 -p- -A 10.0.2.6`:
 ```js title:"nmap -T4 -p- -A 10.0.2.6" fold
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-18 17:36 EDT
@@ -257,7 +256,6 @@ Files found with a 401 responce:
 	
 
 ## directory notes: 
-
 - `http://10.0.2.6/academy/admin/` seems to have default admin:admin credentials tf
 - `http://10.0.2.6/academy/index.php` seems interesting. need student creds to login. will have to find that elsewhere i think. imma try enumming ftp next
 - `http://10.0.2.6/phpmyadmin/index.php` might wanna try SQLi. simple payloads didnt work tho

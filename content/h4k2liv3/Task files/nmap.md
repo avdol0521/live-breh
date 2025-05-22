@@ -14,6 +14,7 @@ tags:
 - `-oN` (saves the output in the normal format)
 - `-oG` (saves the output in a greppable format)
 - `-A` (Aggressive mode. enables OS detection, service detection, script scanning and traceroute)
+- `-iL`
 - `-T{0-5}` (timing. used to speed up the scan speed. levels from 0 to 5. higher speeds are noiser and can incur errors)
 - `-p` {port} (tells nmap to scan that specific port)
 	- `-p {port-port}` (tells nmap to scan a range of ports)

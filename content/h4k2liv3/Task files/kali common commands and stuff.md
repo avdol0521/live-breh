@@ -21,6 +21,9 @@ tags:
 - `tcpdump` 
 	- `tcpdump -i (interface such as eth0) -n`
 - `ifconfig` and `iwconfig` (self explanatory)
+- traceroute to see route
+- nslookup to see dns lookup info 
+- route to see routing table 
 ## navigation and stuff:
 - `cd` shortcuts:
 	- can do just / for root
@@ -29,15 +32,22 @@ tags:
 	- `ls -lah`
 		- lists all files with [[kali file perms and stuff]] listed out including hidden files 
 		- the `-h` switch shows human readable sizes instead of bytes
+	- ls -i
 - `mkdir` 
 	- `mkdir -p path` 
 		- `-p` makes parents directories as well if they dont exist 
+	- mkdir -p /dirname{1..9} 
 - `cp`
 	- `cp -r /source /destination` 
 		- `-r` lets you copy subdirectories and stuff as well
 - `find`
 	- `find /path -name "filename"`
 	- theres other switches as well. like -type as well
+	- -iname ignores case sensitivity
+- find
+	- finds shit from a db of saved paths 
+	- needs the database to be updated to find new stuff 
+		- do updatedb to update the database
 - `grep` 
 	- `grep -r "text" /path` 
 		- `-r` searches through subdirectories 
@@ -48,25 +58,39 @@ tags:
 		- can do this as well to combine files :D
 ## file manipulation stuff: 
 - `touch` to create files 
+	- touch filename{1..20} creates 20 files with indexes
 - `nano` or `vim` or `mousepad` or `code` to use as an editor
 - `echo` 
 	- can be used with `>` or `>>` or other stuff with pipes n shit to do more advanced stuff. can do the same with `cat` as well
 - `>` to insert and `>>` to append
 - `sed` (stream editor)
-	- `sed -i 's/(the text you wanna replace)/(the text you wanna replace it with)/g' filename`
-		- `-i` edits the file in place
-		- `s` stands for substitute
-			- can specify the line number before `s` to specify which line number to apply the substitution to
+	- `sed -i 's/(the text you wanna replace)/(the text you wanna replace it with)/g' filename` 
+		- `-i` edits the file in place 
+		- `s` stands for substitute 
+			- can specify the line number before `s` to specify which line number to apply the substitution to 
 		- `g` is global. basically applies the change to all occurrences 
 	- `sed 'nd' filename` 
-		- `n` specify the line you wanna delete like 2 if you wanna delete the 2nd line
-		- `d` specifies that you wanna delete it
-	- `sed '/^$/d' file`
-		- removes empty lines
+		- `n` specify the line you wanna delete like 2 if you wanna delete the 2nd line 
+		- `d` specifies that you wanna delete it 
+	- `sed '/^$/d' file` 
+		- removes empty lines 
 - `sort`
 	- `sort filename -o filename` 
 		- saves the sorted file into itself
 	- can do `-u` to get unique lines as well
+- head -5 filename 
+- tail -5 filename 
+- split -l 10
+- ln -s filename newfilename
+## system commands 
+- env to view all env variables
+- service start/stop/restart
+	- apache2 for webservers
+- jobs to see suspended jobs
+- fg %ID to foreground suspended jobs
+- bg %ID to background job
+- nohup to give a running process immortality hqhqhqhq
+- proc cpuinfo
 ## other stuff:
 - `passwd`
 	- changes the pass for the specified user 
@@ -74,7 +98,7 @@ tags:
 - `xfwm4`
 	- to troubleshoot UI tweaking
 - `rm` variants:
-	- `rm -r dirname`
+	- `rm -r dirname` 
 - [[my git cheatsheet]] 
 - ill document tool installation with apt and pip later. i already have everything setup in my kali machine so im feeling kinda lazy. and ill look into pimpmykali later as well.
 - 192.168.10.0/30

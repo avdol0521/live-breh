@@ -12,15 +12,15 @@ tags:
 - what it does: sends raw bits over a medium like cables, hubs and other stuff
 - mainly focuses on the signal transmission itself not the data
 #### Data link layer: 
-- what it does: takes care of the node to node connection and correction plus framing as well through switches anode data transfer, error detected bridges 
+- what it does: takes care of the node to node connection and correction plus framing as well through switches and node to node data transfer, error detected bridges 
 - has two sub layers: (will look into it later)
-	- Media access control (MAC)
-	- Logical link control (LLC)
+	- Media access control (MAC) 
+	- Logical link control (LLC) 
 #### Network layer: 
-- what this one does: handles packet routing and stuff like logical addressing (for example IP addresses). basically determines the best path for data to travel from source to destination
+- what this one does: handles packet routing and stuff like logical addressing (for example IP addresses). basically determines the best path for data to travel from source to destination 
 #### Transport layer: 
 - takes care of the data transfer along with error recovery, segmentation and flow control 
-- uses two key protocols:
+- uses two key protocols: 
 	- [[TCP]] : connection oriented, reliable data transfer 
 	- [[UDP]] : connectionless but less reliable data transfer 
 #### Session layer: 

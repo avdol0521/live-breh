@@ -6,8 +6,7 @@ tags:
 the process of dividing a network into sub networks hence the name. makes it more manageable and efficient 
 
 read [[IP]] before getting into this 
-
-#### some trivia and terminology to know beforehand:
+and terminology to know beforehand:
 - modern networks use [[CIDR Notation]] 
 - network bits stay unaffected
 - subnet range
@@ -19,6 +18,12 @@ read [[IP]] before getting into this
 
 ## creating a subnet:
 ### yea:
+# 192.168.72.0 
+# 192.168.72.255
+# 1100 0000 . 1010 1000 . 0011 1010 . 0000 0000
+- unique network address 
+- hosts 
+- broadcast ID
 - each IPv4 has four octets 
 	- octets are divided into network and host portions
 	- classes: 
@@ -58,6 +63,7 @@ read [[IP]] before getting into this
 |        28        |             4              |           16            | 255.255.255.240 |            4            |                  14                   |        |            |
 |        29        |             5              |           32            | 255.255.255.248 |            3            |                   6                   |        |            |
 |        30        |             6              |           64            | 255.255.255.252 |            2            |                   2                   |        |            |
+|                  |                            |                         |                 |                         |                                       |        |            |
 	- /31 is used for point to point links like router connections. but its unusable for hosts since theres only 2 IPs
 	- /32 is used to identify a single device
 
@@ -174,3 +180,57 @@ read [[IP]] before getting into this
 		- network: 10.0.0.64
 		- usable: 10.0.0.65 <--> 10.0.0.62
 		- broadcast: 10.0.0.63
+
+
+
+
+
+
+
+
+
+# GET BITS FROM CIDR NOTATION 
+# IDENTIFY WHICH OCTATE YOU'RE WORKING WITH
+# GET SUBNET MASK 
+# GET BLOCK SIZE (256 - OCTATE VALUE)
+# GET VALID HOST AMOUNT (BLOCK SIZE - 2)
+# IDENTIFY SUBNETS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 10.0.0.0
+# 10.255.255.255
+
+
+# 10.0.2.3/12
+
+# 1111 1111 . 1111 0000 . 0000 0000 . 0000 0000
+# SUBNET MASK - 255.240.0.0
+# block size 256 - 240 = 16 
+# Borrowed Bits - 4 
+# subnet amount : $2^{4}$ = 16 subnets
+# possible host amount per subnet : $2^{host-bit}$ = $2^{4}$ = 16 
+# valid host amount = possible amount - 2 = 14
+# first subnet: 
+## network ID 10.0.0.0 
+## valid host range: 10.0.0.1 - 10.15.255.254
+## broadcast ID 10.15.255.255
+# 2nd subnet: 
+## network ID: 10.16.0.0
+## valid host range: 10.16.0.1 - 10.31.255.254
+## broadcast ID: 10.31.255.255
+# 3rd subnet: 
+## network ID: 10.32.0.0
+## valid host range: 10.32.0.1 - 10.47.255.254
+## broadcast ID: 10.47.255.255

@@ -3,7 +3,7 @@ title: tasks
 tags:
   - child
 ---
-## hover over links to view sub topics btw
+## hover over links to view sub topics btw 
 - [[T1-1-IP and MAC addresses]] 
 - [[T1-2-OSI and TCP-IP model + subnetting]] 
 - [[T1-3-kali linux stuff]] 
@@ -32,3 +32,6 @@ tags:
 - [[T1-26-blaster]] 
 - [[T1-27-relevant]] 
 - [[T1-28-ICA1]] 
+- [[T1-29-DC1]] 
+- [[T1-30-Hack_me_please]] 
+- [[T1-31-symfonos]] 

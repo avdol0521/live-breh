@@ -25,7 +25,7 @@ tags:
 			- group has read and execute perms 
 			- other users have the same perms as the group  
 	3. file owner 
-	4. file creator
+	4. file group
 	5. file size in bytes 
 	6. date and time of last modification or creation
 	7. file name

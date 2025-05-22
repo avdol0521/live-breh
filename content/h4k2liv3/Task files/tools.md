@@ -26,10 +26,11 @@ tags: []
 - [[ffuf]]
 - [[dirbuster]] 
 - [[feroxbuster]] 
-## hash cracking:
+## hash related:
 - [[hash-identifier]] 
 - [[john the ripper]]
 - [[hashcat]] 
+- [[hashrat]] 
 ## shells:
 - [[pentestMonkey-PHP_reverse_shell]] 
 - [[pentestMonkey-oneLinerBashShell]] 
@@ -50,7 +51,7 @@ tags: []
 - [[certutil]] 
 - [[curl]] 
 ## DNS enumeration:
-- [[dnsenum]] 
+- [[dnsrecon]] 
 ## compilers:
 - [[gcc]] 
 ## RDP:

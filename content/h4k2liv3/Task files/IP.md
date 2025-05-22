@@ -7,6 +7,7 @@ tags:
 - types:
 	- IPv4:
 		- its a 32 bit numeric address. its written in decimal like 192.168.0.1 where each part can range from 0 to 255
+		- 1111 1111. 1111 1111. 1111 1111. 1111 1111
 		- can provide around 4.3 billion unique addresses. the reason we havent completely ran out of IPv4 IP addresses is because of stuff like private IP addresses, Dynamic IP addresses etc. more on that shit later
 	- IPv6:
 		- its 128 bit instead of 32 and its written in hexadecimal, seperated by colons 
