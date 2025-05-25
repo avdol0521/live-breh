@@ -3,7 +3,7 @@ title: well hello there
 tags:
   - main
 ---
-### this is Abdullah0521's obsidian vault. at least the one you can access publicly 
+### hey there! this is Vorpidi's notekeeping vault where he keeps his notes and stuff :D
 
 links to key files:
 - [[H4k2liv3]] 

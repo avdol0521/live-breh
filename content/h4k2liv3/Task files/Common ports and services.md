@@ -38,6 +38,9 @@ tags:
 - [[Telnet]] 
 - [[RDP]] 
 - [[MSRDP]]
+#### DB related:
+- [[mysql & postgreSQL]] 
+- [[NoSQL (mongoDB or Redis)]] 
 #### other notable ones:
 - [[NTP]] 
 - [[SNMP]] 

@@ -182,6 +182,6 @@ if (defined('TESTING'))
 ```
 root:mememe
 ```
-- got a different shell through [[rmOneLinerShell]] as well to make my life easier
+- got a different shell through [[oneLinerRmShell]] as well to make my life easier
 - already have the root creds so i switched to root
 - got the flags

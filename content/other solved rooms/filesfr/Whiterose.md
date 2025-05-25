@@ -163,7 +163,7 @@ Jemmy Laurel:
 - `test:test` gave us this: <br>
 ![[WhiteroseSettingsUpdate.png]]
 - reflects the password. lets see what happens if i put in a reverse shell, specificall in there while listening
-	- [[pentestMonkey-oneLinerBashShell]] didnt work. gonna try [[pentestMonkey-PHP_reverse_shell]] 
+	- [[oneLinerBashShell]] didnt work. gonna try [[pentestMonkey-PHP_reverse_shell]] 
 	- didnt work. maybe try with a valid user???
 	- nothing works. im gonna have a looksie at the writeup again
 	- yapping about SSTI

@@ -455,7 +455,7 @@ total 4
 -rwxr-xr-- 1 grimmie administrator 112 May 30  2021 backup.sh
 ```
 	
-- lets paste in a one liner bash shell in here and see what happens. gonna use the [[pentestMonkey-oneLinerBashShell]] :3 
+- lets paste in a one liner bash shell in here and see what happens. gonna use the [[oneLinerBashShell]] :3 
 - added the bash one liner and listening on port `1337` with [[netcat]] 
 ```sh
 grimmie@academy:~$ cat backup.sh 

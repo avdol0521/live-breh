@@ -147,7 +147,7 @@ User holt may run the following commands on brookly_nine_nine:
 
 - lets see if theres anything on `gtfobins`
 - holy shit got root 
-- got a reverse shell with [[rmOneLinerShell]]
+- got a reverse shell with [[oneLinerRmShell]]
 - `root.txt`:
 ```
 -- Creator : Fsociety2006 --

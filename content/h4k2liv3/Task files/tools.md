@@ -32,10 +32,9 @@ tags: []
 - [[hashcat]] 
 - [[hashrat]] 
 ## shells:
-- [[pentestMonkey-PHP_reverse_shell]] 
-- [[pentestMonkey-oneLinerBashShell]] 
+- [[pentestMonkey-PHP_reverse_shell]]  
 - [[python-tty-shell]] 
-- [[rmOneLinerShell]] 
+- [[oneLinerShells]] 
 ## metasploit_framework:
 - [[metasploit]] 
 - [[msfvenom]] 
