@@ -22,3 +22,4 @@ getcap -r / 2>/dev/null
 	- `cap_setgid`
 	- `cap_dac_override` (lets you rwx any file)
 	- `cap_sys_admin` (a shitton of root like stuff. almost as good as full root. probably chainable to full root access)
+		- make sure to check if the binary is user controllable before to save yourself some frustration: `ls -l /path/to/binary`
