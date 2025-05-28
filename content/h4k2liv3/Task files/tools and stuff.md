@@ -35,6 +35,8 @@ tags: []
 - [[pentestMonkey-PHP_reverse_shell]]  
 - [[python-tty-shell]] 
 - [[oneLinerShells]] 
+## more notes:
+- [[partialRootToFullRootChecklist]] 
 ## metasploit_framework:
 - [[metasploit]] 
 - [[msfvenom]] 
