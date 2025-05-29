@@ -117,4 +117,113 @@ metgala.jpg
 ## https enum (port 443):
 - same thing here 
 ### dirbusting result analysis:
-- saved the feroxbuster filtered results in [[MrRobot-1DirbustingResults]] 
+- saved the feroxbuster filtered results in [[MrRobot-1DirbustingResults]]
+- `http://192.168.48.135/join` is using `wordpress 4.3.1` double checked with `whatweb` <br>
+![[MrRobot-1whatebJoinResultSS.png]]
+<br>
+- gonna run [[wpscan]] and see whats up
+- couldnt get me anything. i must've missed something 
+- fuck i didnt check robots.txt what a rookie mistake wth 
+## http enum (port 80 again):
+- `http://192.168.48.135/robots.txt`:
+```txt
+User-agent: *
+fsocity.dic
+key-1-of-3.txt
+```
+- `http://192.168.48.135/key-1-of-3.txt`:
+```
+073403c8a58a1f80d943455fb30724b9
+```
+- the fsocity.dic is most likely a hostname. gonna add it to `/etc/hosts` and see what happens
+- nothing at all. the key seems like a hash. lets run it through [[hash-identifier]]. 
+- yup an MD5 hash. gonna try to crack it with [[hashcat]] 
+- nope exausted the wordlists
+- what did i miss
+- wait lemme access fsocity.dic
+- oh bruh its a dictionary *facepalm*. what is it with me and making rookie mistakes today ffs. it should be obvious that a dic file is a dictionary - __ - lemme remove the entry from `/etc/hosts` first tho. and then ill wget it and crack the hash 
+- couldnt crack the hash with the dictionary. upon taking a closer look at the wordlist. seems like a directory list. lemme try it real quick with [[ffuf]]
+- the wordlist seems to keep repeating
+```sh
+css                     [Status: 301, Size: 234, Words: 14, Lines: 8, Duration: 3ms]
+images                  [Status: 301, Size: 237, Words: 14, Lines: 8, Duration: 206ms]
+image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 117ms]
+license                 [Status: 200, Size: 309, Words: 25, Lines: 157, Duration: 0ms]
+video                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+feed                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 192ms]
+audio                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+admin                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+blog                    [Status: 301, Size: 235, Words: 14, Lines: 8, Duration: 0ms]
+Image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 185ms]
+intro                   [Status: 200, Size: 516314, Words: 2076, Lines: 2028, Duration: 8ms]
+rss                     [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 186ms]
+login                   [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 200ms]
+readme                  [Status: 200, Size: 64, Words: 14, Lines: 2, Duration: 4ms]
+Year201120102009200820072006200520042003200220012000199919981997199619951994199319921991199019891988198719861985198419831982198119801979197819771976197519741973197219711970196919681967196619651964196319621961196019591958195719561955195419531952195119501949194819471946194519441943194219411940193919381937193619351934193319321931193019291928192719261925192419231922192119201919191819171916191519141913191219111910190919081907190619051904190319021901 [Status: 403, Size: 657, Words: 16, Lines: 10, Duration: 1ms]                                                                                                                        
+images                  [Status: 301, Size: 237, Words: 14, Lines: 8, Duration: 1ms]
+css                     [Status: 301, Size: 234, Words: 14, Lines: 8, Duration: 0ms]
+image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 174ms]
+license                 [Status: 200, Size: 309, Words: 25, Lines: 157, Duration: 1ms]
+video                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+feed                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 197ms]
+audio                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+admin                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 4ms]
+blog                    [Status: 301, Size: 235, Words: 14, Lines: 8, Duration: 0ms]
+Image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 198ms]
+intro                   [Status: 200, Size: 516314, Words: 2076, Lines: 2028, Duration: 4ms]
+rss                     [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 192ms]
+login                   [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 173ms]
+readme                  [Status: 200, Size: 64, Words: 14, Lines: 2, Duration: 1ms]
+Year201120102009200820072006200520042003200220012000199919981997199619951994199319921991199019891988198719861985198419831982198119801979197819771976197519741973197219711970196919681967196619651964196319621961196019591958195719561955195419531952195119501949194819471946194519441943194219411940193919381937193619351934193319321931193019291928192719261925192419231922192119201919191819171916191519141913191219111910190919081907190619051904190319021901 [Status: 403, Size: 657, Words: 16, Lines: 10, Duration: 1ms]                                                                                                                        
+images                  [Status: 301, Size: 237, Words: 14, Lines: 8, Duration: 1ms]
+css                     [Status: 301, Size: 234, Words: 14, Lines: 8, Duration: 1ms]
+image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 186ms]
+license                 [Status: 200, Size: 309, Words: 25, Lines: 157, Duration: 1ms]
+video                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+feed                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 201ms]
+audio                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 1ms]
+admin                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+blog                    [Status: 301, Size: 235, Words: 14, Lines: 8, Duration: 0ms]
+Image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 185ms]
+```
+- gonna cut it down. did `sort -u fsocity.dic > ffsociety.dic`. wordcount went from 858160 to 11451.
+- did `ffuf -u http://192.168.48.135/FUZZ -w ffsocity.dic` again. results:
+```txt
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://192.168.48.135/FUZZ
+ :: Wordlist         : FUZZ: /root/projects/mrRobot-1/ffsocity.dic
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+________________________________________________
+
+admin                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 1ms]
+audio                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+blog                    [Status: 301, Size: 235, Words: 14, Lines: 8, Duration: 1ms]
+css                     [Status: 301, Size: 234, Words: 14, Lines: 8, Duration: 0ms]
+feed                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 176ms]
+images                  [Status: 301, Size: 237, Words: 14, Lines: 8, Duration: 0ms]
+image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 194ms]
+Image                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 193ms]
+intro                   [Status: 200, Size: 516314, Words: 2076, Lines: 2028, Duration: 3ms]
+license                 [Status: 200, Size: 309, Words: 25, Lines: 157, Duration: 1ms]
+login                   [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 176ms]
+readme                  [Status: 200, Size: 64, Words: 14, Lines: 2, Duration: 2ms]
+rss                     [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 185ms]
+video                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 0ms]
+Year201120102009200820072006200520042003200220012000199919981997199619951994199319921991199019891988198719861985198419831982198119801979197819771976197519741973197219711970196919681967196619651964196319621961196019591958195719561955195419531952195119501949194819471946194519441943194219411940193919381937193619351934193319321931193019291928192719261925192419231922192119201919191819171916191519141913191219111910190919081907190619051904190319021901 [Status: 403, Size: 657, Words: 16, Lines: 10, Duration: 3ms]
+:: Progress: [11451/11451] :: Job [1/1] :: 202 req/sec :: Duration: [0:00:54] :: Errors: 0 ::
+```
