@@ -22,15 +22,21 @@ tags: []
 - [[gzip]]
 - [[gunzip]]
 - [[unzip]] 
-## directory fuzzing:
+## directory fuzzing/busting:
 - [[ffuf]]
 - [[dirbuster]] 
-- [[feroxbuster]] 
+- [[feroxbuster]]
+- [[gobuster]] 
 ## hash related:
 - [[hash-identifier]] 
 - [[john the ripper]]
 - [[hashcat]] 
 - [[hashrat]] 
+- [[autoCrack.py]] 
+## steganography and stuff:
+- [[binwalk]]
+- [[steghide]]
+- [[aperisolve]] 
 ## shells:
 - [[pentestMonkey-PHP_reverse_shell]]  
 - [[python-tty-shell]] 

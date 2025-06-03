@@ -121,3 +121,7 @@ Act like an experienced, fast-talking hacker. I want detailed vulnerability and 
 - **Auth Bypass Tricks**
     
 - **Bug Bounty PrivEsc via misconfigs**
+
+----
+---
+---

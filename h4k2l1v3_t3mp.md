@@ -157,6 +157,10 @@ assalamualaikum h4k er orientation class e shobaike shagotom. amar nam abd. ami 
 - Download Link: https://drive.google.com/drive/folders/1VXEuyySgzsSo-MYmyCareTnJ5rAeVKeH
 - https://www.youtube.com/watch?v=tLufiXsKOVc
 - https://youtu.be/sH4JCwjybGs?t=24693 (6:51:33 - 7:15:08) (TCMSEC)
+# DAY 27 Topics - Kenobi Exploitation
+## exploitation guides (try to do it entirely on your own. the guides are only there in case you get completely stuck and need a small hint):
+- Room Link: https://tryhackme.com/room/kenobi 
+- Walkthrough: https://www.youtube.com/watch?v=j5oCT1f1nQU
 ---
 
 1. **List all hidden files in `/etc` sorted by mod-time**  

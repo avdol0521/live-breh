@@ -82,6 +82,12 @@ tags:
 - tail -5 filename 
 - split -l 10
 - ln -s filename newfilename
+- `exiftool filename`
+	- to see metadata :D
+- `strings filename`
+	- to see human readable stuff
+- `xdg-open filename` 
+	- opens the file with the default application. quite handy if you ask me :D
 ## system commands 
 - env to view all env variables
 - service start/stop/restart

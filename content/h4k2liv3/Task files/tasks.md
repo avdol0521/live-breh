@@ -20,6 +20,7 @@ tags:
 - [[T1-14-colddbox]] 
 - [[T1-15-FUEL CMS]] 
 - [[T1-16-SQHell]] 
+- [[T1-16.5-easyPeasy]] 
 - [[T1-17-BasicPentesting]] 
 - [[T1-18-kenobi]] 
 - [[T1-19-agentSudo]] 
