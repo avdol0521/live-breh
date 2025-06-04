@@ -4,7 +4,10 @@ tags:
   - fetus
 ---
 - [[Kali installation documentation]] 
-- [[kali common commands and stuff]]
+- [[linux common commands and stuff]] 
+- [[linux file system]]
+- [[linux file perms and stuff]] 
+- [[user perms and stuff]] 
 - [[sudoers file]] 
 - [[python server creation]] 
 - [[random linux trivia]] 

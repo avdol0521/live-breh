@@ -5,6 +5,10 @@ tags:
 ---
 - port: 22 ([[TCP]])
 - gets you secure command line access and data tunneling
+## depricated algorythm fix:
+```sh
+ssh user@IP -oHostKeyAlgorithms=+ssh-rsa
+```
 ## checklist:
 - Weak Credentials / Bruteforce
     - Try default creds like `admin:admin`, `root:toor`

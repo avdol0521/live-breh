@@ -183,7 +183,7 @@ Agent C
 ## image data extraction and enum:
 - used `exiftool` to see if there was any interesting matadata but didnt get anything
 - ran `strings` against both of them. theres a `To_agentR.txt` in the png file. didnt manage to find anything in the jpeg output cuz im not used to analyzing strings outputs yet
-- huh. [[embedded file signatures]]
+- huh. [[embedded file signatures]] 
 - did `xxd cute-alien.jpg | grep "PK"`
 - this showed up: 
 ```

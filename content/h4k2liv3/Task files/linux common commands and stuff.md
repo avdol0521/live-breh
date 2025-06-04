@@ -30,7 +30,7 @@ tags:
 	- can also do username to jump to home
 - `ls`
 	- `ls -lah`
-		- lists all files with [[kali file perms and stuff]] listed out including hidden files 
+		- lists all files with [[linux file perms and stuff]] listed out including hidden files 
 		- the `-h` switch shows human readable sizes instead of bytes
 	- ls -i
 - `mkdir` 

@@ -3,7 +3,7 @@ title: Academy
 tags:
   - fetus
 ---
- ## nmap results
+## nmap results:
 - `nmap -sV -O 10.0.2.6`:
 ```js title:"nmap -sV -O 10.0.2.6" fold
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-18 17:44 EDT

@@ -9,7 +9,7 @@ tags: []
 - [[hydra]] 
 - [[fcrackzip]] 
 ## wordlist generation:
-- [[crunch]]
+- [[crunch]] 
 ## SMB stuff:
 - [[smbclient]] 
 - [[smbmap]] 
