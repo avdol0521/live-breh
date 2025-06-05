@@ -7,10 +7,10 @@ tags:
 ```python
 #!/usr/bin/env python3
 """
-auto_crack_isolated.py
+auto_crack.py
 
 Usage:
-  auto_crack_isolated.py <hash_file> <wordlist>
+  auto_crack.py <hash_file> <wordlist>
 
 What it does:
   • Maintains per-<hash,mode_id> tracking in crack_log.json to avoid redundant cracking.
@@ -29,7 +29,7 @@ What it does:
   • At the end, prints a summary of all newly cracked hashes per mode.
 
 Example:
-  ./auto_crack_isolated.py hashes.txt rockyou.txt
+  ./auto_crack.py hashes.txt rockyou.txt
 """
 
 import subprocess
@@ -311,11 +311,11 @@ python3 autoCrack.py hash.txt wordlist.txt
 ```
 ## github readme.md:
 ```md
-# 🔓 auto_crack_isolated.py
+# auto_crack.py
 
 A Python wrapper for automating Hashcat across multiple hash modes with per-hash-mode tracking and zero overlap. i got lazy during a tryhackme room and decided to vibe code to automate all the hashmode testing. have fun :D
 
-## 💡 Features
+## Features:
 
 - Automatically detects candidate hash modes using `hashcat --show`.
     
@@ -323,7 +323,7 @@ A Python wrapper for automating Hashcat across multiple hash modes with per-hash
     
 - Tracks which `<hash,mode>` pairs have already been tested using `crack_log.json`.
     
-- Efficient: skips hashes already cracked or previously attempted with that mode.
+- Efficient: skips hashes already cracked or previously attempted with that mode or if theres a saved log for that hash for that specific mode in `crack_log.json`.
     
 - Clean, readable output and full summary of cracked hashes.
     
@@ -332,7 +332,7 @@ A Python wrapper for automating Hashcat across multiple hash modes with per-hash
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - Python 3.6+
     
@@ -341,25 +341,17 @@ A Python wrapper for automating Hashcat across multiple hash modes with per-hash
 
 ---
 
-## 🚀 Usage
+## Usage
 
-bash
-
-CopyEdit
-
-`./auto_crack_isolated.py <hash_file> <wordlist>`
+`./auto_crack.py <hash_file> <wordlist>`
 
 ### Example
 
-bash
-
-CopyEdit
-
-`./auto_crack_isolated.py hashes.txt rockyou.txt`
+`./auto_crack.py hashes.txt rockyou.txt`
 
 ---
 
-## 🔧 How It Works
+## How It Works
 
 1. Validates the hash file and wordlist.
     
@@ -391,10 +383,6 @@ CopyEdit
 All cracked results are stored in a local JSON file: `crack_log.json`.
 
 Each entry looks like:
-
-json
-
-CopyEdit
 
 `{   "hash": "5e884898da28047151...",   "mode": "1400",   "cleartext": "password123",   "timestamp": "2025-06-04T14:33:21Z" }`
 
