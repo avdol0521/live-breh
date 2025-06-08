@@ -71,7 +71,9 @@ is an attack on a web application database server that causes malicious queries 
 	- Time-Based
 		- the same thing with boolean but with a catch. we dont even get a boolean anymore. we just get a difference in time to tell if the injection worked or not with. we identify if the code ran or not by including something like `sleep(5)` in the payload so if the query runs it takes 5 seconds to give us a response :D the enumeration is the same as boolean, just guessing based on the time it takes to get a response back instead of a true/false value 
 ### Out-of-Band SQLi:
-- depends on specific features being enabled on the DB server or the Web App's business logic that makes some kind external network call based on the results of the sql query. this type of SQLi is mainly classified by having two different channels of communication. one to communicate with the DB and send malicious payloads and the other to get the information back to a machine you control 
+- depends on specific features being enabled on the DB server or the Web App's business logic that makes some kind external network call based on the results of the sql query. this type of SQLi is mainly classified by having two different channels of communication. one to communicate with the DB and send malicious payloads and the other to get the information back to a machine you control
+(will write the rest later when im procrastinating again)
+---
 ## flag 1:
 ## flag 2:
 ## flag 3:
