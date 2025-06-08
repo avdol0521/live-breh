@@ -110,6 +110,8 @@ select * from users order by id desc;
 select * from users limit 5;
 ```
 - good for huge tables
+- sets how many rows to return
+- doing  `LIMIT 1,1` would mean it would skip the first row and show 1 row out of the rest of the rows after the skipped one 
 ## `BETWEEN`:
 ```mysql
 select * from users where id between 1 and 5;

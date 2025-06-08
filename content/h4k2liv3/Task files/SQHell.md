@@ -3,6 +3,75 @@ title: SQHell
 tags:
   - fetus
 ---
+- _fine ill update this note (i was procrastinating on exam prep)_ - 6/8/2025
+- room links: 
+	- https://tryhackme.com/room/sqlinjectionlm
+	- https://tryhackme.com/room/sqhell
+# Brief:
+in this room. we're going to take a look at various types SQL injection. but before that. lets take a look at the basics just so theres no hurdles going forward
+## Databases and SQL. what are these?
+### databases:
+well a database is just a way to digitally store information. databases are usually controlled by DBMSs or Database Management System. you can have several databases within a single DBMS. with each database being comprised of multiple tables, each table storing sets of related information of various types. each table has columns and rows. each column defines what the data is about and the rows actually store the data. theres also two main types of DBMSs, relational and non relational
+#### relational (SQL) databases:
+- stores data in tables. 
+- the tables usually contain a column that has a unique ID (primary key) that is used in other tables to reference it and cause relationships, hence the name `relational database`
+- used for managing structured data that follows a strict pattern i.e. data that needs to fit in nicely into predefined rows and columns. 
+- supports ACID transactions making a high degree of data accuracy and consistency possible. ideal for usage in applications used in banking, ecommerce and finance
+- needs a specific schema to be set that describes the relationships between tables and feild types. 
+- is easy to query through. makes conplex queries and join operations across numerous tables possible
+- can query and return related data from multiple tables in a single neat table. example: <br>
+![[SQHellRelationalDatabaseExampleSS.png]]
+- some examples of relational DBMSs are:
+	- MySQL 
+	- Microsoft SQL server 
+	- PostgreSQL
+#### nonrelational (NoSQL) databases:
+- doesnt need to store data in table format. can use other types of formats freely
+- doesnt require a schema to be set. is easily configurable to add custom functionality to handle numerous types of data structures
+- has four different types:
+	- document-based databases 
+		- these store data as documents (often in JSON or BSON format) making it easy to manage complex data within single records. partifcularly useful CMSs where each document might have unique structures and fields.
+		- example DBMSs: MongoDB, CouchDB
+	- key-value stores
+		- uses a model where each item is stored as a key value pair allowing quick data fetching. ideal for caching and session management. 
+		- example DBMSs: Redis, DinamoDB
+	- column-family stores 
+		- stores structured data in columns instead of rows, making for efficient handling of large volumes of data across distributed systems. common in data analytics applications where the operations are done on columns and not rows. 
+		- example DBMSs: Cassandra, HBase
+	- graph databases
+		- focuses on relationships between data points. models entities and nodes and relationships as edges. allows for complex interconnected data to be efficiently managed and queried. exactly like how obsidian handles the graphs and connections :D
+		- example DBMSs: Neo4j, Amazon Neptune
+- simple picture for teaching other goofy ahh people too lazy to read: <br>
+![[SQHellNoSQLExamplePic.png]]
+### SQL:
+SQL or Structured Query Language is a feature rich language used for querying relational databases. see [[mysql]] to see various ways to query for specific things and do specific stuff
+## whats SQL injection?
+is an attack on a web application database server that causes malicious queries to be executed. happens when a web app communicates with a database server using user input where the user input hasnt been propertly validated and steralized, running malicious queries
+
+- there are three main types of SQLi in total:
+	- In-Band
+	- Blind
+	- Out-of-Band
+### In-Band SQLi:
+- refers to using the same method of communication between the web page and the server to also exploit and recieve the results of the malicious queries to that same page 
+- subtypes:
+	- Error-Based SQLi
+		- error messages from the database are printed directly to the browser screen. can often be used to enumerate a whole database. most useful for easily obtaining info about DB structure 
+		  - the key is to discovering this type is to break the code's query by trying certain characters until an error message is produced like `'` or `"` 
+	- Union-Based SQLi
+		- uses the UNION with SELECT statements to ruturn additional results to the page. its the most common way of extracting large amounts of data via SQLi 
+- solve task 5 in the first room to get a basic idea
+### Blind SQLi:
+- you cant see the results of the malicious query this time (hence the name _blind_ SQLi), nor can you see any error messages. in Blind SQLi, we get little to no feedback to confirm whether out injected queries ran or not because the error messages were disabled. but we can still enumerate the whole database just from the little bit of variability we get when the query runs regardless of whether we can see the output or not 
+- subtypes:
+	- Auth-Bypass:
+		- usually just depends on the returned boolean value. not the actual values of the credentials. you can make it so that the check always returns the boolean value of true with something like `' OR 1=1;--`  
+	- Boolean-Based
+		- returns a boolean value and nothing else. but here, unlike the auth bypass, we're actually interested in getting some data and not just bypassing the authentication. so we enumerate the entire database just based on the boolean results we get from checking if really specific things are true or not. for example we could check if the name of the database is a certain amount of letters or not and then get each letter by checking if the specific letter in the specific position matches a specific letter we specify and so on. 
+	- Time-Based
+		- the same thing with boolean but with a catch. we dont even get a boolean anymore. we just get a difference in time to tell if the injection worked or not with. we identify if the code ran or not by including something like `sleep(5)` in the payload so if the query runs it takes 5 seconds to give us a response :D the enumeration is the same as boolean, just guessing based on the time it takes to get a response back instead of a true/false value 
+### Out-of-Band SQLi:
+- depends on specific features being enabled on the DB server or the Web App's business logic that makes some kind external network call based on the results of the sql query. this type of SQLi is mainly classified by having two different channels of communication. one to communicate with the DB and send malicious payloads and the other to get the information back to a machine you control 
 ## flag 1:
 ## flag 2:
 ## flag 3:
