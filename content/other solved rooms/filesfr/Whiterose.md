@@ -163,7 +163,7 @@ Jemmy Laurel:
 - `test:test` gave us this: <br>
 ![[WhiteroseSettingsUpdate.png]]
 - reflects the password. lets see what happens if i put in a reverse shell, specificall in there while listening
-	- [[oneLinerBashShell]] didnt work. gonna try [[pentestMonkey-PHP_reverse_shell]] 
+	- [[oneLinerBashShell]] didnt work. gonna try [[webshells]] 
 	- didnt work. maybe try with a valid user???
 	- nothing works. im gonna have a looksie at the writeup again
 	- yapping about SSTI
@@ -223,7 +223,7 @@ whiterose1338.elf
 - set up a handler in [[metasploit]] <br>
 ![[WhiteroseMeterpreterSession.png]] <br>
 - HEH
-- uploaded [[linpeas.sh]] and ran it 
+- uploaded [[peass]] and ran it 
 - oooh red and yellowwwwwwwww: <br>
 ![[WhiterosePossiblePrivEscVector1.png]] <br>
 ```

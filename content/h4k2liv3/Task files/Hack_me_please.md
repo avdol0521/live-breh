@@ -473,7 +473,7 @@ admin:skibidi
 - actual hash for `skibidi`: `2c9d97dc8628f0f8e0b3be3deabc25a6`
 - HELL YEAH GOT IN <br>
 ![[Hack_me_pleaseAdminPanelInitialAccessSS.png]]
-- added [[pentestMonkey-PHP_reverse_shell]] as a document
+- added [[webshells]] as a document
 - time to set up [[pwncat-cs]] hehe
 - the file was located at `http://192.168.48.133/seeddms51x/data/1048576/4/1.php`
 - hehe got a shell. lets run the enumerate module and run linpeas as well

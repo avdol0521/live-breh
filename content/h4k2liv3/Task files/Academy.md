@@ -388,11 +388,11 @@ cd73502828457d15655bbd7a63fb0bc8:student
 
 ## getting a shell through `http://10.0.2.6/academy/my-profile.php`:
 
-- get [[pentestMonkey-PHP_reverse_shell]] and modify it as needed and upload it
+- get [[webshells]] and modify it as needed and upload it
 - use [[netcat]] 
-- we got access as user `www-data`. will try to see if any priv escalation is possible with [[linpeas.sh]] 
+- we got access as user `www-data`. will try to see if any priv escalation is possible with [[peass]] 
 	- process: 
-		- make a python server where the [[linpeas.sh]] file is stored (see [[python server creation]]) and [[wget]] the file in the victim machine. tried it in the root dir but it didnt work. worked in the tmp directory though 
+		- make a python server where the [[peass]] file is stored (see [[python server creation]]) and [[wget]] the file in the victim machine. tried it in the root dir but it didnt work. worked in the tmp directory though 
 		- give the linpeas file execution perm and run it. preferably save the output in a file 
 		- output.txt: [[AcademyOutput.txt]] 
 	

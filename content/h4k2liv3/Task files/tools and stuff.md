@@ -1,6 +1,7 @@
 ---
-title: tools
-tags: []
+title: tools and stuff
+tags:
+  - fetus
 ---
 ## recon:
 - [[nmap]] 
@@ -34,12 +35,14 @@ tags: []
 - [[hashrat]] 
 - [[autoCrack.py]] 
 ## steganography and stuff:
-- [[binwalk]]
-- [[steghide]]
+- [[binwalk]] 
+- [[strings]] 
+- [[exiftool]] 
+- [[steghide]] 
 - [[aperisolve]] 
 - [[outguess]] 
 ## shells:
-- [[pentestMonkey-PHP_reverse_shell]]  
+- [[webshells]]  
 - [[python-tty-shell]] 
 - [[oneLinerShells]] 
 ## more notes:
@@ -49,7 +52,7 @@ tags: []
 - [[msfvenom]] 
 - [[meterpreter]] 
 ## file tools: 
-- [[linpeas.sh]] 
+- [[peass]] 
 ## port listeners: 
 - [[netcat]] 
 - [[pwncat-cs]] 

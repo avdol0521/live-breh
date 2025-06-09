@@ -110,7 +110,7 @@ c0ldd:9876543210
 - tried uploading a reverse shell but didnt work
 - theres an editor option 
 - damn i can edit any file raw 
-- added in the [[pentestMonkey-PHP_reverse_shell]] in the `comments.php` file 
+- added in the [[webshells]] in the `comments.php` file 
 - got shell as `www-data` 
 - i can see config.php
 - new creds found for `c0ldd`:

@@ -740,7 +740,7 @@ EHLO symfonos.localdomain
 ![[symfonosPOC2SS.png]]
 - hell yeah got code exec. lets get an reverse shell real quick with [[oneLinerShells]]  
 - transfered it over to [[pwncat-cs]]. ran `run enumerate`. [[symfonosPwncatEnumerateOutput]] 
-- ran [[linpeas.sh]] as well. [[symfonosLinpeasOutput]]
+- ran [[peass]] as well. [[symfonosLinpeasOutput]]
 - an unknown SUID binary called `/opt/statuscheck` :0
 ```sh
 ╔══════════╣ SUID - Check easy privesc, exploits and write perms
