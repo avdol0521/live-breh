@@ -37,6 +37,7 @@ tags: []
 - [[binwalk]]
 - [[steghide]]
 - [[aperisolve]] 
+- [[outguess]] 
 ## shells:
 - [[pentestMonkey-PHP_reverse_shell]]  
 - [[python-tty-shell]] 
@@ -67,3 +68,5 @@ tags: []
 - [[mysql]] 
 ## specific commands for later:
 - [[base64ListDecoderOneLiner]] 
+## random stuff:
+- [[QRscannerOnline]] 
