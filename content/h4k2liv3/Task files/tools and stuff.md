@@ -3,6 +3,8 @@ title: tools and stuff
 tags:
   - fetus
 ---
+## misc:
+- [[fastfetch]] 
 ## recon:
 - [[nmap]] 
 - [[amass]] 

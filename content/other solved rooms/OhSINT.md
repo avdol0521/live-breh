@@ -62,7 +62,7 @@ W2 15 1.33
 - was a wild goose. no point in pursuing this further. the hint says `BSSID + Wigle.net`. :D WIGLE MY LOVE yayy lets go to wigle. its been so long since my last wardrive xD
 - wigle result: <br>
 ![[OhSINTWigleAdvancedResult.png]]
-- you know what im feeling lazy ill just do a normal wigle search instead of pasting in the positions again ¯\\_(ツ)_/¯ <br>
+- you know what im feeling lazy ill just do a normal wigle search instead of pasting in the positions again ¯\\\_(ツ)\_/¯ <br>
 ![[OhSINTWigleNormalSearchResultSS.png]]
 - dude's located in `london`
 ## THM Q3: `What is the SSID of the WAP he connected to?`
@@ -72,9 +72,9 @@ W2 15 1.33
 - github: <br>
 ![[OhSINTGithubRepoSS.png]]
 - user only has one repo. email is `[OWoodflint@gmail.com](mailto:OWoodflint@gmail.com)`
-- sighs could've just checked the github repo for the location (￣_￣|||)
+- _sighs_ could've just checked the github repo for the location (￣_￣|||)
 ## THM Q5: `What site did you find his email address on?`
-- `github` ¯\\_(ツ)_/¯
+- `github` ¯\\\_(ツ)\_/¯
 ## THM Q6: `Where has he gone on holiday?`
 - lets check the wordpress site: <br>
 ![[OhSINTWPSiteSS.png]]
