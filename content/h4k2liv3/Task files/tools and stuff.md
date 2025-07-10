@@ -47,6 +47,7 @@ tags:
 - [[oneLinerShells]] 
 ## more notes:
 - [[partialRootToFullRootChecklist]] 
+- [[linuxPrivEscVectors]] 
 ## metasploit_framework:
 - [[metasploit]] 
 - [[msfvenom]] 

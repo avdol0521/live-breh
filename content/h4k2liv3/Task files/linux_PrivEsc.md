@@ -202,4 +202,8 @@ User user may run the following commands on this host:
     (root) NOPASSWD: /usr/sbin/apache2
     (root) NOPASSWD: /bin/more
 ```
-- ran `sudo find . -exec /bin/bash \;` and got root. you what ill make a proper priv esc vectors note from this lab for future usage
+- ran `sudo find . -exec /bin/bash \;` and got root. you what ill make a proper priv esc vectors note from this lab for future usage: [[linuxPrivEscVectors]]
+## service exploits:
+- seems like it explains how to exploit the user defined functions in mysql. lets check what UDFs are 
+	- found this really good medium post: https://medium.com/r3d-buck3t/privilege-escalation-with-mysql-user-defined-functions-996ef7d5ceaf
+		- okay so UDFs are basically custom functions that can be called within a relational DBMS like mysql to do custom stuff

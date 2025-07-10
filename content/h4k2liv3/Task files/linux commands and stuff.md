@@ -3,13 +3,146 @@ title: "kali common commands and stuff"
 tags:
   - fetus
 ---
+## fun stuff to try out:
+##### (make sure to add `/usr/games` to PATH for commands to work)
+
+```sh
+cmatrix
+```
+- wont be installed by default. install it with apt
+  
+```sh
+rev filename
+```
+- wont be installed by default either
+- basically revereses all the strings it can find in a file and outputs it xD or you can type in what you wanna reverse and enter to get the reversed string as well
+
+```sh
+cowsay string
+```
+- ASCII cow says stuff 
+- just like the other stuff, wont be installed by default 
+  
+```sh
+oneko
+```
+- cute neko chasing the cursor （\*＾-＾\*）
+  
+```sh
+sl
+```
+- ls typo funi hqhqhq 
+  
+```sh
+rig
+```
+- generates random identities
+  
+
+```sh
+yes string
+```
+- repeats a string infinitely or repeats `y` infinitely. can be piped into other commands to automate annoying confirmation dialogues and stuff 
+  
+```sh
+hollywood
+```
+- emulates hollywood hacking scenes lol. install it with apt as well
+
+```sh
+cool-retro-term
+```
+- self explanatory tbh :v
+  
+```sh
+aafire -extended
+```
+- installation: `apt install libaa-bin` 
+  
+```sh
+fortune
+```
+- fortunes :D (pipe into cowsay if you want :3)
+
+```sh
+figlet string
+```
+	
+```sh
+toilet string
+```
+- ASCII banners of strings :3 (tip: pipe through `lolcat` to make rgb banners :D)
+  
+```sh
+nyancat
+```
+- :3
+  
+```sh
+pipes
+```
+- installation: `apt install pipes-sh`
+
+```sh
+espeak "string"
+```
+- goofy ahh terminal talking hqhqhq
+
+```sh
+asciiquarium
+```
+- [[asciiquarium installation]] 
+
+```sh
+factor number
+```
+- outputs the factors of the given number
+
+```sh
+for i in {1..12}; do for j in $(seq 1 $i); do echo -ne $iÃ—$j=$((i*j))\\t;done; echo;done
+```
+- multiplication table :D
+
+```sh
+:(){ :|: & };:
+```
+- fork bomb :D
+
+```sh
+bb
+```
+- bb
+
+```sh
+echo "awughwauhgoahoiwhi;thaoi;hfgoai;ghioaghfkajfkajwbfauwkbgaoiwgbaoiwgbaiowgbao'wbgiaowbgoaibgoiawbgo;awbgioabgoa;wgbao" | pv -qL 50
+```
+- text typewriting effect 
+
+```sh
+aview image.jpg
+```
+- image to ASCII art :D
+
+```sh
+pacman4console
+```
+- exactly what it sounds like
+
+```sh
+curl parrot.live
+```
+- parrot partyyyyyyyyyyyyyyyyyyyyyy
 ## networking commands: 
-- `ip`
-	- `ip a` 
-		- shows the ip addresses assigned to interfaces 
-- `ping` 
-	- `ping google.com`
+```sh
+ip a
+```
+	
+```sh
+ping
+``` 
+- `ping google.com`
 		- sends data packets to see if it responds or not. can also add `-c packetnumber` to specify how many packets to send
+- `gping` is a solid alternate to ping as well btw
 - `dig` 
 	- `dig +short google.com`
 		- the short switch gives a short answer as the name suggests, just giving the ip addresses 
@@ -56,6 +189,7 @@ tags:
 	- use `less` for longer files 
 	- `cat file1 file2 > combined.txt`
 		- can do this as well to combine files :D
+	- `cat /etc/update-motd.d/00-header`
 ## file manipulation stuff: 
 - `touch` to create files 
 	- touch filename{1..20} creates 20 files with indexes
@@ -97,6 +231,13 @@ tags:
 - bg %ID to background job
 - nohup to give a running process immortality hqhqhqhq
 - proc cpuinfo
+- `ps -ef`
+	- gives a snapshot of all processes in a detailed format
+- `hostnamectl`
+- `lsb_release -a` (can also check /etc/os-release)
+- `run-parts /etc/update-motd.d/` 
+	- tests what MOTD looks like without logging out 
+- `top`, `htop`, `bpytop` :D
 ## other stuff:
 - `passwd`
 	- changes the pass for the specified user 

@@ -8,6 +8,10 @@ tags:
 ```sh
 mysql -h 10.0.2.11 -u qdpmadmin --database=qdpm --ssl=0 -p'UcVQCMQk2STVeS6J'
 ```
+## check user and host:
+```sh
+SELECT User, Host FROM mysql.user;
+```
 ## getting the version:
 ```mysql
 select version();
