@@ -25,6 +25,8 @@ tags:
 - [[gzip]]
 - [[gunzip]]
 - [[unzip]] 
+- [[unrar]] 
+- [[zlib-flate]] 
 ## directory fuzzing/busting:
 - [[ffuf]]
 - [[dirbuster]] 
@@ -76,3 +78,4 @@ tags:
 - [[base64ListDecoderOneLiner]] 
 ## random stuff:
 - [[QRscannerOnline]] 
+- [[cipher-identifier]] 

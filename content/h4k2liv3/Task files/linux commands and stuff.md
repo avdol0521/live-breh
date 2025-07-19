@@ -37,12 +37,16 @@ sl
 rig
 ```
 - generates random identities
-  
 
 ```sh
 yes string
 ```
 - repeats a string infinitely or repeats `y` infinitely. can be piped into other commands to automate annoying confirmation dialogues and stuff 
+
+```sh
+xeyes
+```
+- eyes that follow the cursor :D
   
 ```sh
 hollywood
@@ -122,6 +126,12 @@ echo "awughwauhgoahoiwhi;thaoi;hfgoai;ghioaghfkajfkajwbfauwkbgaoiwgbaoiwgbaiowgb
 aview image.jpg
 ```
 - image to ASCII art :D
+
+```sh
+mplayer -vo aa movie.avi
+```
+- watch a movie in ASCII :D
+	- `mplayer -vo caca $filename.mp4`
 
 ```sh
 pacman4console
@@ -212,6 +222,7 @@ ping
 	- `sort filename -o filename` 
 		- saves the sorted file into itself
 	- can do `-u` to get unique lines as well
+- awk -F: '{print $1}' /etc/passwd
 - head -5 filename 
 - tail -5 filename 
 - split -l 10
