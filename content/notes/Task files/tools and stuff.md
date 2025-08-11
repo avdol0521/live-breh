@@ -34,7 +34,7 @@ tags:
 - [[gobuster]] 
 ## hash related:
 - [[hash-identifier]] 
-- [[john the ripper]]
+- [[john the ripper]] 
 - [[hashcat]] 
 - [[hashrat]] 
 - [[autoCrack.py]] 
@@ -62,7 +62,7 @@ tags:
 - [[netcat]] 
 - [[pwncat-cs]] 
 ## file uploading/downloading (ish): 
-- [[python server creation]]
+- [[python server creation]] 
 - [[wget]] 
 - [[certutil]] 
 - [[curl]] 

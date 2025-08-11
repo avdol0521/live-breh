@@ -84,3 +84,5 @@ _**In summary**_:
 - extremely small and has only the most necessary stuff needed to run the system. has the downside of having limited functionality and compatibility
 - extremely modular, portable and fast. wont be as fast for stuff it wasnt built for
 - better security due to extremely small attack surface
+## stuff:
+- [[kernel memory management]] 

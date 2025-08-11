@@ -3,6 +3,8 @@ title: "ffuf"
 tags:
   - fetus
 ---
+FUZZ FASTER U FOOL
+its a tool for web enumeration, fuzzing and directory brute forcing
 ## usage: 
 #### normal dirbusting:
 

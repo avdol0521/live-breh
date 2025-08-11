@@ -91,7 +91,7 @@ tags:
 assalamualaikum h4k er orientation class e shobaike shagotom. amar nam abd. ami ebong batch 5 er aro onekei apnader mentor hishebe thakbo. ajke apnader class er process and kivabe apnara ki korben na korben niyom kanun janay deya hobe. prothomoto jodi apnader class time shomporke boli, apnader protidin e rat 10 ta theke shuru hobe. daily ashte hobe. kobe ke ashlen na gap dilen shobkichui track kora hobe. protidin apnader task akare kichu topics diye dewa hobe. shegulor upor research kore amader ebong apnader teammates der breif korben apni ki ki jante perechen + shikhechen, knowledge share korben. given topic er upor apnader kono ghatti thakle amra mentors ra ta point out kore dibo and next class er agei sheta apnake complete korte hobe. apnar ki ki topics er upor ki ghatti ache ta track kora hobe. and apnader note gulo refine korben. in depth hote hobe. apnader shobkichui discord e conduct hobe. apnader shobaike teams akare vag kore deya hobe. prottek team er alada discord channel thakbe. obosshoi teammates der shathe porichoy hoye niben ebong communication bojay rakhben. team dead thakle red mark kore deya hobe. prottek team e batch 5 er students ra mentors hishebe thakbe. tader koyekjoner shathe porichoy jodi koriye dite chai. (hand raise). (porichoy). jehetu rules and stuff shesh. ekta chotto QnA 
 
 ---
-# DAY 1 Topics - The Cybersecurity Feild, Networking Foundations (IP, MAC addresses & Ports)
+# TASK-1 Topics - The Cybersecurity Feild, Networking Foundations (IP, MAC addresses & Ports)
 ## resources to get started with:
 - https://tryhackme.com/room/introtoresearch
 - https://tryhackme.com/room/careersincyber
@@ -261,9 +261,6 @@ https://drive.google.com/file/d/1J5F2D1B9tvFJxm0_fm0PGjMLfZKBwSnn/view
 password: sanin
 
 ---
-প্রিয় (নাম) ভাই/আপু, 
-আমি H4K2LIV3 কমিউনিটির পক্ষ থেকে তাইভীন বলছি।  তারই পরিপ্রেক্ষিতে [ আজ ১৬ তারিখ বুধবার রাত ১০ টায় ] আপনাদের সাথে আমাদের একটি Introduction মিটিং রাখা হয়েছে। সেখানে আমরা আপনাদের সাথে পরিচিত হবো এবং আমাদের সকল রুলস গুলো জানিয়ে দেওয়া হবে, সেই সাথে আপনাদের সকল প্রশ্নের উত্তর দেওয়া হবে ইনশাআল্লাহ। আজকের মিটিং এ অবশ্যই উপস্থিত থাকবেন। Join Discord voice channel link: ⁠🗣 Public Voice Meeting Time : Tonight at 10 PM আশা করি ![✅](https://discord.com/assets/43b7ead1fb91b731.svg)সম্পূর্ণ ফ্রিতে![✅](https://discord.com/assets/43b7ead1fb91b731.svg) সাইবার সিকিউরিটি শেখার জার্নিতে আপনাকে পেয়ে আমাদের কমিউনিটির উদ্দেশ্য সফল হবে। ধন্যবাদ HackToLive Community
-
 
 প্রিয় (নাম) ভাই/আপু,
 
@@ -292,3 +289,22 @@ password: sanin
 H4K2LIV3 Community
 
 ইতিমধ্যে
+
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

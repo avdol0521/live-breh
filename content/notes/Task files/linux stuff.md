@@ -4,8 +4,8 @@ tags:
   - fetus
 ---
 # new
+- [[linux file system and stuff]] 
 - [[linux commands and stuff]] 
-- [[linux kernel]] 
 - [[linux exploits]] 
 # deprecated
 - [[Kali installation documentation]] 
@@ -14,5 +14,4 @@ tags:
 - [[linux file perms and stuff]] 
 - [[user perms and stuff]] 
 - [[sudoers file]] 
-- [[python server creation]] 
 - [[random linux trivia]] 

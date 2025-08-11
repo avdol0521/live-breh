@@ -9,9 +9,9 @@ tags:
 #### Link or Network interface layer. whichever one you wanna call it:
 - takes care of the physical transmission of the data through ethernet, wifi and other stuff
 - combines the functionality from the physical and data link layers of the [[OSI model]]
-#### Internet layer:
+#### Internet layer: 
 - same as the network layer from the [[OSI model]]
-#### Transport layer:
+#### Transport layer: 
 - same as the transport layer from the [[OSI model]] as well. 
 - uses [[TCP]] and [[UDP]] protocols
 #### Application layer: 

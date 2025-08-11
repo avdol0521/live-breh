@@ -5,6 +5,26 @@ tags:
 ---
 - port: 22 ([[TCP]])
 - gets you secure command line access and data tunneling
+## file/dir transfer
+- `rsync` is another tool. will look into it later
+#### file transfer
+- local to remote:
+```sh
+scp /path/to/local/file.txt username@remote_IpORhost:/path/to/remote/destination/
+```
+- remote to local:
+```sh
+scp username@remote_IpORhost:/path/to/remote/file.txt /path/to/local/destination/
+```
+#### recursive dir transfer
+- local to remote:
+```sh
+scp -r /path/to/local/directory/ username@remote_host:/path/to/remote/destination/
+```
+- remote to local:
+```sh
+scp -r username@remote_host:/path/to/remote/directory/ /path/to/local/destination/
+```
 ## depricated algorythm fix:
 ```sh
 ssh user@IP -oHostKeyAlgorithms=+ssh-rsa
@@ -69,3 +89,4 @@ ssh user@IP -oHostKeyAlgorithms=+ssh-rsa
     - Run `sudo -l` to list allowed commands
     - No-password binaries = privilege escalation
     - Use GTFOBins to escape limited environments
+    - 

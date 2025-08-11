@@ -4,6 +4,11 @@ tags:
   - fetus
 ---
 ## networking commands: 
+
+```python
+python3 -m http.server port
+```
+
 ```sh
 ip a
 ```
@@ -110,6 +115,8 @@ ping
 - `run-parts /etc/update-motd.d/` 
 	- tests what MOTD looks like without logging out 
 - `top`, `htop`, `bpytop` :D
+- `openssl passwd -6 --salt salt "PASSWORD"`
+	- [[openssl toolkit]] 
 ## other stuff:
 - `passwd`
 	- changes the pass for the specified user 

@@ -26,7 +26,7 @@ tags:
 #### Session layer: 
 - manages the establishment, management and termination of sessions (connections) between apps
 #### Presentation layer: 
-- translates data between the network and the application. basically takes care of the data encryption, decryption, compression and format translation. 
+- translates data between the network and the application. basically takes care of the data encryption, decryption, compression and format translation. Otcp
 - ensures the data is in a usable form between layers 
 #### Application layer:
 - what the user actually sees and uses

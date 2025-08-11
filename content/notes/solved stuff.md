@@ -43,3 +43,4 @@ tags:
 - [[hydra-THM]] 
 - [[yearOfTheRabbit]] 
 - [[dirtyPipe-THM]] 
+- [[lazyAdmin]] 
