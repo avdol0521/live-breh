@@ -59,3 +59,18 @@ ssh encrypted by what - sayem
 protocol cheetsheet
 tcp/ip model - habib
 note revamp,  - kazi rabbi 
+
+# TASK-10 [17/8/25]
+
+```
+Topics: 
+- Shell Types (Reverse vs Bind Shell) 
+- Payload Types (staged vs non-staged)
+- Kioptrix Exploitation (Metasploit and Manual Exploitation)
+```
+
+Resources: 
+- https://www.youtube.com/watch?v=jZ2_BAP08m0 
+- https://www.youtube.com/watch?v=4HBlvTxGDWo
+English: 
+- https://youtu.be/sH4JCwjybGs?t=8887 (2:28:07 - 3:07:00)

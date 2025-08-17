@@ -93,7 +93,7 @@ Nmap done: 1 IP address (1 host up) scanned in 31.55 seconds
 ```
 
 ## [[NFS]] enum:
-- gonna check with [[metasploit]] cuz why not 
+- gonna check with [[metasploit_framework]] cuz why not 
 ```sh
 msf6 auxiliary(scanner/nfs/nfsmount) > run
 [+] 10.0.2.7:111          - 10.0.2.7 Mountable NFS Export: /srv/nfs [172.16.0.0/12, 10.0.0.0/8, 192.168.0.0/16]
@@ -274,7 +274,7 @@ I_love_java
 - huh this uses boltwire on port `8080`. ig ill take a look at that
 - theres a login page at `http://10.0.2.7:8080/dev/index.php?p=welcome&action=login`. seems like there may be LFI as well
 - cant login as bolt or jp. imma try to see if theres any lfi on this
-- `http://10.0.2.7:8080/dev/index.php?p=../../../../../../../../etc/passwd` says missing page. ig not. gonna search with [[metasploit]] to see if theres anything on `boltwire` 
+- `http://10.0.2.7:8080/dev/index.php?p=../../../../../../../../etc/passwd` says missing page. ig not. gonna search with [[metasploit_framework]] to see if theres anything on `boltwire` 
 ```sh
 ┌──(root㉿kali)-[~/Desktop/projects/devBox]
 └─# searchsploit boltwire

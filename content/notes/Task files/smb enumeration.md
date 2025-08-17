@@ -5,9 +5,9 @@ tags:
 ---
 ## how:
 - usual ports are 139 or 445
-- connect to the SMB service to grab the version from the banner information or just get it from [[nmap]] or a [[metasploit]] auxiliary module
+- connect to the SMB service to grab the version from the banner information or just get it from [[nmap]] or a [[metasploit_framework]] auxiliary module
 
-### [[metasploit]] workflow documentation:
+### [[metasploit_framework]] workflow documentation:
 	
 ```
 msfconsole

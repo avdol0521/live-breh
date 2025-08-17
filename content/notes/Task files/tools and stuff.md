@@ -52,10 +52,8 @@ tags:
 ## more notes:
 - [[partialRootToFullRootChecklist]] 
 - [[linuxPrivEscVectors]] 
-## metasploit_framework:
-- [[metasploit]] 
-- [[msfvenom]] 
-- [[meterpreter]] 
+## metasploit:
+- [[metasploit_framework]]  
 ## file tools: 
 - [[peass]] 
 ## port listeners: 

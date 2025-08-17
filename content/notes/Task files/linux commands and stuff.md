@@ -66,13 +66,33 @@ ping
 	- `cat file1 file2 > combined.txt`
 		- can do this as well to combine files :D
 	- `cat /etc/update-motd.d/00-header`
-## file manipulation stuff: 
+## file stuff and STROPS (STRing OPerationS): 
+- room link: https://tryhackme.com/room/linuxmodules
+#### file stuff:
 - `touch` to create files 
 	- touch filename{1..20} creates 20 files with indexes
 - `nano` or `vim` or `mousepad` or `code` to use as an editor
 - `echo` 
 	- can be used with `>` or `>>` or other stuff with pipes n shit to do more advanced stuff. can do the same with `cat` as well
 - `>` to insert and `>>` to append
+- `ln -s filename newfilename`
+- `head -5 filename` 
+- `tail -5 filename` 
+- `split -l 10`
+- `exiftool filename`
+	- to see metadata :D
+- `strings filename`
+	- to see human readable stuff
+#### STROPS
+- `tr` 
+	- `cat grep.txt | tr -d '[a-zA-Z]'` - delete stuff in the specified set
+	- `cat grep.txt | tr -s '[a-z]' '[A-Z]'` - replace stuff. source set then replace set
+- `awk` - scripting lang for manipulating data and generating reports. no need to compile shit
+	- `awk '{print}' filename` - cat alt
+	- `awk '/searchTerm/' filename` - grep alt
+	- `awk '{print $1,$2}' filename` - default field seperator is space. not doing a comma concatinates the feilds. field seperator can be specified with `-F` like below. include the `NR` variable with `$0` to get row count
+	- `awk -F: '{print $1}' /etc/passwd` 
+	- `awk 'BEGIN{OFS=":"} {print $1,$2,$3} END{print "Total Rows= " NR}' filename`
 - `sed` (stream editor)
 	- `sed -i 's/(the text you wanna replace)/(the text you wanna replace it with)/g' filename` 
 		- `-i` edits the file in place 
@@ -88,26 +108,20 @@ ping
 	- `sort filename -o filename` 
 		- saves the sorted file into itself
 	- can do `-u` to get unique lines as well
-- awk -F: '{print $1}' /etc/passwd
-- head -5 filename 
-- tail -5 filename 
-- split -l 10
-- ln -s filename newfilename
-- `exiftool filename`
-	- to see metadata :D
-- `strings filename`
-	- to see human readable stuff
+- `uniq` 
+## system commands 
+- `env` to view all env variables
 - `xdg-open filename` 
 	- opens the file with the default application. quite handy if you ask me :D
-## system commands 
-- env to view all env variables
-- service start/stop/restart
+- `service start/stop/restart`
 	- apache2 for webservers
-- jobs to see suspended jobs
-- fg %ID to foreground suspended jobs
-- bg %ID to background job
-- nohup to give a running process immortality hqhqhqhq
-- proc cpuinfo
+- `jobs` to see suspended jobs
+- `fg %ID` to foreground suspended jobs
+- `bg %ID` to background job
+- `nohup` to give a running process immortality hqhqhqhq
+- `proc cpuinfo`
+- `du --time -d 1 . -h` (ls alt)
+- `stat`
 - `ps -ef`
 	- gives a snapshot of all processes in a detailed format
 - `hostnamectl`
@@ -117,15 +131,14 @@ ping
 - `top`, `htop`, `bpytop` :D
 - `openssl passwd -6 --salt salt "PASSWORD"`
 	- [[openssl toolkit]] 
-## other stuff:
-- `passwd`
+## other stuff: 
+- `passwd` 
 	- changes the pass for the specified user 
 	- `sudo passwd root` 
-- `xfwm4`
-	- to troubleshoot UI tweaking
-- `rm` variants:
+- `xfwm4` 
+	- to troubleshoot UI tweaking 
+- `rm` variants: 
 	- `rm -r dirname` 
-- [[my git cheatsheet]] 
 - ill document tool installation with apt and pip later. i already have everything setup in my kali machine so im feeling kinda lazy. and ill look into pimpmykali later as well.
 - 192.168.10.0/30
 ## fun stuff to try out:

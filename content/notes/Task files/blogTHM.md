@@ -86,7 +86,7 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 1093.43 seconds
 ```
 	
-## [[SMB]] enumeration: 
+## [[SMB - SAMBA]] enumeration: 
 - `nmap --script=*smb* 10.10.76.139 -p 139,445`:
 ```sh fold title:"nmap --script=*smb* 10.10.76.139 -p 139,445"
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-25 04:26 EDT

@@ -26,7 +26,7 @@ tags:
 - [[SFTP]] 
 - [[NFS]] 
 - [[RPC]] 
-- [[SMB]] 
+- [[SMB - SAMBA]] 
 #### email service related:
 - [[SMTP]] 
 - [[POP3]] 

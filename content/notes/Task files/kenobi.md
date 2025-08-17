@@ -105,7 +105,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1334.73 seconds
 ## ftp enum 1: 
 - ftp anon login didnt work 
 - got the version tho. has a vulnerability where it lets you copy files from any destination to any other destination within the server without needing to be authenticated. this can be done by running `SITE CPFR path` and then `SITE CPTO path`
-## [[SMB]] enum: 
+## [[SMB - SAMBA]] enum: 
 - `smbmap -H 10.10.214.169`:
 ```
 [+] IP: 10.10.214.169:445       Name: 10.10.214.169             Status: NULL Session

@@ -1,7 +1,7 @@
 ---
 title: notes
 tags:
-  - main
+  - "#child"
 ---
 time to revamp everything. will start with simple general stuff and will move on to more elaborate stuff i think
 - [[networking stuff]] 
@@ -9,3 +9,4 @@ time to revamp everything. will start with simple general stuff and will move on
 - [[windows stuff]] 
 - [[binary exploitation]] 
 - [[solved stuff]] 
+- [[CRTA]] 

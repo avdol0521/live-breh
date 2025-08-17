@@ -3,8 +3,9 @@ title: "SMB"
 tags:
   - fetus
 ---
+- server message block
 - ports:
-	- 139 : [[SMB]] over [[NetBIOS]] 
+	- 139 : [[SMB - SAMBA]] over [[NetBIOS]] 
 	- 445 : 
 - [[smb enumeration]] 
 ### checklist:

@@ -56,7 +56,7 @@ OS and Service detection performed. Please report any incorrect results at https
 - stuff to look into:
 	- registry, NTFS perms, UAC and service model 
 	- cmdlets, scripting, remoting (WinRM), how attackers use PS for post exploitation 
-	- [[SMB]], share misconfigs, Null SMB sessions, impacket 
+	- [[SMB - SAMBA]], share misconfigs, Null SMB sessions, impacket 
 	- Active directory fundamentals
 		- domains, forests, trusts, users/groups, GPOs and how Kerberos/LDAP fit together
 	- windows enum:
