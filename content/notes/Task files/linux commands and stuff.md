@@ -209,7 +209,7 @@ fortune
 ```sh
 figlet string
 ```
-	
+	`showfigfonts` to see figlet fonts
 ```sh
 toilet string
 ```
@@ -221,12 +221,12 @@ nyancat
 - :3
   
 ```sh
-pipes
+pipes -p 20 -r 0 -R
 ```
 - installation: `apt install pipes-sh`
 
 ```sh
-espeak "string"
+espeak -a 200 skibidi -p 20 -s 20
 ```
 - goofy ahh terminal talking hqhqhq
 
@@ -280,3 +280,29 @@ pacman4console
 curl parrot.live
 ```
 - parrot partyyyyyyyyyyyyyyyyyyyyyy
+
+```sh
+curl -L http://bit.ly/10hA8iC | bash
+```
+- xD
+
+```sh
+telnet mapscii.me
+```
+- ascii map :D
+
+```sh
+LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"
+```
+- random numbers all over the terminal
+
+```sh
+echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2)]";h="$[($RANDOM % 4)]";if [ $h -eq 1 ]; then v="0 $r";else v="1 $r";fi;v2="$v2 $v";done;echo -e $v2;v2="";done;
+```
+- binary spam from 2013. similar to modern day cmatrix but way more primitive
+
+```sh
+while (true) do echo -n "balls"; done
+```
+- repeat spam in terminal :D put anything in the quotes to spam
+https://github.com/jrcharney/hacktop/wiki/Linux-Toys

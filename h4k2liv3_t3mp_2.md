@@ -60,17 +60,16 @@ protocol cheetsheet
 tcp/ip model - habib
 note revamp,  - kazi rabbi 
 
-# TASK-10 [17/8/25]
+# TASK-11 [19/8/25]
 
 ```
 Topics: 
-- Shell Types (Reverse vs Bind Shell) 
-- Payload Types (staged vs non-staged)
-- Kioptrix Exploitation (Metasploit and Manual Exploitation)
+- Academy Exploitation
 ```
 
+Download link: https://drive.google.com/drive/folders/1VXEuyySgzsSo-MYmyCareTnJ5rAeVKeH
+
 Resources: 
-- https://www.youtube.com/watch?v=jZ2_BAP08m0 
-- https://www.youtube.com/watch?v=4HBlvTxGDWo
+- https://www.youtube.com/watch?v=K-7M31BSwIA
 English: 
-- https://youtu.be/sH4JCwjybGs?t=8887 (2:28:07 - 3:07:00)
+- https://youtu.be/sH4JCwjybGs?t=18173 (5:02:53 - 5:49:46)
