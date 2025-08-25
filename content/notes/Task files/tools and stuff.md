@@ -5,6 +5,13 @@ tags:
 ---
 ## misc:
 - [[fastfetch]] 
+## package managers:
+- [[apt]]
+- [[pip]] 
+## cli file editors:
+- [[mousepad]]
+- [[vi]]
+- [[vim]] 
 ## recon:
 - [[nmap]] 
 - [[amass]] 
@@ -70,6 +77,7 @@ tags:
 - [[gcc]] 
 ## RDP:
 - [[remmina]] 
+- [[xfreerdp]] 
 ## database stuff:
 - [[mysql]] 
 ## specific commands for later:

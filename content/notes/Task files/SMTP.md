@@ -5,13 +5,15 @@ tags:
 ---
 - is an old protocol that predates unix. follows the internet standards layed out in RFC 5321
 - port: 
-	- 25 ([[TCP]]) for sending emails
-	- 587 for secure mail submission (with STARTTLS whatever that means)
-	- 465 for [[SMTP]] over [[SSL]]
+	- 25 ([[TCP]]) for insecure mail transmission
+	- 465 for secure mail transmission ([[SSL]])
+	- 587 for secure mail transmission ([[TLS]])
 - common smtp servers: 
 	- Postfix
 	- Exim
 	- Sendmail etc
+- for sending mails only. doesnt handle incoming mails
+- uses [[SSL]]/[[TLS]] for secure email transmission
 ## terminal interaction with SMTP:
 #### connect to the server:
 ```sh

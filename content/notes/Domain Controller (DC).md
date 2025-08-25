@@ -1,0 +1,13 @@
+---
+title: Domain Controller
+tags:
+  - fetus
+---
+- the heart of the [[active directory Domain]] 
+- is a specialized server that handles user authentication and access to resources within an AD network. basically the gatekeeper that verifies user logins and enforces security policies to control who can access what
+- multiple DCs are usually deployed in a cluster within larger networks for backup and they can even be assigned specific roles such as [[Primary Domain Controller (PDC) Emulator]] or Backup DC etc
+- DC types:
+	- standard/writable DCs
+		- maintains a writable copy of the AD database and can make changes to it
+	- Read Only DC (RODC)
+		- provides local auth services without storing any editable directory data. suitable for less secure locations

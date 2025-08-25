@@ -54,3 +54,11 @@ tags:
 - owner: rwx 
 - group: r-x 55
 - other: r--
+## user management
+- add user 
+```sh
+useradd -u 1002 -d /home/john -s /bin/bash john
+```
+- add group 
+```sh
+```

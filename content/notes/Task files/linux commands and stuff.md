@@ -109,6 +109,9 @@ ping
 		- saves the sorted file into itself
 	- can do `-u` to get unique lines as well
 - `uniq` 
+- `paste`
+	- `paste -d: unames cpasses > newcreds`
+	- `ls | paste - - - -`
 ## system commands 
 - `env` to view all env variables
 - `xdg-open filename` 

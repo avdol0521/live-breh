@@ -1,0 +1,21 @@
+---
+title: "active directory Trusts"
+tags:
+  - fetus
+---
+- basically the relationship between two different AD domains. allows users in one domain to access resources in another domain 
+- for a trust to work, a trust account and a [[Trust Domain Object (TDO)]] is created in each domain involved in the trust relationship 
+- trust categories:
+	- direction (self explanatory)
+		- one way
+		- two way
+	- transitivity
+		- transive
+			- domain A trusts domain B and domain B trusts domain C so domain A also trusts domain C 
+		- non transive
+			- only direct trusts no transitivity
+- trust types:
+	- parent-child trust 
+	- tree-root trust 
+	- forest trust 
+	- 
