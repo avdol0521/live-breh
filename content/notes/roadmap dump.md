@@ -267,7 +267,7 @@ Outline :
     
 70. Reverse shell
     
-## Day 26 : [Fuel Cms | Ignite TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Exam Preparation](https://youtu.be/PrB7VpA3YB4?si=kRaO-7GB6A-T7Ohg)
+## Day 26 : [Fuel Cms | Ignite TryHackMe Walkthrough in Bangla | eJPT & CEH Practical Exam Preparation](https://youtu.be/PrB7VpA3YB4?si=kRaO-7GB6A-T7Ohg) 
 
 Room Link : [TryHackMe | Ignite](https://tryhackme.com/r/room/ignite) 
 

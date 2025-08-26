@@ -60,29 +60,15 @@ protocol cheetsheet
 tcp/ip model - habib
 note revamp,  - kazi rabbi 
 
-# TASK-17 [25/8/25]
-
-```
-Topics: 
-- Ignite Exploitation
-```
-
-Room Link: https://tryhackme.com/r/room/ignite
-
-Resources: 
-Bangla: 
-- https://youtu.be/PrB7VpA3YB4?si=kRaO-7GB6A-T7Ohg
-
-# TASK-16 [24/8/25]
+# TASK-18 [27/8/25]
 
 ```
 Topics: 
 - SQHell exploitation
 	- MANUAL EXPLOITATION
-	- AUTOMATED EXPLOITATION
+	- automated exploitation
 ```
-
-Room Link: https://tryhackme.com/r/room/colddboxeasy
+Room Link: https://tryhackme.com/r/room/sqhell
 
 Resources: 
 Bangla: 
