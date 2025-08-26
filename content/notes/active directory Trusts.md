@@ -16,6 +16,10 @@ tags:
 			- only direct trusts no transitivity
 - trust types:
 	- parent-child trust 
+		- always two way and transitive
 	- tree-root trust 
 	- forest trust 
-	- 
+	- shortcut/cross-link trust 
+	- external trust 
+	- realm trust 
+	- Privileged Access Management (PAM) trust
