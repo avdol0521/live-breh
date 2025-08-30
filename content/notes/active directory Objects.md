@@ -1,0 +1,53 @@
+---
+title: active directory Objects
+tags:
+  - fetus
+---
+- the fundamental building blocks of the directory. represents resources like users, computers, groups, printers, shared folders etc. each object then has attributes that store info about them. attributes are used to find/identify these objects via [[LDAP queries]]. each object type also has pre-defined sets of attributes assosiated with it. these pre-defined sets of attributes are defined by [[object classes]] 
+- AD object classifications:
+	- container objects
+		- can hold other objects within them. acting as organizational structures. examples would be
+			- [[Organizational Unit (OU)]]s
+			- [[active directory groups]]
+			- [[active directory Domain]]s
+			- sites
+			- foreign security principals
+	- leaf objects 
+		- cant hold other objects
+		- examples would be:
+			- computers
+			- users
+			- printers
+			- contact
+			- shared folder
+- some objects in AD:
+	- user 
+		- user objects represent user accounts of people that need access to resources in an AD network, has a name and is authenticated using a password
+		- AD has two types of user accounts
+			- administrator account
+				- proper permanent account that has higher privileges for administrative purposes
+			- guest account
+				- temp account with limited permissions and access to resources
+	- computer (self explanatory)
+	- contact
+		- contact objects contain contact info of third party stuff like vendors, service technicians etc 
+	- [[active directory groups]]  
+		- container object 
+		- for access control and membership management
+	- [[Organizational Unit (OU)]] 
+		- container object
+		- for structure and applying [[Group Policy Objects (GPO)]] 
+		- [[Organizational Unit (OU) vs group]]  
+	- printer 
+		- represents a printer resource in the AD network 
+	- shared folder
+		- a pointer to the location of the shared folder. doesnt actually contain any data from the folder itself
+	- [[active directory Domain]]
+	- [[Domain Controller (DC)]] 
+	- site objects 
+		- represents the physical structure of an AD network. not the logical structure. an example would be a company having multiple branches at different geographical locations but having common logical structure like domains and forests 
+		- basically physical groupings of well connected IP subnets that are used tp replicate information between domain controllers 
+	- builtin
+		- the default stuff that gets created when the ad network initially gets made like groups, OUs etc
+	- foreign security principals
+		- holds info on the trust relationships between domains 

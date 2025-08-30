@@ -18,8 +18,25 @@ tags:
 	- parent-child trust 
 		- always two way and transitive
 	- tree-root trust 
+		- similar to parent-child trusts except forestwide
 	- forest trust 
-	- shortcut/cross-link trust 
+		- trust between forests. transive. can be one way or two way trusts
+	- shortcut/cross-link trust
+		- custom shortcut trusts between domains. transive. can be one or two way trusts. bypasses the hierarchy pain and establishes direct trusts between the domains 
 	- external trust 
+		- one way non transive trust with an external domain outside the forest of the trusting domain 
 	- realm trust 
+		- cross platform trust with a domain/forest that isnt based on windows active direcory. one way by default 
 	- Privileged Access Management (PAM) trust
+		- one way forest trust between the actual AD forest and a seperate PAM forest aka 
+		- enforces JIT (Just In Time) and JEA (Just Enough Administration)
+			- JIT
+				- controls how long the elevated privileges are granted
+			- JEA
+				- is a powershell security technology that imprements role based access controll (RBAC)
+				- controls what elevated privileges are granted via roles like what commands the user can run
+				- users connect to the powershell session with the specific elavated privileges via something like `Enter-PSSession -ConfigurationName HelpDeskReset` (in this case for resetting user creds)  
+		- bastion forest. 
+			- a bastion forest is a locked down, hardened, isolated forest specifically designed to host the JIT (Just In Time) privileged accounts. this way no permanent long standing domain admin accounts the attackers can find and exploits. 
+		- basically controls when and who gets what privileges and for how long. once the duration expires, [[microsoft identity manager (MIM)]] revokes access :3
+		- limits pass-the-hash and golden ticket attacks since privileged tickets are short lived :D
