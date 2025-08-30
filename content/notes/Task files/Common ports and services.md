@@ -56,4 +56,5 @@ tags:
 - [[LDAP]] 
 - [[Global Catalog LDAP]]
 - [[WinRM (HTTP)]] (https exists as well)
-- [[Kerberos]]
+- [[Kerberos]] 
+- [[NTLM]] 

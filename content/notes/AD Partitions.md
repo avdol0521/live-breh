@@ -1,0 +1,24 @@
+---
+title: "AD Partitions"
+tags:
+  - fetus
+---
+- logical divisions of the AD database holding different types of directory info
+- has independant replication scopes
+- the AD DB is stored in [[Domain Controller (DC)]]s in the `ntds.dit` file which is logically divided into these partitions: 
+	- schema partition ([[active directory Schema]])
+		- contains: definitions for all objects and attributes in the forest that can be created. basically skeletons to build upon
+		- replication scope: replecated to all DCs across the forest 
+		- purpose: defines the structure and rules for all [[active directory Objects]] in the AD forest 
+	- configuration partition
+		- contains: forestwide structural info such as [[AD topology]] 
+		- replication scope: all DCs just like the schema partition
+		- purpose: stores info necessary for the entire AD forest to function
+	- domain partition
+		- contains: info specific to particular domains such as users, groups, computer accounts, OU structures etc
+		- replication scope: replecated to DCs in the specific domains
+		- purpose: stores and replecates data for a single domain 
+	- application partition
+		- contains: application specific data like AD integrated DNS zones 
+		- replication scope: replicated to specific domain controllers depending on the application's requirements
+		- purpose: allows for flexible data storage and replication for specific applications without replicating to every DC in the forest 

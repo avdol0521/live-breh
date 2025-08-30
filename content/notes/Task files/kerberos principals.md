@@ -1,0 +1,13 @@
+---
+title: "kerberos principals"
+tags:
+  - fetus
+---
+- kerberos principals are unique, named entities in a [[Kerberos]] network that can be authenticated by the [[Key Distribution Center (KDC)]] 
+- principals include users, services and hosts 
+- each principal has a unique secret (like a password hash) that is known only to itself and the KDC which it uses to to prove its identity and and get auth tickets 
+- the format is typically like this: `primary/instance@REALM` where `primary` is the core identity and `instance` provides context and `REALM` is the kerberos realm/domain which is a representation of a DNS domain name that groups related users and resources
+	- examples: 
+		- user: `joemama/admin@SALES.SKIBIDI.COM` 
+		- service: `nfs/server1.skibidi.com@SKIBIDI.COM` 
+		- host: `host/server1.skibidi.com@SKIBIDI.COM` 

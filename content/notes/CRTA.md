@@ -103,7 +103,10 @@ tags:
 	- [[active directory Domain]] 
 	- [[domain structures (trees and forests)]] 
 	- [[Organizational Unit (OU)]] 
-	- [[active directory Schema]] 
+	- [[AD Partitions]] 
 	- [[Global Catalog]] 
 	- [[active directory Objects]] 
+- authentication is typically handled by two key protocols 
+	- [[Kerberos]] 
+	- [[LDAP]] 
 ## 
