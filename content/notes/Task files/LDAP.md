@@ -3,9 +3,12 @@ title: "LDAP"
 tags:
   - fetus
 ---
-- stands for Lightweight DIrectory Access Protocol
+- Lightweight DIrectory Access Protocol (LDAP). the successor to DAP
 - used to manage users, groups and devices in centralized directories like active directory
-- port: 389 ([[TCP]])
+- port: 
+	- 389 ([[TCP]]) (unencrypted)
+	- 636 ([[TCP]]) for [[LDAPS]] 
+- the standard protocol that applications and clients use to communicate with, query and modify/find AD database info to find user info and authenticate users 
 - accesses and maintains DDI (distributed directory information) services
 - often holds juicy auth data, perms and internal structure info 
 ### checklist (gotta look way more into this as well later):

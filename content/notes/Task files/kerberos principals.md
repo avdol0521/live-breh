@@ -9,5 +9,6 @@ tags:
 - the format is typically like this: `primary/instance@REALM` where `primary` is the core identity and `instance` provides context and `REALM` is the kerberos realm/domain which is a representation of a DNS domain name that groups related users and resources
 	- examples: 
 		- user: `joemama/admin@SALES.SKIBIDI.COM` 
+			- active directory uses User Principal Name (UPN)s i.e. the email formatted usernames like we see above :D
 		- service: `nfs/server1.skibidi.com@SKIBIDI.COM` 
 		- host: `host/server1.skibidi.com@SKIBIDI.COM` 

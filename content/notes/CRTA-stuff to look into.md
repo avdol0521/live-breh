@@ -3,6 +3,7 @@ title: "CRTA-stuff to look into"
 tags:
   - fetus
 ---
+- a list of stuff i have further studying left to do :)
 - [ ] this series: https://medium.com/@frsfaisall
 - [x] AD roles (FSMO)
 - [x] trust relationships
@@ -11,6 +12,8 @@ tags:
 - [x] SSO (single sign on)
 - [ ] [[AD topology]] 
 - [ ] AD DNS interaction
-- [ ] [[Kerberos Database]] 
+- [x] [[Kerberos Database]] 
 - [ ] KRBTGT account on a DC
 - [x] [[service tickets]]
+- [ ] [[privileged accounts and groups in AD]] 
+- [ ] [[Access Control Lists (ACL)]] 

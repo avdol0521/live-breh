@@ -11,7 +11,7 @@ tags:
 	- security (security groups)
 - cant apply [[Group Policy Objects (GPO)]] 
 - has an SID
-- can be added to Access Control Lists (ACL)
+- can be added to [[Access Control Lists (ACL)]]
 ## group types:
 #### security groups 
 - used to assign permissions to resources (files, folders, printers, apps etc)

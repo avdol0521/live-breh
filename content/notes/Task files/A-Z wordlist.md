@@ -1,3 +1,8 @@
+---
+title: "A-Z wordlist"
+tags:
+  - fetus
+---
 ```
 A
 B

@@ -45,6 +45,7 @@ tags:
 - [[hashcat]] 
 - [[hashrat]] 
 - [[autoCrack.py]] 
+- [[openssl toolkit]] 
 ## steganography and stuff:
 - [[binwalk]] 
 - [[strings]] 
