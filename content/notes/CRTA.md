@@ -3,7 +3,7 @@ title: "CRTA"
 tags:
   - fetus
 ---
-- target: adversary TTPs
+- target: adversary TTPs  
 - [[CRTA-stuff to look into]] 
 # fundamentals
 ## whats a TTP
@@ -55,10 +55,10 @@ tags:
 - command and control server :v self explanatory. 
 - look at this for some fun: https://github.com/Cryakl/Ultimate-RAT-Collection
 #### Payload server
-- hosts the payloads and malicious scripts and stuff for the attacker to deliver into systems from 
-#### redirector server 
-- sits between the victim networks and the C2 server to mask the c2 server's address
-- attackers use a proxy chain of these servers to make it way harder to trace back to the c2 server
+- hosts the payloads and malicious scripts and stuff for the attacker to deliver into systems from  
+#### Proxy servers 
+- sits between the victim networks and the C2 server to mask the c2 server's address 
+- attackers use a proxy chain of these servers to make it way harder to trace back to the c2 server 
 #### DMZ (De-Militarized Zone) Network <br>
 ![[DMZ.png]]
 - acts as a seperate subnet to host external facing services like web or mail servers and stuff. minimizes the risk of the internal corporate lan being compromised by controlling traffic flow with firewalls 

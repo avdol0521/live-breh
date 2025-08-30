@@ -8,6 +8,7 @@ time to revamp everything. will start with simple general stuff and will move on
 - [[linux stuff]] 
 - [[windows stuff]] 
 - [[binary exploitation]] 
+- [[reversing resources]] 
 - [[solved stuff]] 
 - [[CRTA]] 
 - [[box download links]] 

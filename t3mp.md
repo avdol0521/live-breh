@@ -125,3 +125,10 @@ Act like an experienced, fast-talking hacker. I want detailed vulnerability and 
 ----
 ---
 ---
+- programming - python
+- CTF 
+	- hash cracking 
+	- geolocation osint 
+	- binary exploitation 
+		- tcm - bof made easy 2022 ed 
+- Active directory 
