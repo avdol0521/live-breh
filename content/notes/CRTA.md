@@ -20,6 +20,15 @@ tags:
 	- identify misconfigs and vulns to get critical/sensitive assets and data
 	- testing the targated orgs detection and response capabilities 
 - is quiet and stealthy
+	- red teams are trained to elude detection from stuff like (in terms of physical red teaming techniques):
+		- CCTVs
+		- Keypad entry locks
+		- wireless/video intercoms
+		- motion/sensor detectors
+		- single/double deadbolts
+		- door and window locks 
+		- steel security doors 
+		- remote entry gates 
 - behaves and attacks similarly to real threat actors
 	- RT simulation - copy techniques of threat actors
 		- attacks exactly like a specific threat group/APT based on threat intel
@@ -109,4 +118,6 @@ tags:
 - authentication is typically handled by two key protocols 
 	- [[Kerberos]] 
 	- [[LDAP]] 
-## 
+# lab setup
+## external red team lab setup 
+## internal red team lab setup
