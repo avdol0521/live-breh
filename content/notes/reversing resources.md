@@ -3,8 +3,6 @@ title: "reversing resources"
 tags:
   - fetus
 ---
-# Reverse Engineering
-
 ## 📚 Books & PDFs
 
 - [Secrets of Reverse Engineering (2005, Eldad Eilam, PDF)](https://repo.zenk-security.com/Reversing%20.%20cracking/Reversing%20-%20Secrets%20Of%20Reverse%20Engineering%20\(2005\).pdf)
