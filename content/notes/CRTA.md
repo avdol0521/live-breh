@@ -106,7 +106,6 @@ tags:
 	- [[AD Partitions]] 
 	- [[Global Catalog]] 
 	- [[active directory Objects]] 
-	- [[privileged accounts and groups in AD]] (incomplete note)
 - authentication is typically handled by two key protocols 
 	- [[Kerberos]] 
 	- [[LDAP]] 

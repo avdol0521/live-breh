@@ -15,5 +15,5 @@ tags:
 - [x] [[Kerberos Database]] 
 - [ ] KRBTGT account on a DC
 - [x] [[service tickets]]
-- [ ] [[privileged accounts and groups in AD]] 
-- [ ] [[Access Control Lists (ACL)]] 
+- [ ] [[privileged groups and their permissions in AD]] 
+- [ ] [[Access Control List (ACL)]] 
