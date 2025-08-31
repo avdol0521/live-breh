@@ -24,4 +24,4 @@ tags:
 		- basically transfers the changed parts of a file rather than the entire file
 	- efficient
 	- better conflict resolution and self healing
-	- improved monitoring and event ogging
+	- improved monitoring and event logging

@@ -91,7 +91,7 @@ tags:
 	- web server 
 		- usually in the DMZ and connected to the internal network
 	- mail server 
-	- usually in the DMZ as well 
+		- usually in the DMZ as well 
 	- DB server 
 	- Bastion-Host (Jump server)
 		- acts as a secure gateway for accessing private networks by sitting between the workstation and the internal network  
@@ -119,5 +119,31 @@ tags:
 	- [[Kerberos]] 
 	- [[LDAP]] 
 # lab setup
+- lab structure to setup: <br>
+![[CRTAExternalLabStructure.png]]
+- I'll be using vmware workstation pro 17.6.3 
+	- [[vmware workstation pro 17.6.3 download link]]
+- go to the vmware virtual network editor at `edit>virtual network editor` in the top bar. you should see something like this pop up: <br>
+![[CRTAvmwareVirtualNetworkEditorSS.png]]
+- click on the `Change Settings` button on the bottom right to unlock custom configuration capabilities
+- add two networks and assign the subnet ips: (see [[subnetting]] if you wanna know more about that)
+	- `192.168.50.0` (this will be the external network)
+	- `10.10.10.0` (this will be the internal network)
+- hit apply and it should now look like this (i renamed both my adapters cuz why not) <br>
+![[CRTAvmwareAdaptersSS.png]]
+- remember to uncheck the local DHCP service option since we're going to assign IPs manually
 ## external red team lab setup 
-## internal red team lab setup
+- download ts: https://excellmedia.dl.sourceforge.net/project/metasploitable/Metasploitable2/metasploitable-linux-2.0.0.zip
+- open that shit in vmware (double clicking on the `.vmx` file will work no need to do this stuff its just there for explaining purposes :V)<br>
+![[CRTAmetasploitableOpenInVmwareSS.png]]
+- set up the first adapter as the custom external adapter and the second one as the custom internal one like this <br>
+![[CRTAmetasploitableAdapterConfigSS-1.png]]
+- and set your kali to use the external adapter as well :3
+- run the metasploitable machine (ill call it "the server" from here on out). the creds are `msfadmin:msfadmin`
+- it wont have an ip by default since we dont have dhcp setting everything up for us. open `/etc/network/interfaces` with nano as sudo. should see something like this: <br>
+![[CRTAnanoOpenInterfaceFileSS.png]]
+- add these lines: <br>
+![[CRTAserverInterfacesAddedSS.png]]
+- do `/etc/init.d/networking restart` to restart the networking service. should have two ips now on both the interfaces 
+- do the same thing for kali and give it the address `192.168.50.2` and ping the server to see if its all good. if it does work thats all there is to the external network setup :3
+## internal red team lab setup 

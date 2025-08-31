@@ -3,7 +3,7 @@ title: subnetting
 tags:
   - fetus
 ---
-# NEW
+# NEW (unorganized notes for this one sorryyyyyyyy ill make this prettier later :D)
 ## the what and why
 What even is Subnetting? And why do we do it? Subnetting is basically the process of dividing a larger network into smaller ones. But now a question arises. why do we even need to divide a network into subnets?
 

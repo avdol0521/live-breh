@@ -16,7 +16,7 @@ S-1-5-21-1004336348-1177238915-682003330-512
  - `S-`
 	 - this prefix tells us that the string is an SID 
 - `1`
-	- revision level of the SID, always 1
+	- [[revision level]] of the SID, always 1
 - `5`
 	- indicates what authority issued it. 5 usually indicates `NT Authority`
 - `21-1004336348-1177238915-682003330`

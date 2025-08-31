@@ -7,4 +7,4 @@ tags:
 - TGTs have a limited lifetime
 - TGTs are encrypted with the user's password
 - the KRBTGT account on a [[Domain Controller (DC)]] is responsible for creating and signing all TGTs
-- stolen TGTs can lead to [[Pass The Ticket Attack]]s 
+- stolen TGTs can lead to [[Pass The Ticket Attack]]s

@@ -17,3 +17,5 @@ tags:
 - [x] [[service tickets]]
 - [ ] [[privileged groups and their permissions in AD]] 
 - [ ] [[Access Control List (ACL)]] 
+- [ ] [[revision level]]
+- [ ] [[Key Distribution Center (KDC)]]
