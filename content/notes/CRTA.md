@@ -169,9 +169,9 @@ tags:
 	- https://go.microsoft.com/fwlink/p/?LinkID=2195443&clcid=0x409&culture=en-us&country=US (windows server 2012 R2 for the application server)
 	- https://go.microsoft.com/fwlink/p/?LinkID=2208844&clcid=0x409&culture=en-us&country=US (windows 10 enterprise as an employee machine)
 - we will set these IPs to each machine in the internal network:
-	- DC: `10.10.10.2`
-	- Application Server: `10.10.10.3`
-	- employee machine: `10.10.10.4`
+	- DC: `10.10.10.2` 
+	- Application Server: `10.10.10.3` 
+	- employee machine: `10.10.10.4` 
 #### WS2016 DC setup
 - go to vmware `file>new virtual machine`
 - select typical 
@@ -204,5 +204,37 @@ P@$$w0rd!
 - both the machines and users should show up in the manage users and groups section of the DC panel
 - thats about it for the internal environment
 # exploitation
-#### External web server exploitation:
-- [[CRTAexternalWebServerExploitation]] 
+## External web server exploitation:
+- [[metasploitable2 exploitation]] 
+- got a [[meterpreter]] shell using [[shellToMeterpreter]] 
+- updated the root creds to `root:root` as well
+## Pivoting:
+- [[pivoting]]
+- did this to connect to the webserver via ssh over a local SOCKS proxy:
+```sh
+ssh -D 8008 root@192.168.50.3
+```
+- did `netstat -ant | grep 8008`. its listening:
+```sh
+╭─[~]─[root@DEMONDAYZ]─[0]─[4309]
+╰─[:)] # netstat -ant | grep 8008
+tcp        0      0 127.0.0.1:8008          0.0.0.0:*               LISTEN 
+tcp6       0      0 ::1:8008                :::*                    LISTEN 
+```
+- modified `/etc/proxychains4.conf`
+	- commented out `proxy_dns` at line `60` 
+	- added the entry `socks4 127.0.0.1 8008` at the end of the file and deleted the default entry
+- did this to check if i can connect to 10.10.10.5 (webserver internal) via [[proxychains]] 
+```sh
+proxychains nc -nv 10.10.10.5 80
+```
+- yup sure can
+- cant connect to `10.10.10.4 445` because SMB isnt running on the employee machine unlike in the vid. these fucking assholes dont show the entire setup process fuck these guys and their module ts pisses me off
+- then they did a pretend enumeration to find employee machine possible creds in `vnc.log` which apparently sometimes happens if the employee connects to the webserver via vnc. but those creds dont actually exist in our case cuz they made that shit up fuck these guys again i hate cwl 
+- now they accessed the windows machine via RDP without showing how to set it up or where it came from lmao
+#### how to set up rdp on the windows machine:
+## lab access 
+creds:
+```sh
+abdullah0521:aSo|cVXk
+```

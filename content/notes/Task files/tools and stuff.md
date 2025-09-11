@@ -6,18 +6,20 @@ tags:
 ## misc:
 - [[fastfetch]] 
 ## package managers:
-- [[apt]]
+- [[apt]] 
 - [[pip]] 
 ## cli file editors:
-- [[mousepad]]
-- [[vi]]
+- [[nano]] 
+- [[vi]] 
 - [[vim]] 
 ## recon:
 - [[nmap]] 
+- [[rustscan]] (INCOMPLETE NOTE) 
 - [[amass]] 
+- [[autorecon]] 
 ## brute forcing:
 - [[hydra]] 
-- [[fcrackzip]] 
+- [[fcrackzip]]  
 ## wordlist generation:
 - [[crunch]] 
 ## SMB stuff:
@@ -29,15 +31,15 @@ tags:
 - [[FTP]] 
 - [[mount]] 
 ## file compression/decompression: 
-- [[gzip]]
-- [[gunzip]]
+- [[gzip]] 
+- [[gunzip]] 
 - [[unzip]] 
 - [[unrar]] 
 - [[zlib-flate]] 
 ## directory fuzzing/busting:
-- [[ffuf]]
+- [[ffuf]] 
 - [[dirbuster]] 
-- [[feroxbuster]]
+- [[feroxbuster]] 
 - [[gobuster]] 
 ## hash related:
 - [[hash-identifier]] 
@@ -54,21 +56,25 @@ tags:
 - [[aperisolve]] 
 - [[outguess]] 
 ## shells:
-- [[webshells]]  
-- [[python-tty-shell]] 
+- [[webshells]] 
 - [[oneLinerShells]] 
-## more notes:
+## pivoting:
+- [[chisel]] 
+## useful notes:
 - [[partialRootToFullRootChecklist]] 
-- [[linuxPrivEscVectors]] 
+- [[linuxPrivEscVectors]] (INCOMPLETE NOTE)
+- [[shellStabilizationChecklist]] 
+- [[persistenceChecklist]] 
+- [[shellToMeterpreter]] 
 ## metasploit:
-- [[metasploit_framework]]  
+- [[metasploit_framework]] 
 ## file tools: 
 - [[peass]] 
 ## port listeners: 
 - [[netcat]] 
 - [[pwncat-cs]] 
 ## file uploading/downloading (ish): 
-- [[python server creation]] 
+- [[python http server creation]] 
 - [[wget]] 
 - [[certutil]] 
 - [[curl]] 
@@ -76,13 +82,16 @@ tags:
 - [[dnsrecon]] 
 ## compilers:
 - [[gcc]] 
-## RDP:
+## RDP: 
 - [[remmina]] 
 - [[xfreerdp]] 
+- [[vncviewer]] 
+- [[rdesktop]] 
 ## database stuff:
 - [[mysql]] 
 ## specific commands for later:
 - [[base64ListDecoderOneLiner]] 
+- [[manualPingSweep]] 
 ## random stuff:
 - [[QRscannerOnline]] 
 - [[cipher-identifier]] 

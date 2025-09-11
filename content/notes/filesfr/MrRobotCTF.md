@@ -245,7 +245,7 @@ elliot:ER28-0652
 - huh doesnt let me wtf
 - lets try the wp-login instead ig
 - yup it was the creds for the wp-login
-- went to the editor and put in a quick little reverse shell in the `footer.php` since its in every page and easy to activate. got a shell. stabilized it with [[python-tty-shell]]
+- went to the editor and put in a quick little reverse shell in the `footer.php` since its in every page and easy to activate. got a shell. stabilized it with [[shellStabilizationChecklist]]
 - some info:
 ```sh
 uid=1(daemon) gid=1(daemon) groups=1(daemon)

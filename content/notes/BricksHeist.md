@@ -272,7 +272,7 @@ Interesting Finding(s):
 	- had to install some dependencies for the exploit. see [[pip]] to see how to set up a venv to install libraries if you dont know how to get pip working <br>
 ![[BricksHeistGotAShellSS.png]]
 - got a more stable shell with [[oneLinerBashShell]]
-- time to stabilise it with [[python-tty-shell]] 
+- time to stabilise it with [[shellStabilizationChecklist]] 
 - got this in config.php:
 ```sh
 /** Database username */

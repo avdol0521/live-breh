@@ -20,7 +20,7 @@ tags:
 telnet smtp.idk.com port
 ```
 - can connect with an IP instead as well
-- can use [[netcat]] instead as well
+- can use [[netcat]] instead as wel.l
 #### help:
 ```sh
 HELP command

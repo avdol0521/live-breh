@@ -120,7 +120,7 @@ uploads                 [Status: 301, Size: 330, Words: 20, Lines: 10, Duration:
 
 theres an uploads directory. got the shell at `/internal/uploads/php-reverse-shell.phtml` <br>
 ![[vulnVersityGotAShellSS.png]]
-stabilised the shell with [[python-tty-shell]] and did `export TERM=xterm` to get `clear` working. did `awk -F: '{print $1 ":" $3 ":" $7}' /etc/passwd` to get a list of users with shells on the machine. heres the list:
+stabilised the shell with [[shellStabilizationChecklist]] and did `export TERM=xterm` to get `clear` working. did `awk -F: '{print $1 ":" $3 ":" $7}' /etc/passwd` to get a list of users with shells on the machine. heres the list:
 ```sh
 root:0:/bin/bash
 daemon:1:/usr/sbin/nologin

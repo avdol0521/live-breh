@@ -19,3 +19,4 @@ tags:
 - [ ] [[Access Control List (ACL)]] 
 - [ ] [[revision level]]
 - [ ] [[Key Distribution Center (KDC)]]
+- [ ] userland, kernel land and boot level persistence

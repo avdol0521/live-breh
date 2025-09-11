@@ -1,5 +1,5 @@
 ---
-title: "postgreSQL"
+title: postgreSQL
 tags:
   - fetus
 ---
