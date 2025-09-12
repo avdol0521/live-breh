@@ -14,7 +14,7 @@ tags:
 - [ ] AD DNS interaction
 - [x] [[Kerberos Database]] 
 - [ ] KRBTGT account on a DC
-- [x] [[service tickets]]
+- [x] [[Ticket Granting Service (TGS)]]
 - [ ] [[privileged groups and their permissions in AD]] 
 - [ ] [[Access Control List (ACL)]] 
 - [ ] [[revision level]]

@@ -6,4 +6,6 @@ tags:
 - [[windows file system]] 
 - [[windows user perms and stuff]]
 - [[windows commands and stuff]] 
-- [[windows tools]] 
+- [[powershell]] 
+- [[windows tools and components]] 
+- [[system configuration]] 

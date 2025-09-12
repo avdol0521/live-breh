@@ -4,7 +4,7 @@ tags:
   - fetus
 ---
 - lets services access resources on behalf of the user for example when an application the user uses needs to access data from a database
-- the service uses the user's credentials to impersonate the user and get service tickets from the [[Ticket Granting Server (TGS)]] 
+- the service uses the user's credentials to impersonate the user and get service tickets from the [[Ticket Granting Server]] 
 ## delegation types
 #### unconstrained delegation 
 - the most powerful and least secure. lets the service aqquire any service ticket on the user's behalf 

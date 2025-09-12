@@ -7,7 +7,8 @@ tags:
 - for a trust to work, a trust account and a [[Trust Domain Object (TDO)]] is created in each domain involved in the trust relationship 
 - trust categories:
 	- direction (self explanatory)
-		- one way
+		- one way <br>
+			- ![[Pasted image 20250912210701.png]]
 		- two way
 	- transitivity
 		- transive
