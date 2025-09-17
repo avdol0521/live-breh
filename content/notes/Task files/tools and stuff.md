@@ -67,6 +67,7 @@ tags:
 - [[shellStabilizationChecklist]] 
 - [[persistenceChecklist]] 
 - [[shellToMeterpreter]] 
+- [[lookForCredsLocations]] 
 ## metasploit:
 - [[metasploit_framework]] 
 ## file tools: 
@@ -90,6 +91,7 @@ tags:
 - [[rdesktop]] 
 ## database stuff:
 - [[mysql]] 
+- [[sqlite3]] 
 ## specific commands for later:
 - [[base64ListDecoderOneLiner]] 
 - [[manualPingSweep]] 

