@@ -11,7 +11,7 @@ tags:
 	- read this if you wanna know about some well known APT groups: https://attack.mitre.org/groups/
 - TTP is an accronym for Tactics, Techniques and Procedures
 	- Tactics
-		- overall goal of an attack like stealing data or disrupting a system 
+		- overall goal of an attack like stealing data or disrupting a system
 	- Techniques 
 		- methods to achieve that goal like using phishing mails or exploiting a vuln 
 	- Procedures
@@ -237,4 +237,12 @@ proxychains nc -nv 10.10.10.5 80
 creds:
 ```sh
 abdullah0521:aSo|cVXk
+```
+scope:
+```sh
+vpn connection
+```
+
+```sh
+privilege:Admin@962
 ```

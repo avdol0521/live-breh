@@ -132,3 +132,11 @@ Act like an experienced, fast-talking hacker. I want detailed vulnerability and 
 	- binary exploitation 
 		- tcm - bof made easy 2022 ed 
 - Active directory 
+
+
+
+
+- augmidesk 
+- next ventures 
+- oolio
+- 

