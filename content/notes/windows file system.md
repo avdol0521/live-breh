@@ -13,3 +13,4 @@ tags:
 	- the profile folder only gets created upon login
 	- open [[lusrmgr (Local Users and Groups Management)]] to see in more detail
 	- each user profile will have the same folders. some of em are the usual Desktop, Documents, Downloads, Music, Pictures etc 
+- 

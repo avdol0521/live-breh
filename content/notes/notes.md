@@ -7,7 +7,7 @@ time to revamp everything. will start with simple general stuff and will move on
 - [[networking stuff]] 
 - [[linux stuff]] 
 - [[windows stuff]] 
-- [[solved stuff]] 
+- [[solved boxes]] 
 - [[CRTA]] 
 - [[box download links]] 
 - [[binary exploitation]] 

@@ -4,5 +4,6 @@ tags:
   - fetus
 ---
 - [[msfconsole]] 
+	- [[metasploit database management]] 
 - [[msfvenom]] 
 - [[meterpreter]] 

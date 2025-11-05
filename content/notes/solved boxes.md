@@ -3,7 +3,7 @@ title: "solved stuff"
 tags:
   - fetus
 ---
-### mainly a list of stuff i've already solved and wasnt lazy enough to not write down
+### mainly a list of boxes i've already solved and wasnt lazy enough to not write down
 - [[Kioptrix]] 
 - [[Academy]] 
 - [[Dev]] 
@@ -46,3 +46,6 @@ tags:
 - [[lazyAdmin]] 
 - [[BricksHeist]] 
 - [[breaching AD]] 
+- [[attacktiveDirectory]] 
+- [[windowsPrivEsc]] 
+- [[wreath]] 

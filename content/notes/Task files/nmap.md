@@ -3,12 +3,16 @@ title: "nmap"
 tags:
   - fetus
 ---
-# usage:
-## default scan:
+## static bin download 
 ```sh
-nmap -T4 -sCV -p- -oN Dscan.txt 10.10.161.155
+wget https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/nmap
 ```
-## aggressive scan:
+## usage:
+#### default scan:
+```sh
+nmap -T4 -sSCV -p- -oN Dscan.txt 10.10.161.155
+```
+#### aggressive scan:
 ```sh
 nmap -T4 -p- -A -oN Ascan.txt 10.10.161.155
 ```

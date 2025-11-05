@@ -58,9 +58,8 @@ tags:
 ## shells:
 - [[webshells]] 
 - [[oneLinerShells]] 
-## pivoting:
-- [[chisel]] 
-- [[ligolo-ng]] 
+## enumeration:
+- [[peass]] 
 ## useful notes:
 - [[partialRootToFullRootChecklist]] 
 - [[linuxPrivEscVectors]] (INCOMPLETE NOTE)
@@ -70,8 +69,24 @@ tags:
 - [[lookForCredsLocations]] 
 ## metasploit:
 - [[metasploit_framework]] 
-## file tools: 
-- [[peass]] 
+## [[pivoting]]: 
+- [[ligolo-ng]] 
+- [[sshuttle]] 
+- [[chisel]] 
+- [[SSH]] 
+- [[plink.exe]] 
+- [[socat]] 
+## AD stuff 
+- [[wadcoms]] 
+- [[ldapwhoami]] 
+- [[ldapsearch]] 
+- [[impacket]] 
+- [[crackmapexec]] 
+	- [[netexec]] 
+- [[kerbrute]] 
+- [[evil-winrm]] 
+- [[rubeus]] 
+- [[bloodhound]] 
 ## port listeners: 
 - [[netcat]] 
 - [[pwncat-cs]] 
@@ -94,7 +109,8 @@ tags:
 - [[sqlite3]] 
 ## specific commands for later:
 - [[base64ListDecoderOneLiner]] 
-- [[manualPingSweep]] 
+- [[bashPingSweep]] 
+- [[bashPortScanner]] 
 ## random stuff:
 - [[QRscannerOnline]] 
 - [[cipher-identifier]] 

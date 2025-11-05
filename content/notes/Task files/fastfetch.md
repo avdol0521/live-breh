@@ -14,8 +14,6 @@ mousepad ~/.config/fastfetch/config.jsonc
     "logo": {
         "type": "file",
         "source":"/root/Downloads/lain-navi.txt",
-        "height": 30,
-        "width": 30,
         "padding": {
             "top": 5,
             "left": 3

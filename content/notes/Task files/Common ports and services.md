@@ -41,6 +41,7 @@ tags:
 - [[VNC]] 
 - [[RFB]] 
 - [[MSRDP]]
+- [[WinRM]] 
 #### DB related:
 - [[mysql & postgreSQL]] 
 - [[NoSQL (mongoDB or Redis)]] 

@@ -3,4 +3,10 @@ title: "pivoting"
 tags:
   - fetus
 ---
-#### what it is
+- stuff to pivot with:
+	- [[ligolo-ng]]
+	- [[sshuttle]] 
+	- [[chisel]]
+	- [[SSH]]
+	- [[plink.exe]] 
+	- [[socat]] 
