@@ -39,6 +39,7 @@ tags:
 - [[Fowsniff-CTF]] 
 - [[L3AK-CTF]] 
 - [[vulnVersity]] 
+- [[billing]] 
 - [[c4ptur3-th3-fl4g]] 
 - [[hydra-THM]] 
 - [[yearOfTheRabbit]] 

