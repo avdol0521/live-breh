@@ -5,7 +5,7 @@ tags:
 ---
 - room link: https://tryhackme.com/room/billing
 ## initial enum:
-- nmap Ascan with [[rustscan]]:
+- [[nmap]] Ascan with [[rustscan]]:
 ```sh fold title:"Ascan.txt"
 # Nmap 7.95 scan initiated Sun Nov  9 22:51:37 2025 as: /usr/lib/nmap/nmap -vvv -p 22,80,3306,5038 -4 -T4 -A -oN Ascan.txt 10.201.32.227
 Nmap scan report for 10.201.32.227

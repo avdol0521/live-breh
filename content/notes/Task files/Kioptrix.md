@@ -62,7 +62,7 @@ Host script results:
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Sun Aug 17 15:36:50 2025 -- 1 IP address (1 host up) scanned in 18.85 seconds
 ```
-## service enumeration 
+## service enumeration and exploitation 
 ### [[SSH]] fix
 ```sh
 ssh root@$ip -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -c aes128-cbc
