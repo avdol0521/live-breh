@@ -46,7 +46,6 @@ tags:
 - [[john the ripper]] 
 - [[hashcat]] 
 - [[hashrat]] 
-- [[autoCrack.py]] 
 - [[openssl toolkit]] 
 ## steganography and stuff:
 - [[binwalk]] 
@@ -55,18 +54,49 @@ tags:
 - [[steghide]] 
 - [[aperisolve]] 
 - [[outguess]] 
+## DFIR Tools 
+- Aurora
+- Browser Analysis
+	- chromecacheview
+	- chromecookiesview
+	- chromehistoryview
+	- DB Browser for SQLite 
+	- Hindsight
+- Data Triaging
+	- Kansa 
+	- plaso
+	- CyLR
+- DCode v5
+- Disk Analysis
+	- Arsenal-Image-Mounter
+	- Exterro FTK Imager
+- Email Analysis 
+	- Eml_Analyzer
+	- Kernel for OST to PST 
+	- Kernel OST Viewer 
+	- Kernel Output PST VIewer 
+	- outlookstatview
+	- XstReader
+- exiftool 
+- EZ Tools 
+- HxD
+- LogFileParser
+- Malware Analysis 
+- Memory Analysis
+- Network Analysis 
+- Nmap 
+- PersistenceSniper
+- pestudio
+- Recovery Data 
+- Registry Analysis 
+- Sleuth Kit 
+- SysinternalsSuite
+- USB Analysis 
 ## shells:
 - [[webshells]] 
 - [[oneLinerShells]] 
 ## enumeration:
 - [[peass]] 
-## useful notes:
-- [[partialRootToFullRootChecklist]] 
-- [[linuxPrivEscVectors]] (INCOMPLETE NOTE)
-- [[shellStabilizationChecklist]] 
-- [[persistenceChecklist]] 
-- [[shellToMeterpreter]] 
-- [[lookForCredsLocations]] 
 ## metasploit:
 - [[metasploit_framework]] 
 ## [[pivoting]]: 
@@ -90,6 +120,8 @@ tags:
 ## port listeners: 
 - [[netcat]] 
 - [[pwncat-cs]] 
+## phishing
+- [[setoolkit]]
 ## file uploading/downloading (ish): 
 - [[python http server creation]] 
 - [[wget]] 
@@ -107,6 +139,13 @@ tags:
 ## database stuff:
 - [[mysql]] 
 - [[sqlite3]] 
+## useful notes:
+- [[partialRootToFullRootChecklist]] 
+- [[linuxPrivEscVectors]] (INCOMPLETE NOTE)
+- [[shellStabilizationChecklist]] 
+- [[persistenceChecklist]] 
+- [[shellToMeterpreter]] 
+- [[lookForCredsLocations]] 
 ## specific commands for later:
 - [[base64ListDecoderOneLiner]] 
 - [[bashPingSweep]] 

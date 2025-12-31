@@ -10,3 +10,568 @@ tags:
 - [[Exploit Development ]] 
 - [[Post Exploitation]] 
 - [[Red Teaming]] 
+
+## entire module:
+- Resource Development and Initial Access 
+	-  Powershell for Pentesters
+		- Welcome
+		- Course
+			- Introduction
+				- why powershell 
+				- what is powershell
+			- powershell Fundamentals
+				- the powershell CLI
+				- Cmdlets
+				- Modules
+				- Scripts 
+				- Objects 
+			- offensive powershell 
+				- Downloading and Execution 
+				- Obfuscation
+				- Information gathering and recon 
+				- post exploitation with powershell 
+				- powershell and metasploit 
+				- powershell and metasploit quiz
+				- Empire Overview 
+				- Empire Overview quiz
+				- UAC Bypass Powershell Exploit Script Walkthrough 
+				- UAC Bypass Powershell Exploit Script Walkthrough quiz
+				- Introduction to leveraging WMI and Methods for Persistence 
+				- Introduction to leveraging WMI and Methods for Persistence quiz
+				- leveraging powershell during exploitation
+		- Fundamentals
+			- powershell fundamentals
+				- intro to powershell (vid)
+				- quiz
+				- why powershell (vid)
+				- quiz
+				- the powershell CLI (vid)
+				- quiz
+				- getting comfortable with powershell (vid)
+				- quiz
+				- powershell cmdlets (vid)
+				- quiz
+				- powershell modules (vid)
+				- quiz
+				- powershell objects (vid)
+				- quiz
+		- Pentesting
+			- powershell for pentesting
+				- leveraging powershell during exploitation (vid)
+				- quiz
+				- Powershell Empire (vid)
+				- quiz
+				- Leveraging powershell during exploitation 
+				- AV evation with Shellter (vid)
+				- quiz
+				- Obfuscating Powershell Code (vid)
+				- quiz
+		- Goodbye
+			- conclusion
+	- Client Side Attacks 
+		- Welcome 
+			- Introduction
+		- Lessons
+			- client side attacks
+				- intro to client side attacks (vid)
+				- quiz
+				- Client side attack vectors (vid)
+				- quiz
+			- reconnaissance
+				- client side information gethering (vid)
+				- quiz
+				- client fingerprinting (vid)
+				- quiz
+			- social engineering
+				- intro to social engineering (vid)
+				- quiz
+				- pretexting (vid)
+				- quiz
+				- Phishing with Gophish (vid)
+				- Phishing with Gophish part 2 (vid)
+				- quiz
+				- Lets Go Phishing 
+			- development and weaponization
+				- Resource Development and weaponization (vid)
+				- quiz
+				- VBA Macro Fundamentals (vid)
+				- quiz
+				- VBA Macro Development (vid)
+				- VBA Macro Development part 2 (vid)
+				- quiz
+				- Weaponizing VBA Macros with MSF (vid)
+				- quiz
+				- VBA Powershell Dropper (vid)
+				- quiz
+				- VBA Reverse Shell Macro with Powercat (vid)
+				- quiz
+				- Using ActiveX Controls for Macro Execution (vid)
+				- quiz
+				- Pretexting Phishing Documents (vid)
+				- HTML Applications (HTA) (vid)
+				- quiz
+				- HTA Attacks 
+				- Automating Macro Development with MacroPack (vid)
+				- Automating Macro Development with MacroPack part 2 (vid)
+				- Custom Undetectable Macro Development
+			- delivery and execution
+				- File Smuggling with HTML and JavaScript (vid)
+				- quiz
+				- Windows FIle Smuggling with HTML and Javascript 
+				- Initial Access via Spear Phishing Attachment (vid)
+				- Client-Side Exploitation
+			- browser attacks 
+				- Establishing a Shell Through the Victim's Browser (vid)
+				- Establishing a Shell Through the Victim's Browser 
+		- Goodbye
+			- conclusion
+- Web Application Attacks
+	- Web Application Penetration Testing
+		- Welcome 
+			- introduction
+		- Information Gathering
+			- passive information gathering 
+				- Intro to web enumeration and information gathering (vid)
+				- quiz
+				- OWASP Web Security Testing Guide (vid)
+				- quiz
+				- WHOIS (vid)
+				- quiz
+				- Website Fingerprinting with Netcraft (vid)
+				- quiz
+				- Passive DNS Enumeration (vid)
+				- quiz
+				- Reviewing Web Server Metafiles (vid)
+				- quiz
+				- Web App Technology Fingerprinting (vid)
+				- quiz
+			- active information gathering 
+				- Crawling with Burp Suite and OWASP ZAP (vid)
+				- quiz
+				- Passive Crawling with Burp Suite 
+				- Webserver fingerprinting (vid)
+				- quiz
+				- Apache Recon Basics
+				- Webserver Vulnerability Scanning with Nikto (vid)
+				- quiz
+				- Scanning Web Application with Nikto
+				- File and Directory Brute Force (vid)
+				- quiz
+				- Directory Enumeration With Gobuster 
+				- Automated Recon with OWASP Amass (vid)
+				- quiz
+		- Vulnerabilities
+			- XSS
+				- Identifying and Exploiting Reflected XSS Vulnerabilities (vid)
+				- quiz
+				- WP Relevanssi plugin XSS
+				- Identifying and exploiting stored XSS vulnerabilities (vid)
+				- quiz 
+				- MyBB Downloads Plugin 
+				- Identifying and exploiting DOM-Based XSS Vulnerabilities (vid)
+				- quiz
+				- Exploiting DOM-Based XSS Vulnerabilities
+			- SQLi
+				- Finding SQL Injection Vulnerabilities (vid)
+				- quiz
+				- Exploiting Error-Based SQL Injection Vulnerabilities (vid)
+				- Exploiting Error-Based SQL Injection Vulnerabilities - part 2 (vid)
+				- quiz
+				- PHPMyRecipies
+				- Exploiting Union-Based SQL Injection Vulnerabilities (vid)
+				- Exploiting Union-Based SQL Injection Vulnerabilities - part 2 (vid)
+				- quiz
+				- Vulnerable Results Portal: Union Based SQLi
+		- Goodbye
+			- conclusion
+- Security 
+	- Network Penetration Testing 
+		- Welcome 
+			- introduction
+		- Host Discovery & Port Scanning
+			- information gathering 
+				- Active Information Gathering (vid)
+				- quiz
+			- networking primer 
+				- networking fundamentals
+				- quiz
+				- network layer (vid)
+				- quiz
+				- transport layer (vid)
+				- quiz
+			- host discovery
+				- network mapping (vid)
+				- quiz
+				- host discovery techniques (vid)
+				- quiz
+				- ping sweeps (vid)
+				- quiz
+				- host discovery with nmap (vid)
+				- host discovery with nmap - part 2 (vid)
+				- quiz
+			- port scanning 
+				- port scanning with nmap (vid)
+				- quiz
+				- Windows Recon: Nmap Host Discovery
+				- Service version and OS detection (vid)
+				- quiz
+				- Nmap Scripting Engine (NSE) (vid)
+				- quiz
+				- Scan the Server 1
+			- Firewall
+				- Firewall Detection and IDS Evasion (vid)
+				- quiz
+			- scan timing and performance
+				- Optimizing Nmap Scans (vid)
+			- output and verbosity
+				- Nmap Output formats (vid)
+				- quiz
+				- Windows Recon: SMB Nmap Scripts
+		- Enumeration
+			- enumeration overview 
+				- intro to enumeration (vid)
+				- quiz
+			- windows enumeration 
+				- SMB and NetBIOS Enumeration (vid)
+				- quiz
+				- NetBIOS Hacking 
+				- SNMP Enumeration (vid)
+				- quiz
+				- SNMP Analysis
+			- linux enumeration 
+				- Linux Service Enumeration (vid)
+				- quiz
+				- Linux Exploitation Lab 1: Remote Enumeration 
+		- exploitation 
+			- windows exploitation 
+				- SMB Relay Attack (vid)
+				- quiz
+				- DNS & SMB Relay Attack 
+				- MSSQL DB User Impersonation to RCE (vid)
+				- MSSQL DB User Impersonation to RCE
+			- linux exploitation 
+				- Linux Black-Boz Penetration test (vid)
+				- Linux Exploitation Lab 3: Remote Exploitation and Post Exploitation
+		- Post-Exploitation
+			- windows post exploitation
+				- Dumping & Cracking NTLM Hashes (vid)
+				- Windows: NTLM Hash Cracking 
+				- Windows Post-Exploitation Lab (vid)
+				- Post-exploitation
+		- Goodbye 
+			- conclusion 
+		- Additional Resource 
+			- lab (bypassing AV)
+- Exploit Development 
+	- System Security & x86 Fundamentals
+		- Welcome 
+			- introduction
+		- Lessons 
+			- introduction
+				- Intro to System Security (vid)
+			- architecture fundamentals
+				- CPU Architecture (vid)
+				- quiz
+				- Registers (vid)
+				- quiz
+				- Process Memory
+				- quiz
+				- Understanding the Stack (vid)
+				- quiz
+				- Stack Frames (vid)
+				- quiz
+			- x86 assembly fundamentals
+				- Assemblers and Compilers (vid)
+				- quiz
+				- Intro to Assembly 
+				- quiz
+				- Setting Up Our Lab (vid)
+				- Hello World in Assembly (vid)
+				- Data Types & Variables (vid)
+		- Goodbye
+			- conclusion
+	- Exploit Development: Buffer Overflows
+		- Welcome 
+			- introduction
+		- Lessons 
+			- buffer overflow fundamentals
+				- Intro to buffer overflows (vid)
+				- quiz
+				- Finding Buffer Overflows (mp4)
+				- quiz
+				- Finding Buffer Overflows With Fuzzing (vid)
+				- quiz
+				- Fuzzing windows software
+			- stack-based buffer overflow 
+				- windows Stack Overflows (vid)
+				- quiz
+			- SEH buffer overflow
+				- Structured Exception Handling (SEH) (vid)
+				- quiz
+				- Windows SEH Overflow (EasyChat) (vid)
+				- Windows SEH Overflow (EasyChat)
+		- Goodbye 
+			- conclusion
+- Post Exploitation 
+	- Privilege Escalation
+		- Welcome 
+			- Introduction
+				- course introduction
+				- intro to privilege escalation 
+				- quiz
+		- Course 
+			- Basic 
+				- Clear-text password
+				- shared server 
+				- exploiting setUID programs
+				- unattended installation
+				- bad permissions 
+				- fallen guardian
+				- cron jobs gone wild!
+				- registry autorun
+				- application auto startup 
+				- permissions matter!
+				- credential management 
+				- editing gone wrong 
+				- files restore 
+				- the golden longs 
+				- load order matters 
+				- powershell history 
+				- powershell transcript 
+				- restricted shell 
+				- chroot jail I 
+				- windows: PrivescCheck
+			- Linux 
+				- file permissions II
+				- file permissions 
+				- permissions matter II
+				- exploiting setuid programs II
+				- cron jobs gone wild II
+				- multi user escalation I
+				- multi user escalation II
+				- the golden logs II
+				- multi user escalation III 
+				- Library Chaos 
+				- Library Chaos II
+				- Symlinks Get Me Worried!
+				- Not all PATHs are Secure 
+				- chroot jail II
+				- chroot jail III 
+			- Linux Capabilities
+				- CAP_DAC_READ_SEARCH II
+				- CAP_CHOWN
+				- CAP_SYS_TIME	    
+				- CAP_DAC_OVERRIDE II
+				- CAP_KILL
+				- CAP_NET_BIND_SERVICE
+				- CAP_NET_BIND + NET_RAW				    
+				- CAP_FOWNER
+				- CAP_SETUID				    
+				- CAP_SETPCAP
+				- CAP_SETGID				    
+				- CAP_NET_ADMIN + NET_RAW
+				- CAP_SETGID II
+				- CAP_DAC_OVERRIDE III
+				- CAP_SETUID II				    
+				- CAP_LINUX_IMMUTABLE
+			- App to root
+				- leveraging X Windows System 
+				- Super Screen 
+				- Liberator Database
+				- Leveraging Message Transfer Agent 
+			- Web to root 
+				- CMS Admin to Root II
+		- Windows Privilege Escalation 
+			- privilege escalation scripts
+				- privilege escalation with PowerUp (vid)
+				- quiz
+				- Clear-Text PasswordPrivilege escalation with Privesc Check (vid)
+				- quiz
+				- Windows: PrivescCheck 
+			- locally stored credentials
+				- Unattended Installation Files (vid)
+				- quiz
+				- Unattended Installation 
+				- Windows Credential Manager (vid)
+				- quiz
+				- Credential Management 
+				- Powershell History (vid)
+				- quiz
+				- Powershell History
+			- service exploits
+				- Exploiting Insecure Service Permissions (vid)
+				- quiz 
+				- Bad Permissions 
+			- windows registry 
+				- Privilege escalation via Registry AutoRuns (vid)
+				- quiz
+				- registry AutoRun
+			- impersonation attacks 
+				- access token impersonation (vid)
+				- quiz
+				- privilege escalation: Impersonate
+				- Juicy Potato (vid)
+				- quiz
+				- MSSQL: juicy potato privilege escalation
+			- advanced techniques
+				- bypassing UAC with UACMe (vid)
+				- quiz
+				- UAC Bypass: UACMe 
+				- DLL Hijacking (vid)
+				- DLL Hijacking: DVTA
+		- Linux Privilege Escalation
+			- linux privilege escalation techniques 
+				- locally stored credentials (vid)
+				- quiz
+				- shared server 
+				- misconfigured file permissions (vid)
+				- quiz
+				- FIle permissions Matter!
+				- Exploiting SUID Binaries (vid)
+				- Exploiting Setuid Programs II
+				- Misconfigured SUDO Privileges (vid)
+				- Editing Gone Wrong 
+				- Shared Library Injection (vid)
+				- Load Order Matters
+		- Goodbye 
+			- conclusion
+	- Lateral Movement and Pivoting 
+		- Welcome
+			- introduction
+				- intro 
+				- intro to lateral movement and pivoting 
+				- quiz
+		- Windows Lateral Movement
+			- windows lateral movement techniques 
+				- windows lateral movement techniques (vid)
+				- quiz
+			- credential-based lateral movement techniques 
+				- Lateral MOvement with PsExec (vid)
+				- quiz
+				- Windows: SMB Server PSexec II
+				- lateral movement with SMBExec (vid)
+				- quiz
+				- Windows: SMB Server SMBExec 
+				- lateral movement with CrackMapExec (vid)
+				- quiz
+				- Windows: SMB Server CrackMapExec
+				- Lateral Movement Via RDP (vid)
+				- quiz
+				- Dumping RDCMan Credentials
+				- Lateral movement via WinRM (vid)
+				- quiz
+				- WinRM: Evil-WinRM Invoke PS Script
+			- pass the hash 
+				- pass the hash with Metasploit (vid)
+				- quiz
+				- Windows: Pass The Hash (metasploit)
+				- Pass the Hash with WMIExec (vid)
+				- quiz
+				- Windows: Pass The Hash (WMIExec)
+		- Linux Lateral Movement 
+			- linux movement 
+				- linux lateral movement techniques (vid)
+				- quiz
+				- internal network I 
+		- Pivoting 
+			- pivoting techniques 
+				- Pivoting and Port Forwarding with Metasploit (vid)
+				- quiz
+				- Pivoting 
+				- pivoting with SOCKS Proxy (vid)
+				- quiz
+				- Pivoting IV
+				- Pivoting via SSH Tunneling (vid)
+				- quiz
+				- Pivoting VI
+				- Pivoting with reGeorg (vid)
+				- Pivoting VIII
+		- Goodbye
+			- conclusion
+		- Additional Resources 
+			- lab (linux exploitation + Lateral Movement)
+- Red Teaming 
+	- Active Directory Penetration Testing 
+		- Welcome
+			- introduction
+		- Active DIrectory Primer 
+			- AD primer 
+				- Intro to active directory (vid)
+				- quiz
+				- users, groups and computers (vid)
+				- quiz
+				- organizational units (OUs) (vid)
+				- quiz
+				- Active Directory Authentication (vid)
+				- quiz
+				- Trees, Forests and Trusts (vid)
+				- quiz
+		- Active Directory Penetration Testing 
+			- Active Directory 
+				- AD penetration testing methodology (vid)
+			- AD enumeration 
+				- password spraying (vid)
+				- quiz
+				- Password Spraying 
+				- AD Enumeration: BloodHound (vid)
+				- quiz
+				- BloodHound Reconnaissance
+				- AD Enumeration: PowerView (vid)
+				- quiz
+				- Powerview: AD Enumeration
+			- AD privilege escalation 
+				- AS-REP Roasting (vid)
+				- quiz
+				- AS-REP Roasting
+				- Kerberosting (vid)
+				- quiz
+				- AD: Kerberos Attacks 
+			- AD Lateral Movement 
+				- AD Lateral Movement: Pass the Hash (vid)
+				- quiz
+				- Pass the Hash Attacks 
+				- AD Lateral Movement: Pass the Ticket (vid)
+				- quiz
+				- Pass the Ticket Attacks 
+			- AD persistence 
+				- AD Persistence: Silver Ticket (vid)
+				- quiz
+				- AD: Silver Ticket 
+				- AD Persistence: Golden TIcket (vid)
+				- quiz
+				- Golden Ticket Attacks 
+		- Goodbye
+			- conclusion 
+	- Command & Control (C2)
+		- Welcome 
+			- introduction
+		- Overview
+			- C2 overview 
+				- Intro to Command & Control (vid)
+				- quiz
+				- Intro to C2 Framework (vid)
+				- quiz
+		- Lessons 
+			- Command & Control 
+				- How C2 Frameworks Work (vid)
+				- quiz
+				- C2 Framework Terminology (vid)
+				- quiz
+				- C2 Deployment & Operation (vid)
+				- quiz
+				- The C2 Matrix: Choosing the Correct C2 Framework (vid)
+				- quiz
+			- Powershell Empire & Starkiller
+				- Intro To Powershell Empire (vid)
+				- quiz
+				- Red Team Ops with Powershell Empire (vid)
+				- quiz
+				- Leverating Powershell During Exploitation 
+				- Red Team Ops with Starkiller (vid)
+		- Goodbye 
+			- conclusion
+		- Additional Resources
+			- labs
+				- T1094: Custom Command & Control Protocol
+				- Port Scanning & Enumeration with Armitage
+				- Exploitation & Post Exploitation with Armitage

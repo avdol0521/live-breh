@@ -6,7 +6,7 @@ tags:
 ## usage:
 ### normal brute:
 ```sh
-hydra -l username -P passlist ssh://IP:PORT
+hydra -l htllab01 -P /usr/share/wordlists/rockyou.txt ssh://10.0.2.18:22
 ```
 - `-l` for known username 
 	- `-L` for username list 

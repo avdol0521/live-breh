@@ -51,3 +51,5 @@ tags:
 - [[windowsPrivEsc]] 
 - [[wreath]] 
 - [[windows internals]]
+- [[htllab01]] 
+- [[adventofcyber2025]] 

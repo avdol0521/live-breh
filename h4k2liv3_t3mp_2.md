@@ -73,3 +73,73 @@ Room Link: https://tryhackme.com/r/room/sqhell
 Resources: 
 Bangla: 
 - https://youtu.be/b3N-nZrGOKk?si=OwCtYgl0RiNbueEA
+
+### certs 
+- Mosabbir Shemul
+	- PT1
+	- CRTA
+	-  Dark Web Monitoring Crash Course (SOCRadar) (certificate of participation)
+- Md Mamun Mia 
+	- eJPT
+	- PT1
+	- CRTA
+- Md Ziaur Rahman 
+	- Practical Auditing of Information Security Management Systems according to ISO/IEC 27001:2022 and USI 19011:2018 (sustainable management system inc.)
+	- CRTA
+- Md Moniruzzaman
+	- eJPT
+	- Google Cloud Certified Professional Machine Learning Engineer
+	- Dark Web Monitoring Crash Course (SOCRadar) (certificate of participation + completion)
+	- CRTA
+	- ISO/IEC 27001:2022 Lead Auditor (Certificate of Competency) (awarded by Mastermind Assurance)
+- M Mahmudul Hassan Rony
+	- eJPT
+	- PT1
+	- CRTA
+	- Dark Web Monitoring Crash Course (SOCRadar) (certificate of participation)
+- Md. Junayedul Islam Zarif
+	- CPTS
+	- CRT-ID
+- Saad Bin Ruhul Amin
+	- eJPT
+- Sajeeb Sarker
+	- eJPT
+	- CRTA
+- Md Abid ur Rahman 
+	- SAL1
+	- CRTA
+- Khandakar Asif Mahmud
+	- Certified SOC Analyst (EC-Council)
+	- Chronicle Security Operations
+- Md Masum Molla
+	- CNSP
+- Sondip Roy
+	- eJPT
+	- PT1
+	- CNSP
+	- Fortinet Certified Associate in Cybersecurity
+- Shopno Mia
+	- eJPT
+	- CRTA 
+- Rafiqul Islam 
+	- Fortinet Certified Associate in Cybersecurity
+- Md Siful Islam
+	- CRTA
+	- Fortinet Certified Associate in Cybersecurity
+- Abdullah Muddakir
+	- CRTA 
+- Apurba Sutradhar
+	- CRTA
+	- Fortinet Certified Associate in Cybersecurity
+	- CNSP
+- Saziat Rahman Himel
+	- CRTA
+	- CNSP
+	- Fortinet Certified Associate in Cybersecurity
+	- eJPT
+- Md Rayhan
+	- CRTA 
+- Md Shorif
+	- eJPT 
+	- CRTA 
+- openwrt 
