@@ -53,3 +53,4 @@ tags:
 - [[windows internals]]
 - [[htllab01]] 
 - [[adventofcyber2025]] 
+- [[n8n CVE-2025-68613]]

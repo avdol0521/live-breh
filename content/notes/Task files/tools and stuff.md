@@ -19,7 +19,19 @@ tags:
 - [[autorecon]] 
 ## brute forcing:
 - [[hydra]] 
-- [[fcrackzip]]  
+## hash related:
+- [[hash-identifier]] 
+- [[john the ripper]] 
+- [[hashcat]] 
+- [[hashrat]] 
+- [[openssl toolkit]] 
+## encryption cracking:
+- PDF
+	- [[pdfcrack]]
+	- [[pdf2john]] (for john)
+- ZIP
+	- [[fcrackzip]] 
+	- [[zip2john]] (for john)
 ## wordlist generation:
 - [[crunch]] 
 ## SMB stuff:
@@ -41,12 +53,7 @@ tags:
 - [[dirbuster]] 
 - [[feroxbuster]] 
 - [[gobuster]] 
-## hash related:
-- [[hash-identifier]] 
-- [[john the ripper]] 
-- [[hashcat]] 
-- [[hashrat]] 
-- [[openssl toolkit]] 
+
 ## steganography and stuff:
 - [[binwalk]] 
 - [[strings]] 

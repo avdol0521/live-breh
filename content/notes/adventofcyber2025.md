@@ -3,7 +3,8 @@ title: "adventofcyber2025"
 tags:
   - fetus
 ---
-- wont be covering day 0 and 1 in this note cuz boring as hell who tf doesnt know basic linux cli ToT 
+- wont be covering day 0 and 1 in this note cuz boring as hell who tf doesnt know basic linux cli ToT
+- key for sidequest went something like now_you_see_me
 # Day 2: Phishing https://tryhackme.com/room/phishing-aoc2025-h2tkye9fzU
 - its a subset of social engineering
 - mutiple types exist including but not limited to:
@@ -330,3 +331,31 @@ Connection: keep-alive
 		- wordlists basically. stuff people are likely to use 
 	- brute-force/mask attacks 
 		- brute-force by itself takes way too long. masks are used with them to reduce scope 
+- two files to crack: `flag.pdf` and `flag.zip`. both password protected
+### `flag.pdf`:
+- used [[pdfcrack]] with rockyou to crack it
+- used [[pdf2john]] and then [[john the ripper]] with the hash as well cuz why not 
+- password was `naughtylist`
+### `flag.zip`
+- fcrackzip isnt on the attackbox. common tryhackmeattackbox L. used [[zip2john]] and then [[john the ripper]] like before as well 
+```sh
+ubuntu@tryhackme:~/Desktop$ fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt flag.zip 
+Command 'fcrackzip' not found, but can be installed with:
+sudo apt install fcrackzip
+ubuntu@tryhackme:~/Desktop$ zip2john flag.zip | tee zip.hash
+flag.zip/flag.txt:$zip2$*0*3*0*db58d2418c954f6d78aefc894faebf54*d89c*1d*b8370111f4d9eba3ca5ff6924f8c4ff8636055dce00daec2679f57bde1*57445596ac0bc2a29297*$/zip2$:flag.txt:flag.zip:flag.zip
+ubuntu@tryhackme:~/Desktop$ john zip.hash --wordlist=/usr/share/wordlists/rockyou.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (ZIP, WinZip [PBKDF2-SHA1 256/256 AVX2 8x])
+Cost 1 (HMAC size [KiB]) is 1 for all loaded hashes
+Will run 2 OpenMP threads
+Press 'q' or Ctrl-C to abort, 'h' for help, almost any other key for status
+winter4ever      (flag.zip/flag.txt)     
+1g 0:00:00:00 DONE (2025-12-31 21:43) 2.174g/s 8904p/s 8904c/s 8904C/s friend..sahara
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+```
+- pas was `winter4ever` 
+- theres a sidequest key hidden somewhere in this vm but im too lazy for it
+# Day 10: SOC Alert Triaging https://tryhackme.com/room/azuresentinel-aoc2025-a7d3h9k0p2
+- 
