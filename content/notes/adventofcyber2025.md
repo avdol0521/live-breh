@@ -358,4 +358,10 @@ Session completed
 - pas was `winter4ever` 
 - theres a sidequest key hidden somewhere in this vm but im too lazy for it
 # Day 10: SOC Alert Triaging https://tryhackme.com/room/azuresentinel-aoc2025-a7d3h9k0p2
-- 
+
+# Day 23: AWS Security https://tryhackme.com/room/cloudenum-aoc2025-y4u7i0o3p6
+- AWS CLI looks for creds at `~/.aws/credentials` 
+- our preconfigured creds in the file:
+- Amazon Security Token Service (sts) lets us use saved creds in said file. we can check info about our authenticated user by doing `aws sts get-caller-identity`
+- blablabla everything's similar to AD but aws themed (duh), whats an S3? its Simple Storage Service. basically an object storage service that stores objects :v
+- booring aint gonna note down :P
