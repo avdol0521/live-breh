@@ -362,6 +362,19 @@ Session completed
 # Day 23: AWS Security https://tryhackme.com/room/cloudenum-aoc2025-y4u7i0o3p6
 - AWS CLI looks for creds at `~/.aws/credentials` 
 - our preconfigured creds in the file:
-- Amazon Security Token Service (sts) lets us use saved creds in said file. we can check info about our authenticated user by doing `aws sts get-caller-identity`
+```
+ubuntu@tryhackme:~/.aws$ cat ~/.aws/credentials
+[default]
+aws_access_key_id = AKIARZPUZDIKHWDTNGNW
+aws_secret_access_key = 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
+```
+- Amazon Security Token Service (sts) lets us use saved creds in said file. we can check info about our authenticated user by doing `aws sts get-caller-identity`. output:
+```json
+{
+    "UserId": "ehih2q1bdsd91u5xdzmy",
+    "Account": "123456789012",
+    "Arn": "arn:aws: iam::123456789012:user/sir.carrotbane"
+}
+```
 - blablabla everything's similar to AD but aws themed (duh), whats an S3? its Simple Storage Service. basically an object storage service that stores objects :v
-- booring aint gonna note down :P
+- boooring aint gonna note further :VV
