@@ -3,7 +3,7 @@ title: "lazyAdmin"
 tags:
   - fetus
 ---
-- room link: https://tryhackme.com/room/lazyadmin
+et- room link: https://tryhackme.com/room/lazyadmin
 ## nmap results:
 ```sh
 # Nmap 7.95 scan initiated Fri Aug 22 15:07:50 2025 as: /usr/lib/nmap/nmap -sCV -T4 -oN Dscan.txt 10.201.106.27
@@ -388,3 +388,6 @@ close waste allow stereo busy post survey merge sword where purchase office
 
 work
 g@z0rp@z0rP0521
+
+element.io
+EsTo JUTR Q7eY s1zQ KmpJ WSCX hZhB JZso GPju njSZ Ymdr QBzB

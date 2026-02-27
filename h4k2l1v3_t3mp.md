@@ -80,9 +80,9 @@ tags:
 - moniruzzaman vai 
 - turbo intruder 
 - practical bug bounty tcm sec - youtube 
-	- lab dewa ase
-- linux e 4 ta topic hard
-- CPTS
+	- lab dewa ase 
+- linux e 4 ta topic hard 
+- CPTS 
 - gns (real life er moto), packet tracer 
 - windows server 16, windows server 22
 - farmgate 

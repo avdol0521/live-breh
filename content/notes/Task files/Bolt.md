@@ -3,6 +3,7 @@ title: Bolt
 tags:
   - fetus
 ---
+- room link: https://tryhackme.com/room/bolt
 ## nmap results: 
 - `nmap -p- -Pn -A 10.10.98.63` 
 ```sh title:"nmap -p- -Pn -A 10.10.98.63" fold
@@ -220,4 +221,5 @@ bolt
 ```
 boltadmin123
 ```
-- checked the documentation and found out there's a login at `IP:PORT/bolt/login`. logged in with the creds and got the CMS version `3.7.1`. got the EDB-ID of the RCE vuln as well. used the RCE module and exploited the machine, got a root shell and used find to get and cat `find.txt`. was child's play. gonna do blog next 
+- ssh didnt work
+- checked the documentation and found out there's a login at `IP:PORT/bolt/login`. logged in with the creds and got the CMS version `3.7.1`. got the EDB-ID of the RCE vuln as well. used the RCE module in [[msfconsole]] and exploited the machine, got a root shell and used find to get and cat `find.txt`. was child's play. gonna do blog next 

@@ -143,3 +143,28 @@ Bangla:
 	- eJPT 
 	- CRTA 
 - openwrt 
+
+
+
+----
+- day1 
+	- career paths day 2 te jabe to detail out what each career paths require and stuff
+- day03 te parle more key points
+- day05 will expand to 3 days to 3 parts 
+- day06 will discuss with troubleshooting and stuff 
+- day07 will expand to 2 days 
+- day08 include all possible recons and expand to 2 days
+- day09 will stay theoretical with nmap applying
+- day10 no matter what is the public meeting
+- kioptrix will expand to 3 days 
+	- lab setup+ scanning -nmap
+	- enumeration
+	- exploitation and report writing
+	- dont reveal the kioptrix name in the module
+- all other labs will require 2 days with enumeration taking one day and exploitation + report writing taking the other
+- tryhackme wordpress cms stays. blog stays bolt cms stays [[BasicPentesting]] stays. 
+- day20 is meeting 
+- blue stays the others gone
+- students must include a screenshot of linkedin post in the report and coordinators will monitor it
+- 20 ta kore quiz hobe
+- assignments too 

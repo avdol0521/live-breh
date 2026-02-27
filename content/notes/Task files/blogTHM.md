@@ -3,6 +3,7 @@ title: blog
 tags:
   - fetus
 ---
+- roomlink
 ## nmap results:
 - `nmap -p- -Pn -sV -O -T4 10.10.76.139`:
 ```sh fold title:"nmap -p- -Pn -sV -O -T4 10.10.76.139"
