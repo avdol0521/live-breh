@@ -12,7 +12,7 @@ cd Term-Animation-2.6
 perl Makefile.PL &&  make &&   make test
 make install
 cd /tmp
-wget --no-check-certificate http://www.robobunny.com/projects/asciiquarium/asciiquarium.tar.gz
+wget --no-check-certificate https://robobunny.com/projects/asciiquarium/asciiquarium.tar.gz
 tar -zxvf asciiquarium.tar.gz
 cd asciiquarium_1.1
 sudo cp asciiquarium /usr/local/bin/
