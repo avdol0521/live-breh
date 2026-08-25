@@ -2,7 +2,7 @@
 	"nodes":[
 		{"id":"be2a07c53ff4010a","x":-684,"y":-477,"width":502,"height":753,"type":"group","label":"testGroup"},
 		{"id":"613573295b4b7a98","x":-664,"y":-457,"width":438,"height":322,"type":"text","text":"test"},
-		{"id":"3b1f807a7578f404","x":-644,"y":-35,"width":442,"height":291,"type":"text","text":"test 2"}
+		{"id":"3b1f807a7578f404","x":-664,"y":-40,"width":442,"height":291,"type":"text","text":"test 2"}
 	],
 	"edges":[
 		{"id":"7adff59c4d9abf0c","fromNode":"613573295b4b7a98","fromSide":"bottom","toNode":"3b1f807a7578f404","toSide":"top"}
