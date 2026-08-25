@@ -177,6 +177,10 @@ plugins:
     enabled: true
   - source: "@quartz-community/folder-page"
     enabled: true
+    options:
+      showFolderCount: false
+      showSubfolders: false
+      prefixFolders: false
   - source: "@quartz-community/tag-page"
     enabled: true
   - source: "@quartz-community/explorer"
@@ -280,7 +284,7 @@ plugins:
         - tags
         - aliases
       excludedProperties: []
-      hidePropertiesView: false
+      hidePropertiesView: true
       delimiters: ---
       language: yaml
     order: 5
@@ -362,6 +366,7 @@ layout:
         beforeBody:
           - breadcrumbs
           - article-title
+        afterBody: []
         right:
           - graph
     tag:
