@@ -1,5 +1,5 @@
 ---
-title: notes
+title: Notes
 tags:
   - "#child"
 ---
