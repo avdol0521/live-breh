@@ -277,6 +277,31 @@ plugins:
     enabled: true
     options: {}
     order: 50
+# layout:
+#   groups:
+#     toolbar:
+#       priority: 35
+#       direction: row
+#       gap: 0.5rem
+#   byPageType:
+#     "404":
+#       positions:
+#         beforeBody: []
+#         left: []
+#         right: []
+#     content: {}
+#     folder:
+#       exclude:
+#         - reader-mode
+#       positions:
+#         right: []
+#     tag:
+#       exclude:
+#         - reader-mode
+#       positions:
+#         right: []
+#     canvas: {}
+#     bases: {}
 layout:
   groups:
     toolbar:
@@ -287,18 +312,48 @@ layout:
     "404":
       positions:
         beforeBody: []
-        left: []
+        left: [page-title, search, darkmode]
         right: []
-    content: {}
+    content:
+      positions:
+        left:
+          - page-title
+          - search
+          - darkmode
+        beforeBody:
+          - breadcrumbs
+          - article-title
+        afterBody:
+          - comments
+        right:
+          - graph
+          - table-of-contents
+          - backlinks
     folder:
       exclude:
         - reader-mode
       positions:
-        right: []
+        left:
+          - page-title
+          - search
+          - darkmode
+        beforeBody:
+          - breadcrumbs
+          - article-title
+        right:
+          - graph
     tag:
       exclude:
         - reader-mode
       positions:
-        right: []
+        left:
+          - page-title
+          - search
+          - darkmode
+        beforeBody:
+          - breadcrumbs
+          - article-title
+        right:
+          - graph
     canvas: {}
     bases: {}
