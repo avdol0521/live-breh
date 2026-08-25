@@ -1,4 +1,11 @@
 {
   "version": "1.0.0",
-  "plugins": {}
+  "plugins": {
+    "default": {
+      "source": "github:quartz-themes/default",
+      "resolved": "https://github.com/quartz-themes/default.git",
+      "commit": "562600990a7957895a593dd0ffecdc02e4b33b7d",
+      "installedAt": "2026-08-25T20:12:40.370Z"
+    }
+  }
 }

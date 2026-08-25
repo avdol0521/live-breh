@@ -273,6 +273,10 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  - source: github:quartz-themes/default
+    enabled: true
+    options: {}
+    order: 50
 layout:
   groups:
     toolbar:
