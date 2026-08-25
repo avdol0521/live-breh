@@ -19,6 +19,27 @@ configuration:
       header: Schibsted Grotesk
       body: Source Sans Pro
       code: IBM Plex Mono
+    # colors:
+    #   lightMode:
+    #     light: "#faf8f8"
+    #     lightgray: "#e5e5e5"
+    #     gray: "#b8b8b8"
+    #     darkgray: "#4e4e4e"
+    #     dark: "#2b2b2b"
+    #     secondary: "#284b63"
+    #     tertiary: "#84a59d"
+    #     highlight: rgba(143, 159, 169, 0.15)
+    #     textHighlight: "#fff23688"
+    #   darkMode:
+    #     light: "#161618"
+    #     lightgray: "#393639"
+    #     gray: "#646464"
+    #     darkgray: "#d4d4d4"
+    #     dark: "#ebebec"
+    #     secondary: "#7b97aa"
+    #     tertiary: "#84a59d"
+    #     highlight: rgba(143, 159, 169, 0.15)
+    #     textHighlight: "#b3aa0288"
     colors:
       lightMode:
         light: "#faf8f8"
@@ -28,7 +49,7 @@ configuration:
         dark: "#2b2b2b"
         secondary: "#284b63"
         tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        highlight: "rgba(143, 159, 169, 0.15)"
         textHighlight: "#fff23688"
       darkMode:
         light: "#161618"
@@ -38,8 +59,9 @@ configuration:
         dark: "#ebebec"
         secondary: "#7b97aa"
         tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        highlight: "rgba(143, 159, 169, 0.15)"
         textHighlight: "#b3aa0288"
+
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -109,7 +131,7 @@ plugins:
     enabled: false
     order: 92
   - source: "@quartz-community/quartz-fonts"
-    enabled: true
+    enabled: false
   - source: "@quartz-themes/core"
     enabled: true
     options:
@@ -144,7 +166,7 @@ plugins:
       enableSiteMap: true
       enableRSS: true
   - source: "@quartz-community/favicon"
-    enabled: true
+    enabled: false
   - source: "@quartz-community/og-image"
     enabled: true
   - source: "@quartz-community/cname"
