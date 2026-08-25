@@ -5,9 +5,6 @@ on:
     branches:
       - v5
 
-env:
-  THEME_NAME: ayu-dark
-
 permissions:
   contents: read
   pages: write
