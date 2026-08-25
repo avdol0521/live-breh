@@ -3,6 +3,10 @@ title: "socat"
 tags:
   - fetus
 ---
+## common:
+```sh
+./socat tcp-l:1337 tcp:10.250.180.7:1337 &
+```
 ## rev/bind connections:
 #### stable listener:
 ```sh

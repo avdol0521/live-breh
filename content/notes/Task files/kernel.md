@@ -86,3 +86,7 @@ _**In summary**_:
 - better security due to extremely small attack surface
 ## stuff:
 - [[kernel memory management]] 
+# Kernel Exploits 
+- [[dirtyCOW]] 
+- [[dirtyPipe-THM]] 
+- [[copyFail]] 

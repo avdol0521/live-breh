@@ -19,19 +19,18 @@ tags:
 - [[autorecon]] 
 ## brute forcing:
 - [[hydra]] 
-## hash related:
+## hash cracking and related:
 - [[hash-identifier]] 
 - [[john the ripper]] 
-- [[hashcat]] 
-- [[hashrat]] 
-- [[openssl toolkit]] 
-## encryption cracking:
 - PDF
 	- [[pdfcrack]]
 	- [[pdf2john]] (for john)
 - ZIP
 	- [[fcrackzip]] 
 	- [[zip2john]] (for john)
+- [[hashcat]] 
+- [[hashrat]] 
+- [[openssl toolkit]] 
 ## wordlist generation:
 - [[crunch]] 
 ## SMB stuff:
@@ -42,12 +41,13 @@ tags:
 - [[showmount]] 
 - [[FTP]] 
 - [[mount]] 
-## file compression/decompression: 
+## file compression/decompression/conversion: 
 - [[gzip]] 
 - [[gunzip]] 
 - [[unzip]] 
 - [[unrar]] 
 - [[zlib-flate]] 
+- [[dos2unix]] 
 ## directory fuzzing/busting:
 - [[ffuf]] 
 - [[dirbuster]] 
@@ -101,6 +101,7 @@ tags:
 - USB Analysis 
 ## shells:
 - [[webshells]] 
+- [[ps1 shells]] 
 - [[oneLinerShells]] 
 ## enumeration:
 - [[peass]] 
@@ -127,6 +128,9 @@ tags:
 ## port listeners: 
 - [[netcat]] 
 - [[pwncat-cs]] 
+## packet analysis:
+- wireshark
+- [[tcpdump]] 
 ## phishing
 - [[setoolkit]]
 ## file uploading/downloading (ish): 

