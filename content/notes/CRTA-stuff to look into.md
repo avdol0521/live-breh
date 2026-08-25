@@ -1,0 +1,22 @@
+---
+title: "CRTA-stuff to look into"
+tags:
+  - fetus
+---
+- a list of stuff i have further studying left to do :)
+- [ ] this series: https://medium.com/@frsfaisall
+- [x] AD roles (FSMO)
+- [x] trust relationships
+- [x] DFSR SYSVOL replication
+- [x] FRS 
+- [x] SSO (single sign on)
+- [ ] [[AD topology]] 
+- [ ] AD DNS interaction
+- [x] [[Kerberos Database]] 
+- [ ] KRBTGT account on a DC
+- [x] [[Ticket Granting Service (TGS)]]
+- [ ] [[privileged groups and their permissions in AD]] 
+- [ ] [[Access Control List (ACL)]] 
+- [ ] [[revision level]]
+- [ ] [[Key Distribution Center (KDC)]]
+- [ ] userland, kernel land and boot level persistence
