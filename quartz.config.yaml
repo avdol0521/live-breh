@@ -186,7 +186,7 @@ plugins:
       position: beforeBody
       priority: 10
   - source: "@quartz-community/content-meta"
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 20
@@ -250,7 +250,7 @@ plugins:
     options: {}
     order: 50
   - source: "@quartz-community/note-properties"
-    enabled: true
+    enabled: false
     options:
       includeAll: false
       includedProperties:
@@ -274,7 +274,7 @@ plugins:
       exportPadding: 20
     order: 50
   - source: github:quartz-themes/default
-    enabled: true
+    enabled: false
     options: {}
     order: 50
 layout:
