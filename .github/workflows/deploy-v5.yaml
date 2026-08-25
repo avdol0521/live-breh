@@ -5,6 +5,9 @@ on:
     branches:
       - v5
 
+env:
+  THEME_NAME: ayu-dark
+
 permissions:
   contents: read
   pages: write
@@ -21,6 +24,8 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Fetch all history for git info
+      - name: Fetch Quartz Theme
+        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
       - uses: actions/setup-node@v6
         with:
           node-version: 24
