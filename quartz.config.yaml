@@ -169,6 +169,8 @@ plugins:
     enabled: false
   - source: "@quartz-community/og-image"
     enabled: true
+    options:
+      socialImage: og-image.png
   - source: "@quartz-community/cname"
     enabled: true
   - source: "@quartz-community/canvas-page"
