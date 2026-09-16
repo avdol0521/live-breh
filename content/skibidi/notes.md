@@ -3,7 +3,34 @@ title: Notes
 tags:
   - "#child"
 ---
-#### cybersecurity stuff:
+#### cybersecurity stuff 
+
+#### blender stuff:
+- [[blender basics]] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### cybersecurity stuff (legacy 2.0):
 - [[networking stuff]] 
 - [[linux stuff]] 
 - [[windows stuff]] 
@@ -13,5 +40,3 @@ tags:
 - [[box download links]] 
 - [[binary exploitation]] 
 - [[resources]] 
-#### blender stuff:
-- [[blender basics]] 
