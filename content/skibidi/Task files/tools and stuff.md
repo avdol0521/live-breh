@@ -37,9 +37,9 @@ tags:
 - [[smbclient]] 
 - [[smbmap]] 
 - [[smbget]] 
-## file sharing services and stuff:
-- [[showmount]] 
+## interaction with file sharing services:
 - [[FTP]] 
+- [[showmount]] 
 - [[mount]] 
 ## file compression/decompression/conversion: 
 - [[gzip]] 
@@ -61,44 +61,6 @@ tags:
 - [[steghide]] 
 - [[aperisolve]] 
 - [[outguess]] 
-## DFIR Tools 
-- Aurora
-- Browser Analysis
-	- chromecacheview
-	- chromecookiesview
-	- chromehistoryview
-	- DB Browser for SQLite 
-	- Hindsight
-- Data Triaging
-	- Kansa 
-	- plaso
-	- CyLR
-- DCode v5
-- Disk Analysis
-	- Arsenal-Image-Mounter
-	- Exterro FTK Imager
-- Email Analysis 
-	- Eml_Analyzer
-	- Kernel for OST to PST 
-	- Kernel OST Viewer 
-	- Kernel Output PST VIewer 
-	- outlookstatview
-	- XstReader
-- exiftool 
-- EZ Tools 
-- HxD
-- LogFileParser
-- Malware Analysis 
-- Memory Analysis
-- Network Analysis 
-- Nmap 
-- PersistenceSniper
-- pestudio
-- Recovery Data 
-- Registry Analysis 
-- Sleuth Kit 
-- SysinternalsSuite
-- USB Analysis 
 ## shells:
 - [[webshells]] 
 - [[ps1 shells]] 
@@ -164,3 +126,41 @@ tags:
 ## random stuff:
 - [[QRscannerOnline]] 
 - [[cipher-identifier]] 
+## DFIR Tools (to look into later)
+- Aurora
+- Browser Analysis
+	- chromecacheview
+	- chromecookiesview
+	- chromehistoryview
+	- DB Browser for SQLite 
+	- Hindsight
+- Data Triaging
+	- Kansa 
+	- plaso
+	- CyLR
+- DCode v5
+- Disk Analysis
+	- Arsenal-Image-Mounter
+	- Exterro FTK Imager
+- Email Analysis 
+	- Eml_Analyzer
+	- Kernel for OST to PST 
+	- Kernel OST Viewer 
+	- Kernel Output PST VIewer 
+	- outlookstatview
+	- XstReader
+- exiftool 
+- EZ Tools 
+- HxD
+- LogFileParser
+- Malware Analysis 
+- Memory Analysis
+- Network Analysis 
+- Nmap 
+- PersistenceSniper
+- pestudio
+- Recovery Data 
+- Registry Analysis 
+- Sleuth Kit 
+- SysinternalsSuite
+- USB Analysis 

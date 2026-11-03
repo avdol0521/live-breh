@@ -4,9 +4,12 @@ tags:
   - "#child"
 ---
 #### cybersecurity stuff 
-
+- [[Intro to infosec]] 
 #### blender stuff:
 - [[blender basics]] 
+#### IoT stuff 
+- [[Electronics basics]] 
+- [[Arduino Basics]]
 
 
 
@@ -29,8 +32,7 @@ tags:
 
 
 
-
-#### cybersecurity stuff (legacy 2.0):
+#### cybersecurity stuff (legacy):
 - [[networking stuff]] 
 - [[linux stuff]] 
 - [[windows stuff]] 
